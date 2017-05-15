@@ -149,14 +149,16 @@ Das Amperemeter wird in Serie zu dem Vorwiderstand (zur Begrenzung des Stroms) g
 \subsubsection{Ergebnis}
 \begin{table}[H]
   \centering
-  \begin{tabular}{c|c|c}
+  \begin{tabular}{|c|c|c|}
+    \hline
     $U_Q$ & $I_A$ & $U_A$ \\
     \hline
     $1V$ & $504,3\mu A$ & $503,3mV$ \\
     \hline
     $5V$ & $5,013mA$ & $56,4mV$ \\
     \hline
-    $20V$ & $0,022A$ & $0,7mV$
+    $20V$ & $0,022A$ & $0,7mV$ \\
+    \hline
   \end{tabular}
   \caption{Gemessene Werte}
 \end{table}
@@ -165,14 +167,16 @@ Das Amperemeter wird in Serie zu dem Vorwiderstand (zur Begrenzung des Stroms) g
 
 \begin{table}[H]
   \centering
-  \begin{tabular}{c|c}
+  \begin{tabular}{|c|c|}
+  \hline
   Messbereich & $R_A$ (gerundet) \\
   \hline
   $\mu A$ & $998\Omega$ \\
   \hline
   $mA$ & $11,25\Omega$ \\
   \hline
-  $A$ & $0,032\Omega$
+  $A$ & $0,032\Omega$ \\
+  \hline
   \end{tabular}
   \caption{Innenwiderstände}
 \end{table}
@@ -210,10 +214,12 @@ Das Amperemeter und das Voltmeter werden in Serie geschalten und an die gesamte 
 \subsubsection{Ergebnis}
 \begin{table}[H]
   \centering
-  \begin{tabular}{c|c}
+  \begin{tabular}{|c|c|}
+    \hline
     $U_Q$ & $I_V$ \\
     \hline
-    $20V$ & $2,25\mu A$
+    $20V$ & $2,25\mu A$ \\
+    \hline
   \end{tabular}
   \caption{Gemessener Wert}
 \end{table}
@@ -222,6 +228,9 @@ Das Amperemeter und das Voltmeter werden in Serie geschalten und an die gesamte 
 
 \noindent Der Innenwiderstand bei einem idealen Voltmeter wäre $R_V = \infty\Omega$. Dieser Wert ist jedoch nicht zu erreichen, da dies einer Unterbrechung gleichkommen würde. Bei Messungen muss man sich der ohmschen Eigenschaft des Voltmeters und derer möglichen Auswirkungen bewusst sein.
 
+
+
+\newpage
 \section{Belastungsfehler}
 
 \subsection{Aufgabenstellung}
@@ -266,7 +275,8 @@ Es wird jeweils die Strom- bzw. Spannungsrichtige Schaltung aufgebaut. Für jede
 \begin{table}[H]
   \centering
   \label{Figure2.5.1}
-  \begin{tabular}{c|c|c|c}
+  \begin{tabular}{|c|c|c|c|}
+    \hline
     $U_0$ & $R_1$ & $U_R$ & $I_A$ \\
     \hline
     $1V$ & $10\Omega$ & $454,2mV$ & $46,16mA$ \\
@@ -279,7 +289,8 @@ Es wird jeweils die Strom- bzw. Spannungsrichtige Schaltung aufgebaut. Für jede
     \hline
     $10V$ & $1M\Omega$ & $9,975V$ & $11,22\mu A$ \\
     \hline
-    $10V$ & $1M\Omega$ & $9,986V$ & $0,01mA$
+    $10V$ & $1M\Omega$ & $9,986V$ & $0,01mA$ \\
+    \hline
   \end{tabular}
   \caption{Spannungsrichtige Messergebnisse}
 \end{table}
@@ -287,7 +298,8 @@ Es wird jeweils die Strom- bzw. Spannungsrichtige Schaltung aufgebaut. Für jede
 \begin{table}[H]
   \centering
   \label{Figure2.5.2}
-  \begin{tabular}{c|c|c|c}
+  \begin{tabular}{|c|c|c|c|}
+    \hline
     $U_0$ & $R_1$ & $U_V$ & $I_R$ \\
     \hline
     $1V$ & $10\Omega$ & $0,999V$ & $38,36mA$ \\
@@ -300,7 +312,8 @@ Es wird jeweils die Strom- bzw. Spannungsrichtige Schaltung aufgebaut. Für jede
     \hline
     $10V$ & $1M\Omega$ & $9,987V$ & $10,15\mu A$ \\
     \hline
-    $10V$ & $1M\Omega$ & $9,986V$ & $0,009mA$
+    $10V$ & $1M\Omega$ & $9,986V$ & $0,009mA$ \\
+    \hline
   \end{tabular}
   \caption{Stromrichtige Messergebnisse}
 \end{table}
@@ -340,14 +353,16 @@ Es wird jeweils die Strom- bzw. Spannungsrichtige Schaltung aufgebaut. Für jede
 \begin{table}[H]
   \centering
   \label{Figure2.5.7}
-  \begin{tabular}{c|c|c|c}
+  \begin{tabular}{|c|c|c|c|}
+    \hline
     $R_{nominell}$ & $R_{spannungsrichtig}$ & $R_{stromrichtig}$ & $R_{Multimeter}$ \\
     \hline
     $10\Omega$ & $9,83\Omega$ & $26\Omega$ & $9,8\Omega$ \\
     \hline
     $1k\Omega$ & $9,82k\Omega$ & $10,8k\Omega$ & $9,82k\Omega$ \\
     \hline
-    $1M\Omega$ & $0,89M\Omega$ & $0,98M\Omega$ & $985,5k\Omega$
+    $1M\Omega$ & $0,89M\Omega$ & $0,98M\Omega$ & $985,5k\Omega$ \\
+    \hline
   \end{tabular}
   \caption{Auswertung der Messergebnisse (gerundet)}
 \end{table}
@@ -357,12 +372,11 @@ Anhand der Ergebnisse kann man deutlich erkennen, dass die spannungsrichtige Mes
 
 
 
+\newpage
 \section{Spannungs- und Stromteiler}
 
 \subsection{Aufgabenstellung}
 Die Spannungs- und Stromteilerregel ist ein wesentlichen Bestandteil der Schaltungsanalyse. In dieser Aufgabe sollen Str\"ome und Spannungen einer einfachen Schaltung (Abbildung~\ref{Figure3.3.2}) berechnet werden. Anschlie\ss end soll diese Schaltung auf einem Steckbrett aufgebaut und die Str\"ome und Spannungen gemessen werden. Die berechneten Werte sollen verifiziert werden, indem sie mit den Messwerten gegen\"ubergestellt werden.
-
-\subsection{Verwendete Materialien und Einstellungen}
 
 \subsection{Theoretische \"Uberlegung}
 In der Angabe sind 3 Varianten von Widerst\"anden (Abbildung~\ref{Figure3.3.1}) gegeben. Es soll die Sinnvollste gew\"ahlt werden.
@@ -378,7 +392,16 @@ C        & $22 k\Omega$  & $33 k\Omega$  & $27 k\Omega$  & $10 V$ \\ \hline
 \caption{Parameter f\"ur Spannungs- und Stromteiler}
 \label{Figure3.3.1}
 \end{table}
-Bei Variante \textit{A} sind die Widersta\"nde sehr klein, wodurch die thermische Belastbarkeitsgrenze ($P_{tot} < \frac{1}{4} W$) \"uberschritten wird. Bei Variante \textit{C} wird der zu messende Strom sehr gering (im $\mu A$ Bereich), wodurch das Messergebnis ungenau wird. Daher wird Variante \textit{B} gew\"ahlt.
+\noindent Bei Variante \textit{A} sind die Widersta\"nde sehr klein, wodurch die thermische Belastbarkeitsgrenze ($P_{tot} < \frac{1}{4} W$) \"uberschritten wird. Bei Variante \textit{C} wird der zu messende Strom sehr gering (im $\mu A$ Bereich), wodurch die Messergebnisse ungenau werden. Daher wird Variante \textit{B} gew\"ahlt.
+
+\subsection{Verwendete Materialien und Einstellungen}
+\begin{itemize}
+  \item Netzteil: Agilent U8031A
+  \item Amperemeter: Amprobe 37XR-A
+  \item Voltmeter: Amprobe 37XR-A
+  \item Ohmmeter: Amprobe 37XR-A
+  \item Widerst\"ande ($22 k\Omega$, $33 k\Omega$, $27 k\Omega$)
+\end{itemize}
 
 \subsection{Schaltungsaufbau}
 \begin{figure}[H]
@@ -415,10 +438,10 @@ Da die Aufgabe vorsieht, die Spannungen und Str\"ome der Schaltung mit den gemes
 
 \subsection{Durchf\"uhrung}
 \begin{itemize}
-  \item Die Widerstandswerte der Widerst\"ande werden mit dem Ger\"at mit der Ohmmeter Einstellung gemessen. Die Messergebnisse sind in Abbildung~\ref{Figure3.3.3} zu finden.
+  \item Die Widerstandswerte der Widerst\"ande werden mit dem Ohmmeter gemessen. Die Messergebnisse sind in Abbildung~\ref{Figure3.3.3} zu finden.
   \item Die Spannungen $U_1$, $U_2$ und $U_3$ sowie die Str\"ome $I_1$, $I_2$ und $I_3$ werden berechnet. Dazu werden die gemessenen Widerstandswerte ber\"ucksichtigt. Die berechneten Werte sind in Abbildung~\ref{Figure3.3.4} zu finden.
-  \item Die Spannungen werden mit dem Ger\"at XXX mit der Einstellung \textit{Gleichspannung} parallel zu den Widerst\"anden gemssen.
-  \item Die Str\"ome werden mit dem Ger\"at XXX mit der Einstellung \textit{mA} (Milli-Ampere) gemessen. Die Messwerte sind in Abbildung~\ref{Figure3.3.4} zu finden.
+  \item Die Spannungen werden mit dem Voltmeter mit der Einstellung \textit{Gleichspannung} parallel zu den Widerst\"anden gemessen. Die Messwerte sind in Abbildung~\ref{Figure3.3.4} zu finden.
+  \item Die Str\"ome werden mit dem Amperemeter mit der Einstellung \textit{mA} (Milli-Ampere) gemessen. Die Messwerte sind in Abbildung~\ref{Figure3.3.5} zu finden.
 \end{itemize}
 
 \subsection{Ergebnisse}
@@ -444,6 +467,12 @@ Da die Aufgabe vorsieht, die Spannungen und Str\"ome der Schaltung mit den gemes
   $U_2$ & $4,69 V$             & $4,673 V$            \\ \hline
   $U_3$ & $4,69 V$             & $4,673 V$            \\ \hline
   \end{tabular}
+  \caption{Vergleich Berechnung und Messung der Spannungen}
+  \label{Figure3.3.4}
+\end{table}
+
+\begin{table}[H]
+  \centering
   \begin{tabular}{|c|c|c|}
   \hline
   ~  & Strom berechnet & Strom gemessen \\ \hline
@@ -451,28 +480,29 @@ Da die Aufgabe vorsieht, die Spannungen und Str\"ome der Schaltung mit den gemes
   $I_2$ & $144,04 \mu A$      & $141,10 \mu A$     \\ \hline
   $I_3$ & $99,67 \mu A$       & $98,49 \mu A$      \\ \hline
   \end{tabular}
-  \caption{Vergleich Berechnung und Messung der Str\"ome und Spannungen}
-  \label{Figure3.3.4}
+  \caption{Vergleich Berechnung und Messung der Str\"ome}
+  \label{Figure3.3.5}
 \end{table}
 
 \subsection{Diskussion}
 \subsubsection{Messwerte der Widerst\"ande}
-Die gemessenen Widerstandswerte sind nicht exakt, jedoch liegen die Messwerte in der jeweilig angegebenen Toleranzgrenze. An anderer Faktor f\"ur die Abweichung vom eigentlichen Widerstandswert ist die Ungenauigkeit des Ger\"ates XXX, welches lt. Spezifikation bis $1k \Omega$ eine Toleranz von $\pm0.5\%$ bzw. bis $10 M\Omega$ eine Toleranz von $\pm1.0\%$ hat.
+Die gemessenen Widerstandswerte sind nicht exakt, jedoch liegen die Messwerte in der jeweilig angegebenen Toleranzgrenze. Ein anderer Faktor f\"ur die Abweichung vom eigentlichen Widerstandswert ist die Messtoleranz des Ohmmeters, welches lt. Spezifikation bis $1k \Omega$ eine Toleranz von $\pm0.5\%$ bzw. bis $10 M\Omega$ eine Toleranz von $\pm1.0\%$ hat.
 
 \subsubsection{Unterschied berechnete und gemessene Spannungen und Str\"ome}
 Der Unterschied zwischen berechneten und gemessen Spannungen und St\"omen ist auf die Messtoleranz des Messger\"ats zur\"uckzuf\"uhren.
 
 
-\pagebreak
+
+\newpage
 \section{Superpositionsprinzip}
 \subsection{Aufgabenstellung}
 In dieser Mess\"ubung soll das Superpositionsprinzip verifiziert werden.
 
 \subsection{Theoretische \"Uberlegung}
-Das Superpositionsprinzip wird verwendet um Schaltkreise mit mehreren Spannungs- und Stromquellen zu berechnen. Die Berechnung der Spannungen und Str\"ome erfolgt f\"ur jede Quelle getrennt. Dabei werden alle anderen Quelle von der Schaltung getrennt und kurzgeschlossen. Danach werden die Teilergebnisse \"uberlagert, das hei\"st die St\"ome und Spannungen werden jeweils summiert.
+Das Superpositionsprinzip wird verwendet um Schaltkreise mit mehreren Spannungs- und Stromquellen zu berechnen. Die Berechnung der Spannungen und Str\"ome erfolgt f\"ur jede Quelle getrennt. Dabei werden alle anderen Quelle von der Schaltung getrennt und kurzgeschlossen. Danach werden die Teilergebnisse \"uberlagert, das hei\ss t die St\"ome und Spannungen werden jeweils summiert.
 
-\subsection{Berechnung}
-Die Spannungen und die Str\"ome werden f\"ur die Schaltung aus Abbildung \ref{Figure4.1.1} berechnet. Hierbei wird eine ideale Spannungsquelle mit Innenwiderstand $0 \Omega$ angenommen.
+\subsubsection{Berechnung Spannungen und Str\"ome}
+Die Spannungen und die Str\"ome werden f\"ur die Schaltung aus Abbildung \ref{Figure4.1.1} berechnet um die Plausibilit\"at der Messwerte zu verifizieren. Hierbei wird eine ideale Spannungsquelle mit Innenwiderstand $0 \Omega$ angenommen.
 \begin{table}[H]
 \centering
 \begin{tabular}{|l|l|l|}
@@ -485,6 +515,25 @@ Summe                             & $2,88 V$  & $2,88 mA$ \\\hline
 \caption{Berechnung der Schaltung mittels Superpositionsprinzip}
 \label{Figure4.1.1}
 \end{table}
+
+\subsection{Verwendete Materialien und Einstellungen}
+\begin{itemize}
+  \item Netzteil: Agilent U8031A
+  \item Amperemeter: Amprobe 37XR-A
+  \item Voltmeter: Amprobe 37XR-A
+  \item Ohmmeter: Amprobe 37XR-A
+  \item diverse Widerst\"ande (siehe Abbildung~\ref{Figure4.10.1})
+  \begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|c|}
+      \hline
+      $R_1$ & $R_2$ & $R_3$ & $R_4$ & $R_5$ & $R_X$ \\ \hline
+      $6,8 k\Omega$ & $3,3 k\Omega$ & $3,3 k\Omega$ & $6,8 k\Omega$ & $2,2 k\Omega$ & $1 k\Omega$ \\ \hline
+    \end{tabular}
+    \caption{Verwendete Widerst\"ande}
+    \label{Figure4.10.1}
+  \end{table}
+\end{itemize}
 
 \subsection{Schaltungsaufbau}
 \begin{figure}[H]
@@ -521,17 +570,17 @@ Summe                             & $2,88 V$  & $2,88 mA$ \\\hline
 \end{figure}
 
 \subsection{Durchf\"uhrung}
-\begin{enumerate}
+\begin{itemize}
   \item Die Schaltung aus Abbildung wird auf einem Steckbrett aufgebaut.
   \item Die Schaltung wird von der Spannungsquelle $U_2$ getrennt und kurzgeschlossen.
-  \item Die Schaltung wird mit dem Netzteil XXX verbunden.
+  \item Die Schaltung wird mit dem Netzteil verbunden.
   \item Auf dem Ger\"at wird eine Spannung von $10 V$ eingestellt.
-  \item Die Spannungsmessung erfolgt mit dem Ger\"at XXX mit der Einstellung XXX.
+  \item Die Spannungsmessung erfolgt mit dem Voltmeter mit der Einstellung Gleichspannung.
   \item Die Spannung wird parallel zum Widerstand $R_X$ gemessen.
   \item Der Strom wird in Serie mit dem Widerstand $R_X$ gemessen.
   \item Die gleichen Messungen erfolgen analog mit der Spannungsquelle $U_1$ kurzgeschlossen und mit beiden Spannungsquellen angeschlossen.
   \item Die Messwerte sind in Abbildung~\ref{Figure4.4.5} zu finden.
-\end{enumerate}
+\end{itemize}
 
 \subsection{Ergebnisse}
 \begin{table}[H]
@@ -548,13 +597,22 @@ beide Stromquellen angeschlossen  & $2,872 V$    & $2,901 mA$ \\ \hline
 \end{table}
 
 \subsection{Diskussion}
-Bei der Messung des Stromes am Widerstand $R_X$ ergibt sich im Vergleich \textit{Summe Spannungsmesswerte mit jeweils einer Stromquelle getrennt} zu \textit{Spannungsmessung mit beiden Stromquellen aktiv} eine Differenz von $51 \mu A$. Dies ist mit der Messtoleranz des Amperemeters zu begr\"unden, welches lt. Spezifikation eine Messtoleranz von $\pm0.5\%$ bei der Einstellung \textit{2m} hat. \\
+Bei der Messung des Stromes am Widerstand $R_X$ ergibt sich im Vergleich \textit{Summe Spannungsmesswerte mit jeweils einer Stromquelle getrennt} zu \textit{Spannungsmessung mit beiden Stromquellen aktiv} eine Differenz von $51 \mu A$. Dies ist mit der Messtoleranz des Amperemeters zu begr\"unden. \\
 Bei dem gleichen Gegen\"uberstellung im Bezug auf die Spannung wurde keine Abweichung festgestellt.
 
 
+
+\newpage
 \section{Erste Messung mit Oszilloskop}
 \subsection{Aufgabenstellung}
-In dieser Mess\"ubung soll der Umgang mit Ozsillskop und Frequenzgenerator ge\"ubt werden. Dazu soll eine einfache Schaltung aufgebaut und ein Signale erzeugt und gemessen werden.
+In dieser Mess\"ubung soll der Umgang mit Ozsillskop und Frequenzgenerator ge\"ubt werden. Dazu soll eine einfache Schaltung aufgebaut und ein Signal erzeugt und gemessen werden.
+
+\subsection{Theoretische \"Uberlegung}
+\subsubsection{Berechnung Periodendauer}
+In der Angabe ist eine Frequenz von $5,27 MHz$ angegeben. Da am Funktionsgenerator f\"ur die Funktionsart $Square$ nur die Periodendauer eingestellt werden kann, wird diese berechnet.\\
+\begin{equation}
+T = \frac{1}{5,27 MHz} \approx 190 ns
+\end{equation}
 
 \subsection{Schaltungsaufbau}
 \begin{figure}[H]
@@ -575,41 +633,41 @@ In dieser Mess\"ubung soll der Umgang mit Ozsillskop und Frequenzgenerator ge\"u
 \end{figure}
 
 \subsection{Verwendete Materialien und Ger\"ate}
-
-\subsection{Berechnung}
-In der Angabe ist eine Frequenz von $5,27 MHz$ angegeben. Da am Funktionsgenerator f\"ur die Funktionsart $Square$ nur die Periodendauer eingestellt werden kann, wird diese berechnet.\\
-\begin{equation}
-T = \frac{1}{5,27 MHz} \approx 190 ns
-\end{equation}
+\begin{itemize}
+  \item Oszilloskop: Agilent InfiniiVision MSO-X 3054A
+  \item BNC Kabel
+  \item Funktionsgenerator: Agilent 33220A
+  \item Widerst\"ande: $100 k\Omega$ und $50 \Omega$
+\end{itemize}
 
 \subsection{Durchf\"uhrung}
 \begin{itemize}
   \item Die Schaltung aus Abbildung \ref{Figure3.5.1} wird auf einem Steckbrett aufgebaut.
   \item Am Funktionsgenerator werden folgende Einstellungen vorgenommen:
-    \begin{enumerate}
+    \begin{itemize}
       \item Funktionsart: Rechteck (Taste $Square$)
       \item Frequenz: $5,27 MHz \Leftrightarrow \sim190 ns$ (Softkey \textit{Freq Period})
       \item $3,3 V_{PP}$ (Softkey \textit{Ampl HiLevel})
       \item Offset $1 V$ (Softkey \textit{Offset LoLevel})
       \item Duty Circle $25 \%$ (Softkey \textit{Duty Circle})
       \item Lastimpedanz: HighZ (\textit{Utility} $\rightarrow$ \textit{OUTPUT-Setup})
-    \end{enumerate}
+    \end{itemize}
   \item Der Funktionsgenerator und das Oszilloskop werden mit der Schaltung lt. Schaltplan verbunden.
   \item Die \textit{Auto-Scale} Taste wird gedr\"uckt. Dadurch wird das Oszilloskop so konfiguriert, dass das Eingangssignal bestm\"oglich dargestellt wird.
   \item Mittels Cursorfunktion wird die Amplitude gemessen. Dazu wird ein Y-Cursor am Minimum und ein Y-Cursor am Maximum angelegt. Es wird jeweils der Abstand des Cursors zur X-Achse angezeigt (Abbildung \ref{Figure3.5.2}).
   \item Mittels Cursorfunktion wird die Periodendauer gemessen. Dazu wird ein X-Cursor am positiven Sprung des Rechtecksignals und ein zweiter X-Cursor an der gleichen Stelle eine Periode sp\"ater angelegt (Abbildung \ref{Figure3.5.2})
   \item Mittels Quick-Measure Funktion werden Effektivwert, Mittelwert und der Pk-Pk-Wert gemessen. Dazu werden folgende Measurements am Oszilloskop hinzugef\"ugt (Softkey \textit{Add Measurement}).
-    \begin{enumerate}
+    \begin{itemize}
       \item Effektivwert: \textit{DC RMS-Cyc.}
       \item Mittelwert: \textit{Avg-Cyc.}
       \item Pk-Pk-Wert: \textit{Pk-Pk}
-    \end{enumerate}
+    \end{itemize}
     Aus Abbildung \ref{Figure3.5.3} werden die Messwerte abgelesen (Abbildung  \ref{Figure3.5.4}).
   \item Am Funktionsgenerator wird die Lastimpedanz auf $50 \Omega$ ge\"andert (\textit{Utility} $\rightarrow$ \textit{OUTPUT-Setup}).
   \item Am Funktionsgenerator wird unter der Einstellung \textit{Amplitude} nun $V_{PP} = 1,65 V$ angezeigt.
   \item Die Anzeige am Oszilloskop bleibt unver\"andert.
-  \item Der $100 k\Omega$ Widerstand wird nun durch einen $50 k\Omega$ Widerstand ausgetauscht.
-  \item Mittels Quick-Measure Funktion werden die nochmals die gleichen Messwerte am Oszilloskop gemessen. Aus Abbildung \ref{Figure3.5.5} werden die Messwerte \ref{Figure3.5.4} abgelesen.
+  \item Der $100 k\Omega$ Widerstand wird nun durch einen $50 \Omega$ Widerstand ausgetauscht.
+  \item Mittels Quick-Measure Funktion werden nochmals die gleichen Messwerte am Oszilloskop gemessen. Aus Abbildung \ref{Figure3.5.5} werden die Messwerte \ref{Figure3.5.4} abgelesen.
 \end{itemize}
 
 \subsection{Ergebnisse}
@@ -657,10 +715,11 @@ $R_1=50 \Omega$    & 720 mV               & 70 mV              & 1,83 V         
 \end{table}
 
 \subsection{Diskussion}
-In Abbildung~\ref{Figure3.5.3} sieht man an der positiven Flanke des Rechtecks eine \"Uberschwingung. Dieses Vehalten wird Gibbsches Ph\"anomen genannt. In der Praxis gibt es keine M\"oglichkeit eine exakte Rechteckfunktion zu erzeugen. Stattdessen wird die Funktion mit \"Uberlagerung von Sinusfunktionen verschiedener Frequenzen m\"oglichst genau approximiert. Die \"Uberschwingung ist ein Nebeneffekt dieser \"Uberlagerung. \\
+In Abbildung~\ref{Figure3.5.3} sieht man an der positiven Flanke des Rechtecks eine \"Uberschwingung. Dieses Verhalten wird Gibbsches Ph\"anomen genannt. In der Praxis gibt es keine M\"oglichkeit eine exakte Rechteckfunktion zu erzeugen. Stattdessen wird die Funktion mit \"Uberlagerung von Sinusfunktionen verschiedener Frequenzen m\"oglichst genau approximiert. Die \"Uberschwingung ist ein Nebeneffekt dieser \"Uberlagerung. \\
 
 
 
+\newpage
 \section{Arbitrary Waveform}
 
 \subsection{Aufgabenstellung}
@@ -675,10 +734,20 @@ In diesem Beispiel soll ein moduliertes Signal durch Überlagerung zwei verschie
 
 \subsection{Schaltungsaufbau}
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=100mm]{oszi_sg.png}
-  \caption{Verbindung von Oszilloskop und Funktionsgenerator}
-  \label{Figure6.3.1}
+\centering
+\begin{circuitikz}[european]
+  \draw (0,2) to [short, ->, l=$Frequenzgenerator$](4,2);
+  \draw (4,2) node[inputarrow] {};
+  \draw (8,2) to [short, ->, l=$Oszilloskop$](12,2);
+  \draw (12,2) node[inputarrow] {};
+  \draw (2,4) to [short, -] (6,4);
+  \draw (6,4) to [R=100<\kilo\ohm>, l={$R_1 100k\Omega$}] (6,0);
+  \draw (6,0) to [short, -] (2,0);
+  \draw (6,3.5) to [short, *-] (9,3.5);
+  \draw (6,0.5) to [short, *-] (9,0.5);
+\end{circuitikz}
+\caption{Oszilloskop und Frequenzgenerator}
+\label{Figure6.3.1}
 \end{figure}
 
 \subsection{Durchführung}
@@ -695,6 +764,7 @@ Am Frequenzgenerator (Lastwiderstand \"High Z\") wird zuerst ein Dreieckssignal 
 
 
 
+\newpage
 \section{X/Y-Betrieb}
 
 \subsection{Aufgabenstellung}
@@ -717,14 +787,19 @@ In dieser Aufgabe soll man sich mit dem X/Y-Betrieb des Oszilloskops vertraut ma
 \end{figure}
 
 \subsection{Verwendete Materialien und Ger\"ate}
-BNC Kabel
-
+\begin{itemize}
+  \item Oszilloskop: Agilent InfiniiVision MSO-X 3054A
+  \item BNC Kabel
+  \item Funktionsgenerator: Agilent 33220A
+  \item Widerstand: $50 k\Omega$
+  \item Kondensator: $6,8 \mu F$
+\end{itemize}
 
 \subsection{Durchf\"uhrung}
 \begin{itemize}
   \item Die Schaltung aus Abbildung~\ref{Figure7.3.1} wird auf einem Steckbrett aufgebaut.
-  \item Am Kanal 1 des Oszilloskops wird die Spannung am Widerstand gemessen. Dazu wird der Pluspol des BNC Kabels in der Schaltung zwischen Spannungsquelle und Widerstand verbunden und der Minuspol zwischen Widerstand und Kondensator.
-  \item Am Kanal 2 des Oszilloskops wird die Spannung am Kondensator gemessen. Dazu wird er Pluspol des BNC Kabels in der Schaltung zwischen Spannungsquelle und Widerstand verbunden und der Minuspol zwischen Widerstand und Kondensator.
+  \item Am Kanal 1 des Oszilloskops wird die Spannung am Kondensator gemessen. Dazu wird er Pluspol des BNC Kabels in der Schaltung zwischen Spannungsquelle und Widerstand verbunden und der Minuspol zwischen Widerstand und Kondensator.
+  \item Am Kanal 2 des Oszilloskops wird die Spannung am Widerstand gemessen. Dazu wird der Pluspol des BNC Kabels in der Schaltung zwischen Spannungsquelle und Widerstand verbunden und der Minuspol zwischen Widerstand und Kondensator.
   \item Am Funktionsgenerator werden folgende Einstellungen vorgenommen:
   \begin{itemize}
     \item Funktionsart: Sinus (Taste \textit{Sine})
@@ -737,11 +812,11 @@ BNC Kabel
   \item Nun wird die Frequenz am Funktionsgenerator so adjustiert, dass die Amplituden der beiden Kan\"ale in etwa gleich gro\ss  sind.
   \item Bei einer Frequenz von $500 Hz$ sind die Amplituden der beiden Signale in etwa gleich gro\ss .
   \item Der Funktionsgenerator wird wie folgt eingestellt.
-  \begin{enumerate}
+  \begin{itemize}
     \item Um in den X/Y-Betrieb zu wechseln, wird die Taste \textit{Horiz.} gedr\"uckt.
     \item Auf der X-Achse wird das Signal von Kanal 1 eingestellt. Au\ss erdem wird hier das Signal invertiert geschalten.
     \item Auf der Y-Achse wird das Signal von Kanal 2 eingestellt.
-  \end{enumerate}
+  \end{itemize}
   \item Das geometrische Ergebnis dieser Einstellung ist ein Kreis (Abbildung~\ref{Figure7.6.1}).
   \item Die Frequenz wird am Funktionsgenerator erh\"oht ($900 Hz$) und am Oszilloskop etsteht eine in X-Richtung gestreckte Ellipse (Abbildung~\ref{Figure7.6.2}).
   \item Die Frequenz wird am Funktionsgenerator verringert ($300 Hz$) und am Oszilloskop etsteht eine in Y-Richtung gestreckte Ellipse (Abbildung~\ref{Figure7.6.3}).
@@ -782,9 +857,11 @@ Bildet man nun aus den beiden Funktionen einen Graphen, wobei $U_C$ auf der X-Ac
 Da $U_C(t)$ mit dem Minuspol der Wechselspannungsquelle verbunden ist, muss die Funktion noch zus\"atzlich invertiert werden.
 
 \subsubsection{\"Anderung der Frequenz}
-Bei \"Anderung der Frequenz der Eingangsspannung \"andert sich die Amplitude der Spannung am Kondensator. Dadurch ergibt sich bei erh\"ohung der Frequenz eine Streckung des Kreises in Richtung X-Achse, bei Verringerung der Frequenz ergibt sich eine Streckung in Richtung Y-Achse.
+Bei \"Anderung der Frequenz der Eingangsspannung \"andert sich die Amplitude der Spannung am Kondensator. Dadurch ergibt sich bei Erh\"ohung der Frequenz eine Streckung des Kreises in Richtung X-Achse, bei Verringerung der Frequenz ergibt sich eine Streckung in Richtung Y-Achse.
 
 
+
+\newpage
 \section{Diodenkennlinie}
 
 \subsection{Aufgabenstellung}
