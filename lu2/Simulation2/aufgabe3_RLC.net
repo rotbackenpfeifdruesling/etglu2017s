@@ -1,0 +1,9 @@
+* Q:\Dropbox\uni\2017s\etglu\etglu2017s\lu2\Simulation2\aufgabe3_RLC.asc
+V1 N001 0 AC AC
+R1 N003 N002 1k
+C1 N003 0 100n
+L1 N001 N002 1m
+;tran 0 2m 0
+.ac dec 100 1 1MEG
+.backanno
+.end

@@ -69,11 +69,9 @@
 \begin{tabular}{|p{3.5cm}|p{3.5cm}|p{6.5cm}|}
 \hline \textbf{Matr. Nr.} & \textbf{Kennzahl} & \textbf{Name} \\
 \hline
-& & \\
+1614835 & & Jan Nausner \\
 \hline
-& & \\
-\hline
-& & \\
+1633068 & & David Pernerstorfer \\
 \hline
 \end{tabular}
 \end{table}
@@ -96,7 +94,7 @@
 
 % start of actual lab protocol
 % CHANGE ME!
-
+\newpage
 \section{RC-Tiefpassilter 1. Ordnung}
 
 \subsection{Aufgabenstellung}
@@ -152,6 +150,8 @@ Wenn die Frequenz bei 0 liegt, dann sind Aus- und Eingangsspannung gleich groß.
 \noindent erreicht.\\
 Hier beträgt die Dämpfung ca. $-3dB$ und der Phasengang $-45^{\circ}$ und die Spannung über $R1$ und $C1$ ist gleich. Man kann anhand des Diagramms auch gut erkennen, dass die Filtersteilheit bei einem RC-Tiefpass 1.Ordnung $-20dB/Dekade$ beträgt.
 
+
+\newpage
 \section{RL-Hochpassfilter 1. Ordnung}
 
 \subsection{Aufgabenstellung}
@@ -212,5 +212,45 @@ Hier beträgt die Dämpfung ca. $3dB$ und der Phasengang $45^{\circ}$ und die Sp
 \end{figure}
 
 \noindent Durch den parasitären Serienwiderstand wird die Schaltung verändert und somit auch die Filtereigenschaften. Verglichen mit dem Bode-Diagramm für das System ohne parasitären Serienwiderstand zeigt sich, dass hier eine starke Veränderung des gewünschten Hochpassverhaltens eintritt und dieses kaum mehr vorhanden ist.
+
+
+\newpage
+\section{Simulation eines dynamischen Systems 2. Ordnung}
+\subsection{Aufgabenstellung}
+Der Amplituden- und Phasengang eines dynamischen Systems 2. Ordnung soll mittels LT-Spice simuliert werden.
+
+\subsection{Schaltplan}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=100mm]{filter03_schaltung.PNG}
+  \caption{RLC-System}
+\end{figure}
+
+\subsection{Durchf\"uhrung}
+Zuerst wird die Schaltung mit $R = 22 \Omega$, $L = 1 mH$ ($Rs = 0 \Omega$) und $C = 100 nF$ zusammengef\"ugt. Der Frequenzbereich von $1 Hz$ bis $1 MHz$ wird simuliert. Die entsprechende Einstellung findet man unter \textit{Simulate} - \textit{Edit Simulation Command} - Reiter \textit{AC Analysis}. Folgende Einstellungen werden vorgenommen.
+\begin{itemize}
+  \item Type of Sweep: \textit{Decade}
+  \item Number of Points per Decade: 100
+  \item Start frequency: 1
+  \item Stop frequency: 1MEG
+\end{itemize}
+\noindent Nun wird die Simulation gestartet und Phasengang und Amplitudengang werden geplottet. Die gleiche Simulation wird mit ge\"anderten Widerstandswerten durchgef\"uhrt ($180 \Omega$, $1 k\Omega$).
+
+\subsection{Ergebnis}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=150mm]{bode_filter03_22o.PNG}
+  \caption{Bode-Diagramm RLC-System mit $22 \Omega$ Widerstand}
+\end{figure}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=150mm]{bode_filter03_180o.PNG}
+  \caption{Bode-Diagramm RLC-System mit $180 \Omega$ Widerstand}
+\end{figure}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=150mm]{bode_filter03_1ko.PNG}
+  \caption{Bode-Diagramm RLC-System mit $1 k\Omega$ Widerstand}
+\end{figure}
 
 \end{document}
