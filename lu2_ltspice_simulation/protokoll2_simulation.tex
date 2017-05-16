@@ -225,6 +225,7 @@ Der Amplituden- und Phasengang eines dynamischen Systems 2. Ordnung soll mittels
   \centering
   \includegraphics[width=100mm]{filter03_schaltung.PNG}
   \caption{RLC-System}
+  \label{aufgabe3_schaltplan}
 \end{figure}
 
 \subsection{Durchf\"uhrung}
@@ -242,6 +243,7 @@ Zuerst wird die Schaltung mit $R = 22 \Omega$, $L = 1 mH$ ($Rs = 0 \Omega$) und 
   \centering
   \includegraphics[width=150mm]{bode_filter03_22o.PNG}
   \caption{Bode-Diagramm RLC-System mit $22 \Omega$ Widerstand}
+  \label{aufgabe3_bode1}
 \end{figure}
 \begin{figure}[H]
   \centering
@@ -253,5 +255,8 @@ Zuerst wird die Schaltung mit $R = 22 \Omega$, $L = 1 mH$ ($Rs = 0 \Omega$) und 
   \includegraphics[width=150mm]{bode_filter03_1ko.PNG}
   \caption{Bode-Diagramm RLC-System mit $1 k\Omega$ Widerstand}
 \end{figure}
+
+\noindent In der Schaltung aus Abbildung ~\ref{aufgabe3_schaltplan} werden RL und RC Tiefpassfilter kombiniert und man erh\"ahlt einen Tiefpass 2. Ordnung. Dadurch f\"allt die Spannung oberhalb der Grenzfrequenz schneller ab, im Vergleich zu einem Tiefpass 1. Ordnung. Bei der Schaltung mit einem Widerstand von $22 \Omega$ ist eine Spannung\"uberh\"ohung zu erkennen. Dieser Effekt entsteht im Resonanzfall von Eingangsspannung und Eigenfrequenz des RLC-Systems. Die Bodediagramme unterscheiden sich in der Flankensteilheit der Amplituden- und Phaseng\"ange. Die Grenzfrequenz des Kondensators wird bei gro\ss en Widerstand fr\"uher erreicht ($f_c = \frac{1}{2\pi*R*C}$). Die Grenzfrequenz der Spule hingegen wird bei gro\ss en Widerstand erst sp\"ater erreicht ($f_l = \frac{R}{2\pi*L}$). Das bewirkt, dass bei gro\ss em Widerstand die D\"ampfung schon bei geringerer Frequenz einsetzt, jedoch ist die Flankensteilheit bis zur Grenzfrequenz der Spule geringer.
+
 
 \end{document}
