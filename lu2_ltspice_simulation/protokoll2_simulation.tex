@@ -42,6 +42,15 @@
 \usepackage{setspace}
 \usepackage{csquotes}
 
+% hyperref settings
+\hypersetup{
+    colorlinks=false,       % false: boxed links; true: colored links
+    linkcolor=black,          % color of internal links (change box color with linkbordercolor)
+    citecolor=black,        % color of links to bibliography
+    filecolor=black,      % color of file links
+    urlcolor=black           % color of external links
+}
+
 \begin{document}
 
 \begin{titlepage}
@@ -61,7 +70,7 @@
 
 % fill in group number and date of lab here
 % CHANGE ME!
-{\Large Gruppennr.: \ldots \hspace{1cm} Datum der Laborübung: \ldots\ldots\ldots\ldots\ldots}
+{\Large Gruppennr.: 22 \hspace{1cm} Datum der Laborübung: 16.05.2017}
 
 % fill in IDs and names here
 % CHANGE ME!
@@ -70,9 +79,9 @@
 \begin{tabular}{|p{3.5cm}|p{3.5cm}|p{6.5cm}|}
 \hline \textbf{Matr. Nr.} & \textbf{Kennzahl} & \textbf{Name} \\
 \hline
-1614835 & & Jan Nausner \\
+1614835 & 033 535 & Jan Nausner \\
 \hline
-1633068 & & David Pernerstorfer \\
+1633068 & 033 535 & David Pernerstorfer \\
 \hline
 \end{tabular}
 \end{table}
@@ -92,6 +101,10 @@
 
 \end{titlepage}
 \setcounter{page}{2}
+
+\newpage
+\setcounter{tocdepth}{1}
+\tableofcontents
 
 % start of actual lab protocol
 % CHANGE ME!
