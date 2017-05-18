@@ -1,9 +1,0 @@
-* Q:\Dropbox\uni\2017s\etglu\etglu2017s\lu2_ltspice_simulation\Simulation2\aufgabe3_RLC.asc
-V1 N001 0 SINE(0 0.5 15k 0)
-R1 N003 N002 22
-C1 NC_01 0 100n
-L1 N001 N002 1m Rser=0
-;ac dec 100 1 1MEG
-.tran 0 0.1 0
-.backanno
-.end
