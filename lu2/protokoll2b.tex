@@ -143,17 +143,17 @@ Die charakteristischen Eigenschaften eines RC-Tiefpassfilters mit realen Bauteil
 
 
 \subsection{Durchf\"uhrung}
-Die Schaltung wurde gem\"a\ss\, Schaltplan mit einem Widerstand $R=22k\Omega$ und einem Kondensator $C=10nF$ aufgebaut. Um die Sprungantwort aufzuzeichnen wurde am Eingang ein periodisches Rechtecksignal mit $1 V_{PP}$, Offset $0,5 V$, $50 \%$ Duty Circle und Frequenz $250 Hz$, angelegt. Die Eingangs- und Ausgangsspannung wurden mit dem Oszilloskop im Zeitbereich aufgezeichnet (siehe Abbildung~\ref{Figure02}). Die Zeitkonstante wurde mit den gemessenen Bauteilwerten ($R=21,75 k\Omega$, $C=10,28nF$) berechnet und ergibt einen Wert von $\tau = RC = 226,16 \mu s$. Die Zeitkonstante wurde aus der Sprungantwort ausgelesen indem der Zeitpunkt gemessen wurde, an dem das Signal der Sprungantwort $632,75 mV$ (entspricht zirka $63 \%$ der Eingangsspannung) betrug. \\
-Am Eingang wurde nun ein Sinussignal mit $1 V_{PP}$, Offset $0 V$ angelegt. Die Eingangs- und Ausgangsspannung bzw. die Phasenverschiebung wurden mit dem Oszilloskop gemessen. Der Frequenzbereich von $10Hz$ bis $1MHz$ mit 5 Frequenzmesspunkten pro Dekade wurden abgetastet. Weiters wurde ein Frequenzmesspunkt an der Grenzfrequenz gesetzt. Die Messpunkte wurden in tabellarischer Form aufgezeichnet und in eine doppelt logarithmischen Diagrammm eingetragen (siehe Abbildung~\ref{Figure04}). Ab der Frequenz von rund $20kHz$ konnte die Phasenverschiebung nicht mehr gemessen werden, da der Messwert am Oszilloskop zu stark schwankte.
+Die Schaltung wurde gem\"a\ss\, Schaltplan mit einem Widerstand $R=22k\Omega$ und einem Kondensator $C=10nF$ aufgebaut. Um die Sprungantwort aufzuzeichnen wurde am Eingang ein periodisches Rechtecksignal mit $1 V_{PP}$, Offset $0,5 V$, $50 \%$ Duty Circle und Frequenz $250 Hz$, angelegt. Die Eingangs- und Ausgangsspannung wurden mit dem Oszilloskop im Zeitbereich aufgezeichnet (siehe Abbildung~\ref{Figure02}). Die Zeitkonstante wurde mit den gemessenen Bauteilwerten ($R=21,75 k\Omega$, $C=10,28nF$) berechnet und ergibt einen Wert von $\tau = RC = 226,16 \mu s$. Die Zeitkonstante wurde aus der Sprungantwort ausgelesen indem der Zeitpunkt gemessen wurde, an dem das Signal der Sprungantwort $632,75 mV$ (entspricht zirka $63 \%$ der Eingangsspannung) betrug (Vergleich siehe Tabelle ~\ref{Figure03}). \\
+Am Eingang wurde nun ein Sinussignal mit $1 V_{PP}$, Offset $0 V$ angelegt. Die Eingangs- und Ausgangsspannung bzw. die Phasenverschiebung wurden mit dem Oszilloskop gemessen. Der Frequenzbereich von $10Hz$ bis $1MHz$ mit 5 Frequenzmesspunkten pro Dekade wurden abgetastet. Weiters wurde ein Frequenzmesspunkt an der Grenzfrequenz gesetzt. Die Messpunkte wurden in tabellarischer Form aufgezeichnet und in ein doppelt logarithmisches Diagramm eingetragen (siehe Abbildung~\ref{Figure04}). Ab der Frequenz von rund $20kHz$ konnte die Phasenverschiebung nicht mehr gemessen werden, da der Messwert am Oszilloskop sehr schwach war und dadurch zu stark schwankte.
 
 \subsection{Ergebnis \& Diskussion}
 \begin{figure}[H]
   \centering
-  \includegraphics[width=100mm]{rc_tiefpassfilter_sprungantwort.png}
+  \includegraphics[width=100mm]{sprungantwort_rc_tiefpass.png}
   \caption{Sprungantwort RC Tiefpass}
   \label{Figure02}
 \end{figure}
-\noindent Die Sprungantwort der RC-Filter schaltung l\"asst auf einen Tiefpass 1.Ordnung schlie\ss en.
+\noindent Die Sprungantwort der RC-Filterschaltung l\"asst auf einen Tiefpass 1.Ordnung schlie\ss en, da bei niedirger Frequenz die D\"ampfung $0dB$ ist und bei hoher Frequenz eine starke D\"ampfung zu erkennen ist.
 
 \begin{table}[H]
   \centering
@@ -169,11 +169,17 @@ Am Eingang wurde nun ein Sinussignal mit $1 V_{PP}$, Offset $0 V$ angelegt. Die 
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=100mm]{sprungantwort_rc_tiefpass.png}
-  \caption{Bodediagramm RC-Tiefpass durch Messungen}
+  \includegraphics[width=100mm]{amplitudengang_rc_tiefpass.png}
+  \caption{Amplitudengang RC-Tiefpass durch Messungen}
   \label{Figure04}
 \end{figure}
-In Abbildung~\ref{Figure04} und Abbildung~\ref{Figure045} sind Amplituden- und Phasengang des RC-Tiefpassfilters anhand der gemessenen Werte dargestellt. Der Graph entspricht der erwarteten Form aus der Simulation. Bei der Grenzfrequenz ($723Hz$) wurde am Ausgang eine Spannung von $750mV$ und eine Phasenverschiebung von $-46^{\circ}$ gemessen. Diese Werte sind plausibel, da lt. Berechnung und Simulation die Ausgangsspannung $\frac{1V}{\sqrt{2}} \approx 707,11mV$ und die Phasenverschiebung $-45^{\circ}$ sind. Bis zur Frequenz von rund $10kHz$ hat der Amplitudengang, wie erwartet, eine Filtersteilheit von $-20db/Dekade$. Bei idealen Bauteilen w\"are der Spannungswert ab einer gewissen Frequenz $0 V$. Bei realen Bauteilen jedoch wird die D\"ampfung von nicht errreich, stattdessen geht die D\"ampfung, wie in Abbildung~\ref{} zu erkennen, asymptotisch gegen $0V$.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=100mm]{phasengang_rc_tiefpass.png}
+  \caption{Phasengang RC-Tiefpass durch Messungen}
+  \label{Figure05}
+\end{figure}
+In Abbildung~\ref{Figure04} und Abbildung~\ref{Figure05} sind Amplituden- und Phasengang des RC-Tiefpassfilters anhand der gemessenen Werte dargestellt. Der Graph entspricht der erwarteten Form aus der Simulation. Bei der Grenzfrequenz ($723Hz$) wurde am Ausgang eine Spannung von $750mV$ und eine Phasenverschiebung von $-46^{\circ}$ gemessen. Diese Werte sind plausibel, da lt. Berechnung und Simulation die Ausgangsspannung $\frac{1V}{\sqrt{2}} \approx 707,11mV$ und die Phasenverschiebung $-45^{\circ}$ sind. Bis zur Frequenz von rund $10kHz$ hat der Amplitudengang, wie erwartet, eine Filtersteilheit von $-20db/Dekade$. Bei idealen Bauteilen w\"are der Spannungswert ab einer gewissen Frequenz $0 V$. Bei realen Bauteilen jedoch wird diese D\"ampfung ($0V$) nie erreicht, stattdessen geht die D\"ampfung, wie in Abbildung~\ref{Figure04} zu erkennen, asymptotisch gegen $0V$.
 
 
 
@@ -196,34 +202,35 @@ In Abbildung~\ref{Figure04} und Abbildung~\ref{Figure045} sind Amplituden- und P
     (0,0) to [short, o-o] (4,0);
 \end{circuitikz}
 \caption{RL Hochpassfilter 1.Ordnung}
-\label{Figure05}
+\label{Figure06}
 \end{figure}
 
 \subsection{Durchf\"uhrung}
-Die Schaltung wurde gem\"a\ss Schaltplan mit einem Widerstand $R=47\Omega$ und einem Kondensator $L=1mH$ aufgebaut. Um die Sprungantwort aufzuzeichnen wurde am Eingang ein periodisches Rechtecksignal mit $1 V_{PP}$, Offset $0,5 V$, $50 \% Duty Circle$ und Frequenz $2,5 kHz$, angelegt. Die Eingangs- und Ausgangsspannung wurden mit dem Oszilloskop im Zeitbereich aufgezeichnet (siehe Abbildung~\ref{Figure0}). Die Zeitkonstante wurde mit den gemessenen Bauteilwerten ($R=46,83 k\Omega$, $C=1,075mH$) berechnet und ergibt einen Wert von $\tau = \frac{L}{R} = 22,96 \mu s$. Die Zeitkonstante wurde aus der Sprungantwort ausgelesen indem der Zeitpunkt gemessen wurde, an dem das Signal der Sprungantwort $370 mV$ (entspricht $37 \%$ der Eingangsspannung) betrug. \\
-Am Eingang wurde nun ein Sinussignal mit $1 V_{PP}$, Offset $0 V$ angelegt. Die Eingangs- und Ausgangsspannung Spannung bzw. die Phasenverschiebung wurden mit dem Oszilloskop gemessen. Der Frequenzbereich von $10Hz$ bis $1MHz$ mit 5 Frequenzmesspunkten pro Dekade wurden abgetastet. Weiters wurde ein Frequenzmesspunkt an der Grenzfrequenz gesetzt. Die Messpunkte wurden in tabellarischer Form aufgezeichnet und in eine doppelt logarithmischen Diagrammm eingetragen (siehe Abbildung~\ref{Figure07}).
+Die Schaltung wurde gem\"a\ss Schaltplan mit einem Widerstand $R=47\Omega$ und einem Kondensator $L=1mH$ aufgebaut. Um die Sprungantwort aufzuzeichnen wurde am Eingang ein periodisches Rechtecksignal mit $1 V_{PP}$, Offset $0,5 V$, $50 \% Duty Circle$ und Frequenz $2,5 kHz$, angelegt. Die Eingangs- und Ausgangsspannung wurden mit dem Oszilloskop im Zeitbereich aufgezeichnet (siehe Abbildung~\ref{Figure07}). Die Zeitkonstante wurde mit den gemessenen Bauteilwerten ($R=46,83 k\Omega$, $C=1,075mH$) berechnet und ergibt einen Wert von $\tau = \frac{L}{R} = 22,96 \mu s$. Die Zeitkonstante wurde aus der Sprungantwort ausgelesen indem der Zeitpunkt gemessen wurde, an dem das Signal der Sprungantwort $37 \%$ der Eingangsspannung betrug. \\
+Am Eingang wurde nun ein Sinussignal mit $1 V_{PP}$, Offset $0 V$ angelegt. Die Eingangs- und Ausgangsspannung bzw. die Phasenverschiebung wurden mit dem Oszilloskop gemessen. Der Frequenzbereich von $10Hz$ bis $1MHz$ wurde mit 5 Frequenzmesspunkten pro Dekade abgetastet. Weiters wurde ein Frequenzmesspunkt an der Grenzfrequenz gesetzt. Die Messpunkte wurden in tabellarischer Form aufgezeichnet und in eine doppelt logarithmischen Diagrammm eingetragen (siehe Abbildung~\ref{Figure08} und Abbildung~\ref{Figure09}).
 
 \subsection{Ergebnis \& Diskussion}
 \begin{figure}[H]
   \centering
-  \includegraphics[width=100mm]{sprungantwort_rc_tiefpass.png}
-  \caption{Sprungantwort RL Tiefpass}
-  \label{Figure06}
+  \includegraphics[width=100mm]{sprungantwort_rl_hochpass.png}
+  \caption{Sprungantwort RL Hochpass}
+  \label{Figure07}
 \end{figure}
-TODO: figure anpassen
-\noindent Die Sprungantwort der RL-Filter schaltung l\"asst auf einen Hochpassfilter 1.Ordnung schlie\ss en. Ein Hochpassfilter kann auch mit einem RC-Glied realisiert werden, wobei die Ausgangsspannung am Widerstand abgenommen wird.
+\noindent Die Sprungantwort der RL-Filterschaltung l\"asst auf einen Hochpassfilter 1.Ordnung schlie\ss en, da bei niedriger Frequenz die D\"ampfung der Spannungsamplitude stark ist und bei hoher Frequenz auf $0 dB$ zur\"uck geht. Ein Hochpassfilter kann auch mit einem RC-Glied realisiert werden, wobei die Ausgangsspannung am Widerstand abgenommen wird.
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=100mm]{sprungantwort_rc_tiefpass.png}
-  \caption{Bodediagramm RC-Tiefpass durch Messungen}
-  \label{Figure07}
+  \includegraphics[width=100mm]{amplitudengang_rl_hochpass.png}
+  \caption{Amplitudengang RL-Hochpass durch Messungen}
+  \label{Figure08}
 \end{figure}
-TODO: insert Amplituden und Phasengang von RC-Tiefpassfilter \\
-TODO: wie Dämpfung begründen?
-In Abbildung~\ref{Figure07} sind Amplituden- und Phasengang des RL-Hochpassfilters anhand der gemessenen Werte dargestellt. Der Graph entspricht der erwarteten Form aus der Simulation. Die Eingangsspannung wird durch die Reflexion der Spule beeintr\"achtigt. Je h\"oher die Frequenz, desto st\"arker wurde die Verst\"arkung der Eingangsspannung. Bis zur Frequenz von $1 kHz$ konnte kaum eine Ver\"anderung festgestellt werden, bei der Frequenz von $60 kHz$ war die gemessene Eingangsspannung bereits doppelt so gro\ss. Das Verh\"ahtnis von Eingangs- und Ausgangsspannung verhielt sich jedoch wie in der Simulation. Bei der Grenzfrequenz ($7480, 28Hz$) wurde am Eingang $U_e = 1,35V$, am Ausgang $U_a = 980mV$ und eine Phasenverschiebung von $-40,01^{\circ}$ gemessen.
-
-  Bei der Grenzfrequenz ($7480,28 Hz$) wurde am Ausgang eine Spannung von $980mV$ und eine Phasenverschiebung von $-40,01^{\circ}$ gemessen. Diese Werte sind plausibel, da lt. Berechnung und Simulation die Ausgangsspannung $\frac{1V}{\sqrt{2}} \approx 707,11mV$ und die Phasenverschiebung $-45^{\circ}$ sind. Bis zur Frequenz von rund $10kHz$ hat der Amplitudengang, wie erwartet, eine Filtersteilheit von $-20db/Dekade$. Danach nimmt die D\"ampfung aufgrund der realen Bauteile ab.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=100mm]{phasengang_rl_hochpass.png}
+  \caption{Phasengang RL-Hochpass durch Messungen}
+  \label{Figure09}
+\end{figure}
+In Abbildung~\ref{Figure07} sind Amplituden- und Phasengang des RL-Hochpassfilters anhand der gemessenen Werte dargestellt. Der Graph entspricht der erwarteten Form aus der Simulation. Die Eingangsspannung wird durch die Reflexion der Spule beeintr\"achtigt. Je h\"oher die Frequenz, desto st\"arker wurde die Verst\"arkung der Eingangsspannung. Bis zur Frequenz von $1 kHz$ konnte kaum eine Ver\"anderung festgestellt werden, bei der Frequenz von $60 kHz$ war die gemessene Eingangsspannung bereits doppelt so gro\ss. Das Verh\"ahtnis von Eingangs- und Ausgangsspannung verhielt sich jedoch wie in der Simulation. Bei der Grenzfrequenz ($7480$) wurde am Eingang $U_e = 650mV$, am Ausgang $U_a = 470mV$ und eine Phasenverschiebung von $43^{\circ}$ gemessen.
 
 
 
