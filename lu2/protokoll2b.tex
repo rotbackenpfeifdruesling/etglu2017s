@@ -153,7 +153,7 @@ Am Eingang wurde nun ein Sinussignal mit $1 V_{PP}$, Offset $0 V$ angelegt. Die 
   \caption{Sprungantwort RC Tiefpass}
   \label{Figure02}
 \end{figure}
-\noindent Die Sprungantwort der RC-Filterschaltung l\"asst auf einen Tiefpass 1.Ordnung schlie\ss en, da bei niedirger Frequenz die D\"ampfung $0dB$ ist und bei hoher Frequenz eine starke D\"ampfung zu erkennen ist.
+\noindent Die Sprungantwort der RC-Filterschaltung l\"asst auf einen Tiefpass 1.Ordnung schlie\ss en, da bei niedriger Frequenz die D\"ampfung $0dB$ ist und bei hoher Frequenz eine starke D\"ampfung zu erkennen ist.
 
 \begin{table}[H]
   \centering
@@ -253,12 +253,25 @@ Die Sprungantwort sowie das Frequenzverhalten eines RLC-Systems 2. Ordnung soll 
 Die Schaltung wurde gem\"aß Schaltplan mit den Bauteilwerten $L=1mH$, $C=100nF$ und $R=22\Omega$ aufgebaut. Um die Sprungantwort des Systems mit dem Oszilloskop aufzuzeichnen, wurde als Eingangssignal eine periodische Rechteckschwingung mit $1Vpp$, Offset $0,5V$ und Frequenz $2,5kHz$ (Periodendauer $400\mu s$) angelegt. Weiters wurde das Frequenz- bzw. D\"ampfungsverhalten des Systems mit einem Sinussignal ($1Vpp$) ermittelt. Hierbei wurde zuerst die Resonanzfrequenz durch Variation der Frequenz des Eingangssignals bestimmt. Diese ist erreicht, wenn Eingangs- und Aussgangsignal eine Phasenverschiebung von $-90^{\circ}$ zueinander aufweisen. Um den Amplitudengang des Systems zu ermitteln, wurden Eingangs- und Ausgangspannung an verschiedenen Frequenzmesspunkten im lograithmischen Maßstab ermittelt. Im Bereich der Resonanzfrequenz wurden zusätzlich Messpunkte gewählt, um die Genauigkeit zu erhöhen. Die oben beschriebene Vorgangsweise wurde mit den Widerstandswerten $R = 183 \Omega$ (in der Angabe wurden $180\Omega$ verlangt, es gibt jedoch keinen Normwiderstand mit diesem Wert, darum wurden hier ein $150\Omega$ und ein $33\Omega$ in Serie geschalten) und $R = 1k\Omega$ wiederholt.
 
 \subsection{Ergebnis \& Diskussion}
+Die Resonanzfrequenz des Systems ergibt sich aus folgender Formel:
+\begin{figure}[H]
+  \centering
+  $f_R = \sqrt{f_H*f_L} = \frac{1}{2\pi\sqrt{LC}} \approx 15916Hz$
+\end{figure}
+
 \begin{figure}[H]
   \centering
   \includegraphics[width=100mm]{sprungantwort_rlc_22.png}
   \caption{Sprungantwort bei $R=22\Omega$}
 \end{figure}
-Durch den kleinen Widerstand ($R=22\Omega$) ist die Dämpfung des Systems sehr gering und es wird auch das Schwingungsverhalten des $LC$-Glieds deutlich sichtbar (\"Uberschwingung). Verursacht durch die parasit\"aren Eigenschaften der realen Bauelemente kommt es auch zu Reflexionen, die sich auf die Messung der Eingangsspannung auswirken.
+Durch den kleinen Widerstand ($R=22\Omega$) ist die Dämpfung des Systems sehr gering und es wird auch das Schwingungsverhalten des $LC$-Glieds deutlich sichtbar (\"Uberschwingung). Verursacht durch die parasit\"aren Eigenschaften der realen Bauelemente kommt es zu Effekten, die sich auf die Eingansspannung auswirken.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=150mm]{bode_rlc_22.png}
+  \caption{Bode-Diagramm (Amplitudengang) bei $R=22\Omega$}
+\end{figure}
+\noindent Die gemessene Resonanzfrequenz betr\"agt hier $\sim15,8kHz$ (Abweichung $-0,7\%$). Im Bereich von $f_R$ erkennt man am Bode-Diagramm, dass hier tats\"achlich eine Verstärkung des Eingangsignals stattfindet. Dies lässt sich durch die kleine Dämpfung bei $R=22\Omega$ erkl\"aren, wodurch sich das $LC$-Glied im Resonanzfall befindet. Nach dem die Resonanzfrequenz erreicht wurde, lässt sich die typische Filtersteilheilt von $-40dB/Dekade$ gut erkennen.\\
 
 \begin{figure}[H]
   \centering
@@ -269,15 +282,28 @@ Durch den kleinen Widerstand ($R=22\Omega$) ist die Dämpfung des Systems sehr g
 
 \begin{figure}[H]
   \centering
+  \includegraphics[width=150mm]{bode_rlc_180.png}
+  \caption{Bode-Diagramm (Amplitudengang) bei $R=183\Omega$}
+\end{figure}
+\noindent Die gemessene Resonanzfrequenz betr\"agt hier $\sim15,5kHz$ (Abweichung $-2,61\%$). Das System befindet sich im aperiodischen Grenzfall. Auch hier lässt sich die typische Filtersteilheit von $-40dB/Dekade$ aus dem Diagramm ablesen.\\
+
+\begin{figure}[H]
+  \centering
   \includegraphics[width=100mm]{sprungantwort_rlc_1k.png}
   \caption{Sprungantwort bei $R=1k\Omega$}
 \end{figure}
-\noindent Durch den großen Widerstand von $R=1k\Omega$ wird die D\"ampfung des Systems sehr groß. Dadurch wird in der Folge die anliegende Rechteckspannung stark verschliffen (die Energiespeicher werden durch die große Zeitkonstante nie vollst\"andig geladen).\\\\
-Die Resonanzfrequenz des Systems ergibt sich aus folgender Formel:
+\noindent Durch den großen Widerstand von $R=1k\Omega$ wird die D\"ampfung des Systems sehr groß. Dadurch wird in der Folge die anliegende Rechteckspannung stark verschliffen.
+
 \begin{figure}[H]
   \centering
-  $f_R = \sqrt{f_H*f_L} = \frac{1}{2\pi\sqrt{LC}} \approx 15916Hz$
+  \includegraphics[width=150mm]{bode_rlc_1k.png}
+  \caption{Bode-Diagramm (Amplitudengang) bei $R=1k\Omega$}
 \end{figure}
+\noindent Durch den großen Widerstand wird die Grenzfrequenz des Kondensators $f_C$ (orange) früher erreicht, sie liegt laut Messung bei $\sim1,6kHz$. Die Grenzfrequenz der Spule $f_L$ (gr\"un) wird laut Messung erst bei $\sim145kHz$ erreicht. Nachteilig ist hier, dass im Bereich zwischen $f_C$ und $f_L$ nur eine Filtersteilheit von $-20dB/Dekade$ erreicht wird.\\\\
+
+\noindent Der Widerstand hat aus rein mathematischer Sicht keinen Einfluss auf die Resonanzfrequenz, wie man an obenstehender Formel sehen kann. Bei den Messungen zeigen sich jedoch leichte Abweichungen von der berechneten Resonanzfrequenz, dies sind auf die Eigenschaften realer Bauteile zurückzuführen.\\\\
+
+\noindent Im Vergleich zu den Simulationen lässt sich sagen, dass das simulierte Verhalten des Filters mit verschiedenen Widerständen im Labor sehr gut messbar und nachvollziehbar war. Es zeigen sich jedoch einige Ungenauigkeiten, die auf reale Bauteile und Messfehler zurückzuführen sind.\\\\
 
 \noindent Die \"Ubertragungsfunktion des Systems lautet:
 \begin{figure}[H]
@@ -285,29 +311,6 @@ Die Resonanzfrequenz des Systems ergibt sich aus folgender Formel:
   $\frac{U_a}{U_e} = \frac{Z_C}{Z_R+Z_L+Z_C} = \frac{\frac{1}{j\omega C}}{R+j\omega L+\frac{1}{j\omega C}} = \frac{1}{j\omega CR-\omega^2CL+1} = \frac{1}{s^2CL+sCR+1}$
 \end{figure}
 
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=150mm]{bode_rlc_22.png}
-  \caption{Bode-Diagramm (Amplitudengang) bei $R=22\Omega$}
-\end{figure}
-\noindent Die gemessene Resonanzfrequenz betr\"agt hier $\sim15800Hz$. Im Bereich von $f_R$ erkennt man am Bode-Diagramm, dass hier tats\"achlich eine Verstärkung des Eingangsignals stattfindet. Dies lässt sich durch die kleine Dämpfung bei $R=22\Omega$ erkl\"aren, wodurch sich das $LC$-Glied im Resonanzfall befindet. Nach dem die Resonanzfrequenz erreicht wurde, lässt sich die typische Filtersteilheilt von $-40dB/Dekade$ gut erkennen.\\
-TODO: Messdaten einfügen
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=150mm]{bode_rlc_180.png}
-  \caption{Bode-Diagramm (Amplitudengang) bei $R=183\Omega$}
-\end{figure}
-\noindent Die gemessene Resonanzfrequenz betr\"agt hier $\sim15500Hz$. Das System befindet sich im aperiodischen Grenzfall, \\
-TODO: Messdaten einfügen
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=150mm]{bode_rlc_1k.png}
-  \caption{Bode-Diagramm (Amplitudengang) bei $R=1k\Omega$}
-\end{figure}
-TODO: Resonanzfrequenz messen\\
-TODO: Messdaten einfügen\\
 
 \begin{figure}[H]
   \centering
