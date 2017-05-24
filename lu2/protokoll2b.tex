@@ -271,7 +271,15 @@ Die Resonanzfrequenz des Systems ergibt sich aus folgender Formel:
   \includegraphics[width=150mm]{bode_rlc_22.png}
   \caption{Bode-Diagramm (Amplitudengang) bei $R=22\Omega$}
 \end{figure}
-\noindent Die gemessene Resonanzfrequenz betr\"agt hier $\sim15,8kHz$ (Abweichung $-0,7\%$). Im Bereich von $f_R$ erkennt man am Bode-Diagramm, dass hier tats\"achlich eine Verstärkung des Eingangsignals stattfindet. Dies lässt sich durch die kleine Dämpfung bei $R=22\Omega$ erkl\"aren, wodurch sich das $LC$-Glied im Resonanzfall befindet, es kommt zu \"Uberschwingungen. Nach dem die Resonanzfrequenz erreicht wurde ist die D\"ampfung sehr stark, danach l\"asst sich die typische Filtersteilheilt eines Tiefpassfilters 2.Ordnung von $-40dB/Dekade$ gut erkennen.\\
+\noindent Die gemessene Resonanzfrequenz betr\"agt hier $\sim15,8kHz$ (Abweichung $-0,7\%$). Von $10-2000Hz$ ist die Dämpfung $0dB$, das Ausgangssignal entspricht dem Eingangssignal. Im Bereich um $f_R$ erkennt man am Bode-Diagramm, dass hier tats\"achlich eine Verstärkung des Eingangsignals stattfindet. Dies lässt sich durch die kleine Dämpfung bei $R=22\Omega$ erkl\"aren, wodurch sich das $LC$-Glied im Resonanzfall befindet, es kommt zu \"Uberschwingungen. Nach dem die Resonanzfrequenz erreicht wurde ist die D\"ampfung sehr stark, danach l\"asst sich die typische Filtersteilheilt eines Tiefpassfilters 2.Ordnung von $-40dB/Dekade$ gut erkennen.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=150mm]{phasengang_rlc_22.png}
+  \caption{Phasengang bei $R=22\Omega$}
+\end{figure}
+
+\noindent Bei $-90{\circ}$ Phasenverschiebung wird die Resonanzfrequenz erreicht.
 
 \begin{figure}[H]
   \centering
@@ -285,14 +293,23 @@ Die Resonanzfrequenz des Systems ergibt sich aus folgender Formel:
   \includegraphics[width=150mm]{bode_rlc_180.png}
   \caption{Bode-Diagramm (Amplitudengang) bei $R=183\Omega$}
 \end{figure}
-\noindent Die gemessene Resonanzfrequenz betr\"agt hier $\sim15,5kHz$ (Abweichung $-2,61\%$). Das System befindet sich im aperiodischen Grenzfall. Auch hier lässt sich die typische Filtersteilheit von $-40dB/Dekade$ aus dem Diagramm ablesen.\\
+
+\noindent Die gemessene Resonanzfrequenz betr\"agt hier $\sim15,5kHz$ (Abweichung $-2,61\%$). Das System befindet sich im aperiodischen Grenzfall. Von $10-2000Hz$ ist die Dämpfung $0dB$, das Ausgangssignal entspricht dem Eingangssignal. Auch hier lässt sich die typische Filtersteilheit von $-40dB/Dekade$ nach dem Erreichen der Resonanzfrequenz aus dem Diagramm ablesen.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=150mm]{phasengang_rlc_180.png}
+  \caption{Phasengang bei $R=183\Omega$}
+\end{figure}
+
+\noindent Bei $-90{\circ}$ Phasenverschiebung wird die Resonanzfrequenz erreicht.
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=100mm]{sprungantwort_rlc_1k.png}
   \caption{Sprungantwort bei $R=1k\Omega$}
 \end{figure}
-\noindent Durch den großen Widerstand von $R=1k\Omega$ ist die Zeitkonstante des Systems sehr groß. Dadurch wird in der Folge die anliegende Rechteckspannung stark verschliffen.
+\noindent Durch den großen Widerstand von $R=1k\Omega$ ist die Zeitkonstante des Systems sehr groß. Dadurch wird die am Eingang anliegende Rechteckspannung am Ausgang stark verschliffen.
 
 \begin{figure}[H]
   \centering
@@ -312,7 +329,15 @@ Die Resonanzfrequenz des Systems ergibt sich aus folgender Formel:
 $f_L = \frac{R}{2\pi L} = \frac{1k\Omega}{2\pi *1mH} = 159155Hz$
 \end{figure}
 
-\noindent Durch den großen Widerstand wird die Grenzfrequenz des Kondensators $f_C$ (orange) früher erreicht, sie liegt laut Messung bei $\sim1,6kHz$. Die Grenzfrequenz der Spule $f_L$ (gr\"un) wird laut Messung erst bei $\sim145kHz$ erreicht. Der Filter beginnt hier sehr früh zu Dämpfen, jedoch wird im Bereich zwischen $f_C$ und $f_L$ nur eine Filtersteilheit von $-20dB/Dekade$ erreicht.\\\\
+\noindent Durch den großen Widerstand wird die Grenzfrequenz des Kondensators $f_C$ (orange) früher erreicht, sie liegt laut Messung bei $\sim1,6kHz$. Die Grenzfrequenz der Spule $f_L$ (gr\"un) wird laut Messung erst bei $\sim145kHz$ erreicht. Der Filter beginnt hier sehr früh zu Dämpfen, jedoch wird im Bereich zwischen $f_C$ und $f_L$ nur eine Filtersteilheit von $-20dB/Dekade$ erreicht.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=150mm]{phasengang_rlc_1k.png}
+  \caption{Phasengang bei $R=1k\Omega$}
+\end{figure}
+
+\noindent Hier l\"asst sich gut erkennen, dass die Grenzfrequenz des Kondensators fr\"uher erreicht wird als jene der Spule, die Änderung der Phasenverschiebung ist im Bereich der beiden Grenzfrequenzen gr\"oßer.\\\\
 
 \noindent Der Widerstand hat aus rein mathematischer Sicht keinen Einfluss auf die Resonanzfrequenz, wie man an obenstehender Formel sehen kann. Bei den Messungen zeigen sich jedoch leichte Abweichungen von der berechneten Resonanzfrequenz, diese sind auf die Eigenschaften realer Bauteile zurückzuführen.\\\\
 

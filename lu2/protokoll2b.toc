@@ -1,0 +1,15 @@
+\contentsline {section}{\numberline {1}Messung des Verhaltens eines RC-Filters 1. Ordnung}{3}{section.1}
+\contentsline {subsection}{\numberline {1.1}Aufgabenstellung}{3}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}Schaltplan}{3}{subsection.1.2}
+\contentsline {subsection}{\numberline {1.3}Durchf\"uhrung}{3}{subsection.1.3}
+\contentsline {subsection}{\numberline {1.4}Ergebnis \& Diskussion}{4}{subsection.1.4}
+\contentsline {section}{\numberline {2}Messung des Verhaltens eines RL-Filters 1. Ordnung}{6}{section.2}
+\contentsline {subsection}{\numberline {2.1}Aufgabenstellung}{6}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Schaltplan}{6}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3}Durchf\"uhrung}{6}{subsection.2.3}
+\contentsline {subsection}{\numberline {2.4}Ergebnis \& Diskussion}{7}{subsection.2.4}
+\contentsline {section}{\numberline {3}Messung des Verhaltens eines dynamischen Systems 2. Ordnung}{8}{section.3}
+\contentsline {subsection}{\numberline {3.1}Aufgabenstellung}{8}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Schaltplan}{9}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}Durchf\"uhrung}{9}{subsection.3.3}
+\contentsline {subsection}{\numberline {3.4}Ergebnis \& Diskussion}{9}{subsection.3.4}
