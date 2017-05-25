@@ -306,7 +306,7 @@ Die Resonanzfrequenz des Systems ergibt sich aus folgender Formel:
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=100mm]{sprungantwort_rlc_1k.png}
+  \includegraphics[width=80mm]{sprungantwort_rlc_1k.png}
   \caption{Sprungantwort bei $R=1k\Omega$}
 \end{figure}
 \noindent Durch den großen Widerstand von $R=1k\Omega$ ist die Zeitkonstante des Systems sehr groß. Dadurch wird die am Eingang anliegende Rechteckspannung am Ausgang stark verschliffen.
@@ -354,6 +354,39 @@ $f_L = \frac{R}{2\pi L} = \frac{1k\Omega}{2\pi *1mH} = 159155Hz$
   \centering
   \includegraphics[width=150mm]{pnd.jpg}
   \caption{PN-Diagramm der \"Ubertragungsfunktion (violett: $R=22\Omega$, blau: $R=180\Omega$, gr\"un: $R=1k\Omega$)}
+\end{figure}
+
+\section{Anhang - Messwerte}
+
+\begin{figure}[H]
+  \centering
+  \begin{minipage}[b]{0.4\textwidth}
+    \includegraphics[width=\textwidth]{rc_data.png}
+    \caption{Messdaten RC-Tiefpass}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[b]{0.4\textwidth}
+    \includegraphics[width=\textwidth]{rl_data.png}
+    \caption{Messdaten RL-Hochpass}
+  \end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \begin{minipage}[b]{0.3\textwidth}
+    \includegraphics[width=\textwidth]{rlc_22_data.png}
+    \caption{Messdaten RLC-Tiefpass mit $R=22\Omega$}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[b]{0.3\textwidth}
+    \includegraphics[width=\textwidth]{rlc_180_data.png}
+    \caption{Messdaten RLC-Tiefpass mit $R=183\Omega$}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[b]{0.3\textwidth}
+    \includegraphics[width=\textwidth]{rlc_1k_data.png}
+    \caption{Messdaten RLC-Tiefpass mit $R=1k\Omega$}
+  \end{minipage}
 \end{figure}
 
 \end{document}
