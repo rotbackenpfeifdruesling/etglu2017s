@@ -93,8 +93,8 @@
 \begin{table}[h!]
 \begin{tabular}{|l|l|}
 \hline \textbf{Kontrolle} & \checkmark \\
-\hline Verhalten eines Filters 1. Ordnung & \\
-\hline Verhalten eines RL-Filters & \\
+\hline Verhalten eines RC-Filters 1. Ordnung & \\
+\hline Verhalten eines RL-Filters 1. Ordnung & \\
 \hline Dynamisches System 2. Ordnung & \\
 \hline
 \end{tabular}
@@ -122,7 +122,7 @@
 \section{Messung des Verhaltens eines RC-Filters 1. Ordnung}
 
 \subsection{Aufgabenstellung}
-Die charakteristischen Eigenschaften eines RC-Tiefpassfilters mit realen Bauteilen sollen untersucht werden.
+Die charakteristischen Eigenschaften eines RC-Filters 1. Ordnung mit realen Bauteilen sollen untersucht werden und mit der Simulation verglichen werden.
 
 \subsection{Schaltplan}
 \begin{figure}[H]
@@ -160,7 +160,7 @@ Am Eingang wurde nun ein Sinussignal mit $1 V_{PP}$, Offset $0 V$ angelegt. Die 
   \begin{tabular}{|c|c|c|c|}
   \hline
                      & berechnet    & gemessen    & Abweichung \\ \hline
-  Zeitkonstante $\tau$ & $226,16 \mu s$    & $230 \mu s$      & $+1,70 \%$ \\ \hline
+  Zeitkonstante $\tau$ & $226,16 \mu s$    & $230 \mu s$      & $+3,83 \mu s(+1,70 \%)$ \\ \hline
   \end{tabular}
   \caption{Vergleich Zeitkonstante $\tau$ berechnet und bemessen}
   \label{Figure03}
@@ -187,6 +187,7 @@ Am Eingang wurde nun ein Sinussignal mit $1 V_{PP}$, Offset $0 V$ angelegt. Die 
 \section{Messung des Verhaltens eines RL-Filters 1. Ordnung}
 
 \subsection{Aufgabenstellung}
+Die charakteristischen Eigenschaften eines RL-Filters 1. Ordnung mit realen Bauteilen sollen untersucht werden und mit der Simulation verglichen werden.
 
 \subsection{Schaltplan}
 \begin{figure}[H]
@@ -216,15 +217,15 @@ Am Eingang wurde nun ein Sinussignal mit $1 V_{PP}$, Offset $0 V$ angelegt. Die 
   \caption{Sprungantwort RL Hochpass}
   \label{Figure07}
 \end{figure}
-\noindent In der Abbildung~\ref{Figure02} ist zu sehen, wie sich die Ausgangsspannung bei Anlegen eines Rechtecksignals verh\"alt. Ein Sprung am Eingang bewirkt am Ausgang einen sprungartigen Anstieg der Spannung. Mit der Zeit geht die Ausgangsspannung asymptotisch gegen $0V$. Das l\"asst auf ein System mit Energiespeicher schlie\ss en. In diesem Fall handelt es sich um eine Spule, weil anfangs die Impedanz der Spule (und dadurch auch die Spannung) gro\ss \, ist, und mit der Zeit die Impedanz gegen $0 \Omega$ und somit auch die Ausgangsspannung gegen $0V$ geht. Bei der negativen Flanke des Rechtecksignals am Eingang, entseht eine negative Spannung am Ausgang. Dieses Verhalten entsteht durch die gespeicherte Energie der Spule. \\
-Weiters ist zu erkennen, dass sich die gemessene Eingangsspannung bei der positiven bzw. negativen Flanke \"ahnlich wie die Ausgangsspannung verh\"ahlt. Das ist auf die Reflexion der Spule im System zur\"uckzuf\"uhren. Die Spule wirkt also negativ auf den Frequenzgenerator aus. Daher ist es besser den Hochpass mittels RC-Glied zu realisieren.
+\noindent In der Abbildung~\ref{Figure02} ist zu sehen, wie sich die Ausgangsspannung bei Anlegen eines Rechtecksignals verh\"alt. Ein Sprung am Eingang bewirkt am Ausgang einen sprungartigen Anstieg der Spannung. Mit der Zeit geht die Ausgangsspannung asymptotisch gegen $0V$. Das l\"asst auf ein System mit Energiespeicher schlie\ss en. In diesem Fall handelt es sich um eine Spule, weil anfangs die Impedanz der Spule (und dadurch auch die Spannung) gro\ss \, ist, und mit der Zeit die Impedanz gegen $0 \Omega$ und somit auch die Ausgangsspannung gegen $0V$ geht. Bei der negativen Flanke des Rechtecksignals am Eingang, entsteht eine negative Spannung am Ausgang. Dieses Verhalten entsteht durch die gespeicherte Energie der Spule. \\
+Weiters ist zu erkennen, dass sich die gemessene Eingangsspannung bei der positiven bzw. negativen Flanke \"ahnlich wie die Ausgangsspannung verh\"alt. Das ist auf die Reflexion der Spule im System zur\"uckzuf\"uhren. Die Spule wirkt also negativ auf den Frequenzgenerator aus. Daher ist es besser den Hochpass mittels RC-Glied zu realisieren.
 
 \begin{table}[H]
 \centering
 \begin{tabular}{|c|c|c|c|}
 \hline
 & berechnet    & gemessen    & Abweichung \\ \hline
-Zeitkonstante $\tau$ & $22,96 \mu s$  & $20 \mu s$      & $-2,96 \mu s (\approx-12,89 \%$ \\ \hline
+Zeitkonstante $\tau$ & $22,96 \mu s$  & $20 \mu s$      & $-2,96 \mu s (\approx-12,89 \%$) \\ \hline
 \end{tabular}
 \caption{Vergleich Zeitkonstante $\tau$ berechnet und bemessen}
 \label{Figure03}
@@ -244,8 +245,8 @@ Zeitkonstante $\tau$ & $22,96 \mu s$  & $20 \mu s$      & $-2,96 \mu s (\approx-
   \caption{Phasengang RL-Hochpass durch Messungen}
   \label{Figure09}
 \end{figure}
-\noindent In Abbildung~\ref{Figure07} sind Amplituden- und Phasengang des RL-Hochpassfilters anhand der gemessenen Werte dargestellt. Bei den Messungen wurde beobachtet, dass bei niedrigen Frequenzen die Eingangsspannung abf\"allt. Das kommt daher, dass das System durch die Spule viel Strom aufnimmt und der Funktionsgenerator den Strom nicht liefern kann. Trotzdem entsprichen die Graphen  der erwarteten Form aus der Simulation, da das Verh\"ahltnis $\frac{U_a}{U_e}$ gleich bleibt. \\
-Bei der Grenzfrequenz ($7480 Hz$) wurde am Eingang $U_e = 650mV$, am Ausgang $U_a = 470mV$ und eine Phasenverschiebung von $-43^{\circ}$ gemessen gemessen. Das entspricht einer D\"ampfung von $\approx 72,31\%$. Die Werte sind plausibel, da bei idealen Bauelementen die D\"ampfung bei der Grenzfrequenz $-3db \approx 70,71\%$ und die Phasenverschiebung $-45^{\circ}$ ist.
+\noindent In Abbildung~\ref{Figure07} sind Amplituden- und Phasengang des RL-Hochpassfilters anhand der gemessenen Werte dargestellt. Bei den Messungen wurde beobachtet, dass bei niedrigen Frequenzen die Eingangsspannung abf\"allt. Das kommt daher, dass das System durch die Spule viel Strom aufnimmt und der Funktionsgenerator den Strom nicht liefern kann. Trotzdem entsprichen die Graphen  der erwarteten Form aus der Simulation, da das Verh\"ahltnis $\frac{U_a}{U_e}$ gleich bleibt. Bis zur Grenzfrequnz ist, wie erwartet eine Filtersteilheit von rund $+20 db/Dekade$ zu erkennen, jedoch flacht die Kurve der bei niedriger Frequenz ab und geht asymptotisch gegen $0V$.\\
+Bei der Grenzfrequenz ($7480 Hz$) wurde am Eingang $U_e = 650mV$, am Ausgang $U_a = 470mV$ und eine Phasenverschiebung von $-43^{\circ}$ gemessen. Das entspricht einer D\"ampfung von $\approx 72,31\%$. Die Werte sind plausibel, da bei idealen Bauelementen die D\"ampfung bei der Grenzfrequenz $-3db \approx 70,71\%$ und die Phasenverschiebung $-45^{\circ}$ ist.
 
 
 
