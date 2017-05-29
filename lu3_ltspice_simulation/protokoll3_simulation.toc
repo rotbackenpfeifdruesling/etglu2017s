@@ -10,11 +10,11 @@
 \contentsline {subsection}{\numberline {2.4}Ergebnis \& Diskussion}{3}{subsection.2.4}
 \contentsline {section}{\numberline {3}Integrierer}{3}{section.3}
 \contentsline {subsection}{\numberline {3.1}Aufgabenstellung}{3}{subsection.3.1}
-\contentsline {subsection}{\numberline {3.2}Schaltplan}{4}{subsection.3.2}
-\contentsline {subsection}{\numberline {3.3}Durchf\"uhrung}{4}{subsection.3.3}
-\contentsline {subsection}{\numberline {3.4}Ergebnis \& Diskussion}{5}{subsection.3.4}
-\contentsline {section}{\numberline {4}Invertierender Schmitt-Trigger}{6}{section.4}
-\contentsline {subsection}{\numberline {4.1}Aufgabenstellung}{6}{subsection.4.1}
-\contentsline {subsection}{\numberline {4.2}Schaltplan}{6}{subsection.4.2}
-\contentsline {subsection}{\numberline {4.3}Durchf\"uhrung}{6}{subsection.4.3}
-\contentsline {subsection}{\numberline {4.4}Ergebnis \& Diskussion}{7}{subsection.4.4}
+\contentsline {subsection}{\numberline {3.2}Schaltplan}{6}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}Durchf\"uhrung}{6}{subsection.3.3}
+\contentsline {subsection}{\numberline {3.4}Ergebnis \& Diskussion}{7}{subsection.3.4}
+\contentsline {section}{\numberline {4}Invertierender Schmitt-Trigger}{8}{section.4}
+\contentsline {subsection}{\numberline {4.1}Aufgabenstellung}{8}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Schaltplan}{8}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}Durchf\"uhrung}{8}{subsection.4.3}
+\contentsline {subsection}{\numberline {4.4}Ergebnis \& Diskussion}{9}{subsection.4.4}

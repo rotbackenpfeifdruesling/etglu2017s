@@ -123,18 +123,18 @@ Das Verhalten eines OPV als nichtinvertierender Verst\"arker soll mittels LTSpic
 \begin{figure}
   \includegraphics{nichtinvertierend_schaltung}
   \caption{Nichtinvertierender Verst\"arker}
-  \label{figure01}
+%  \label{figure01}
 \end{figure}
 
 \subsection{Durchf\"uhrung}
-Mit LTSpice wird die Schaltung eines OPV als nichtinvertierender Verst\"arker aufgebaut. Die Spannungsverst\"arkung wird mit $V_u = 1 + \frac{R_2}{R_1}$ berechnet und soll zwischen 40 und 60 liegen. Das bedeutet $R_2$ muss 41 bis 61 mal gr\"o\ss er dimensioniert werden als $R_1$. Gew\"ahlt wurden die Widerst\"ande $R_1 = 22\Ohm$ und $R_2 = 1k\Omega$. Nun wurde das Verhalten des Systems mit einer DC Eingangsspannung bzw. mit 2 verschieden Rechteckspannungen (siehe Angabe) simuliert und diverse Messungen durchgef\"uhrt (siehe Ergebnis \& Diskussion).
+Mit LTSpice wird die Schaltung eines OPV als nichtinvertierender Verst\"arker aufgebaut. Die Spannungsverst\"arkung wird mit $V_u = 1 + \frac{R_2}{R_1}$ berechnet und soll zwischen 40 und 60 liegen. Das bedeutet $R_2$ muss 41 bis 61 mal gr\"o\ss er dimensioniert werden als $R_1$. Gew\"ahlt wurden die Widerst\"ande $R_1 = 22\Omega$ und $R_2 = 1k\Omega$. Nun wurde das Verhalten des Systems mit einer DC Eingangsspannung bzw. mit 2 verschieden Rechteckspannungen (siehe Angabe) simuliert und diverse Messungen durchgef\"uhrt (siehe Ergebnis \& Diskussion).
 
 
 \subsection{Ergebnis \& Diskussion}
 \begin{figure}
   \includegraphics{nichtinvertierend_schaltung}
   \caption{Nichtinvertierender Verst\"arker}
-  \label{figure01}
+%  \label{figure01}
 \end{figure}
 
 
@@ -241,10 +241,22 @@ Die Schaltung wurde gem\"aß Angabe zusammengef\"ugt. Die Versorgungsspannung de
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=150mm]{schmitt_transient2.png}
-  \caption{Zeitverhalten bei hochfrequentem Dreieckssignal (rot $\hdots$ Ausgangsspannung, blau $\hdots$ Eingangsspannung, gr\"un $\hdots$ Spannung am positiven OPV Eingang)}
+  \includegraphics[width=150mm]{schmitt_transient3.png}
+  \caption{Zeitverhalten bei $5MHz$ Dreieckssignal - Eingangssignal}
 \end{figure}
 
-\noindent TODO: Erkl\"arung!!!
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=150mm]{schmitt_transient4.png}
+  \caption{Zeitverhalten bei $5MHz$ Dreieckssignal - Ausgangssignal}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=150mm]{schmitt_transient5.png}
+  \caption{Zeitverhalten bei $5MHz$ Dreieckssignal - Spannung am postiven OPV Eingang}
+\end{figure}
+
+\noindent Im Bereich von $0-3,6\mu s$ ist deutlich der Einschwingvorgang des Systems zu erkennen.
 
 \end{document}
