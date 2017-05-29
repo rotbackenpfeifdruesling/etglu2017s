@@ -136,6 +136,10 @@ Die charakteristischen Eigenschaften eines RC-Filters 1. Ordnung mit realen Baut
     (3,2) to [C, l=$C$] (3,0);
   \draw
     (0,0) to [short, o-o] (4,0);
+  \draw
+    (0,2) to [open, v=$U_e$] (0,0);
+  \draw
+    (4,2) to [open, v^=$U_a$] (4,0);
 \end{circuitikz}
 \caption{RC Tiefpassfilter 1.Ordnung}
 \label{Figure01}
@@ -144,7 +148,7 @@ Die charakteristischen Eigenschaften eines RC-Filters 1. Ordnung mit realen Baut
 
 \subsection{Durchf\"uhrung}
 Die Schaltung wurde gem\"a\ss\, Schaltplan mit einem Widerstand $R=22k\Omega$ und einem Kondensator $C=10nF$ aufgebaut. Um die Sprungantwort aufzuzeichnen wurde am Eingang ein periodisches Rechtecksignal mit $1 V_{PP}$, Offset $0,5 V$, $50 \%$ Duty Circle und Frequenz $250 Hz$, angelegt. Die Eingangs- und Ausgangsspannung wurden mit dem Oszilloskop im Zeitbereich aufgezeichnet (siehe Abbildung~\ref{Figure02}). Die Zeitkonstante wurde mit den gemessenen Bauteilwerten ($R=21,75 k\Omega$, $C=10,28nF$) berechnet und ergibt einen Wert von $\tau = RC = 226,16 \mu s$. Die Zeitkonstante wurde aus der Sprungantwort ausgelesen indem der Zeitpunkt gemessen wurde, an dem das Signal der Sprungantwort ca. $63 \%$ der Eingangsspannung betrug (Vergleich siehe Tabelle ~\ref{Figure03}). \\
-Am Eingang wurde nun ein Sinussignal mit $1 V_{PP}$, Offset $0 V$ angelegt. Die Eingangs- und Ausgangsspannung bzw. die Phasenverschiebung wurden mit dem Oszilloskop gemessen. Der Frequenzbereich von $10Hz$ bis $1MHz$ mit 5 Frequenzmesspunkten pro Dekade wurden abgetastet. Weiters wurde ein Frequenzmesspunkt an der Grenzfrequenz gesetzt. Die Messpunkte wurden in tabellarischer Form aufgezeichnet und in ein doppelt logarithmisches Diagramm eingetragen (siehe Abbildung~\ref{Figure04}). Ab der Frequenz von rund $20kHz$ konnte die Phasenverschiebung nicht mehr gemessen werden, da der Messwert am Oszilloskop sehr schwach war und dadurch zu stark schwankte.
+Am Eingang wurde nun ein Sinussignal mit $1 V_{PP}$, Offset $0 V$ angelegt. Die Eingangs- und Ausgangsspannung bzw. die Phasenverschiebung wurden mit dem Oszilloskop gemessen. Der Frequenzbereich von $10Hz$ bis $1MHz$ mit 5 Frequenzmesspunkten pro Dekade wurden aufgezeichnet. Weiters wurde ein Frequenzmesspunkt an der Grenzfrequenz gesetzt. Die Messpunkte wurden in tabellarischer Form aufgezeichnet und als Bodediagramm dargestellt (siehe Abbildung~\ref{Figure04} und ~\ref{Figure05}). Ab der Frequenz von rund $20kHz$ konnte die Phasenverschiebung nicht mehr gemessen werden, da der Messwert am Oszilloskop sehr schwach war und dadurch zu stark schwankte.
 
 \subsection{Ergebnis \& Diskussion}
 \begin{figure}[H]
@@ -201,6 +205,10 @@ Die charakteristischen Eigenschaften eines RL-Filters 1. Ordnung mit realen Baut
     (3,2) to [L, l=$L$] (3,0);
   \draw
     (0,0) to [short, o-o] (4,0);
+  \draw
+    (0,2) to [open, v=$U_e$] (0,0);
+  \draw
+    (4,2) to [open, v^=$U_a$] (4,0);
 \end{circuitikz}
 \caption{RL Hochpassfilter 1.Ordnung}
 \label{Figure06}
@@ -208,7 +216,7 @@ Die charakteristischen Eigenschaften eines RL-Filters 1. Ordnung mit realen Baut
 
 \subsection{Durchf\"uhrung}
 Die Schaltung wurde gem\"a\ss \, Schaltplan mit einem Widerstand $R=47\Omega$ und einem Kondensator $L=1mH$ aufgebaut. Um die Sprungantwort aufzuzeichnen wurde am Eingang ein periodisches Rechtecksignal mit $1 V_{PP}$, Offset $0,5 V$, $50 \%$ Duty Circle und Frequenz $2,5 kHz$, angelegt. Die Eingangs- und Ausgangsspannung wurden mit dem Oszilloskop im Zeitbereich aufgezeichnet (siehe Abbildung~\ref{Figure07}). Die Zeitkonstante wurde mit den gemessenen Bauteilwerten ($R=46,83 k\Omega$, $C=1,075mH$) berechnet und ergibt einen Wert von $\tau = \frac{L}{R} = 22,96 \mu s$. Die Zeitkonstante wurde aus der Sprungantwort ausgelesen indem der Zeitpunkt gemessen wurde, an dem das Signal der Sprungantwort rund $37 \%$ der Eingangsspannung betrug. \\
-Am Eingang wurde nun ein Sinussignal mit $1 V_{PP}$, Offset $0 V$ angelegt. Die Eingangs- und Ausgangsspannung bzw. die Phasenverschiebung wurden mit dem Oszilloskop gemessen. Der Frequenzbereich von $100Hz$ bis $1MHz$ wurde mit 5 Frequenzmesspunkten pro Dekade abgetastet. Weiters wurde ein Frequenzmesspunkt an der Grenzfrequenz gesetzt. Die Messpunkte wurden in tabellarischer Form aufgezeichnet und in eine doppelt logarithmischen Diagrammm eingetragen (siehe Abbildung~\ref{Figure08} und Abbildung~\ref{Figure09}). Bei Frequenzen unter $100Hz$ konnten keine Vern\"unftigen Messungen der Ausgangsspannung bzw. der Phasenverschiebung durchgef\"uhrt werden, da das Signal am Oszilloskop zu schwar war.
+Am Eingang wurde nun ein Sinussignal mit $1 V_{PP}$, Offset $0 V$ angelegt. Die Eingangs- und Ausgangsspannung bzw. die Phasenverschiebung wurden mit dem Oszilloskop gemessen. Der Frequenzbereich von $100Hz$ bis $1MHz$ wurde mit 5 Frequenzmesspunkten pro Dekade aufgezeichnet. Weiters wurde ein Frequenzmesspunkt an der Grenzfrequenz gesetzt. Die Messpunkte wurden in tabellarischer Form aufgezeichnet und als Bodediagramm dargestellt (siehe Abbildung~\ref{Figure08} und Abbildung~\ref{Figure09}). Bei Frequenzen unter $100Hz$ konnten keine Vern\"unftigen Messungen der Ausgangsspannung bzw. der Phasenverschiebung durchgef\"uhrt werden, da das Signal am Oszilloskop zu schwar war.
 
 \subsection{Ergebnis \& Diskussion}
 \begin{figure}[H]
@@ -218,7 +226,7 @@ Am Eingang wurde nun ein Sinussignal mit $1 V_{PP}$, Offset $0 V$ angelegt. Die 
   \label{Figure07}
 \end{figure}
 \noindent In der Abbildung~\ref{Figure02} ist zu sehen, wie sich die Ausgangsspannung bei Anlegen eines Rechtecksignals verh\"alt. Ein Sprung am Eingang bewirkt am Ausgang einen sprungartigen Anstieg der Spannung. Mit der Zeit geht die Ausgangsspannung asymptotisch gegen $0V$. Das l\"asst auf ein System mit Energiespeicher schlie\ss en. In diesem Fall handelt es sich um eine Spule, weil anfangs die Impedanz der Spule (und dadurch auch die Spannung) gro\ss \, ist, und mit der Zeit die Impedanz gegen $0 \Omega$ und somit auch die Ausgangsspannung gegen $0V$ geht. Bei der negativen Flanke des Rechtecksignals am Eingang, entsteht eine negative Spannung am Ausgang. Dieses Verhalten entsteht durch die gespeicherte Energie der Spule. \\
-Weiters ist zu erkennen, dass sich die gemessene Eingangsspannung bei der positiven bzw. negativen Flanke \"ahnlich wie die Ausgangsspannung verh\"alt. Das ist auf die Reflexion der Spule im System zur\"uckzuf\"uhren. Die Spule wirkt also negativ auf den Frequenzgenerator aus. Daher ist es besser den Hochpass mittels RC-Glied zu realisieren.
+Weiters ist zu erkennen, dass sich die gemessene Eingangsspannung bei der positiven bzw. negativen Flanke \"ahnlich wie die Ausgangsspannung verh\"alt. Das ist auf die Reflexion der Spule im System zur\"uckzuf\"uhren. Die Spule wirkt also negativ auf den Frequenzgenerator aus. Um diesen Effekt zu vermeiden kann der Tiefpass auch mit einem RC-Glied realisiert werden.
 
 \begin{table}[H]
 \centering
