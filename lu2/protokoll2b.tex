@@ -274,7 +274,7 @@ Die Resonanzfrequenz des Systems ergibt sich aus folgender Formel:
 \begin{figure}[H]
   \centering
   \includegraphics[width=100mm]{sprungantwort_rlc_22.png}
-  \caption{Sprungantwort bei $R=22\Omega$}
+  \caption{Sprungantwort bei $R=22\Omega$ (gelb $\hdots$ Eingangsspannung, gr\"un $\hdots$ Ausgangsspannung)}
 \end{figure}
 \noindent Durch den kleinen Widerstand ($R=22\Omega$) kommt es zu gut sichtbaren \"Uberschwingungen des $LC$-Glieds (Resonanzfall). Die Spule verursacht Schwingungen der Eingangsspannung.
 
@@ -291,14 +291,14 @@ Die Resonanzfrequenz des Systems ergibt sich aus folgender Formel:
   \caption{Phasengang bei $R=22\Omega$}
 \end{figure}
 
-\noindent Bei $-90{\circ}$ Phasenverschiebung wird die Resonanzfrequenz erreicht.
+\noindent Bei $-90^{\circ}$ Phasenverschiebung wird die Resonanzfrequenz erreicht.
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=100mm]{sprungantwort_rlc_180.png}
-  \caption{Sprungantwort bei $R=183\Omega$}
+  \caption{Sprungantwort bei $R=183\Omega$ (gelb $\hdots$ Eingangsspannung, gr\"un $\hdots$ Ausgangsspannung)}
 \end{figure}
-\noindent Bei $R=183\Omega$ sind gerade keine \"Uberschwingungen sichtbar (aperiodischer Grenzfall). Die Sprungantwort zeigt das typische Tiefpassverhalten.
+\noindent Bei $R=183\Omega$ sind gerade keine \"Uberschwingungen sichtbar (aperiodischer Grenzfall). Die Sprungantwort zeigt das typische Tiefpassverhalten. Die Schwingung an der Eingangsspannung wird durch die Induktivit\"at verursacht.
 
 \begin{figure}[H]
   \centering
@@ -319,7 +319,7 @@ Die Resonanzfrequenz des Systems ergibt sich aus folgender Formel:
 \begin{figure}[H]
   \centering
   \includegraphics[width=80mm]{sprungantwort_rlc_1k.png}
-  \caption{Sprungantwort bei $R=1k\Omega$}
+  \caption{Sprungantwort bei $R=1k\Omega$ (gelb $\hdots$ Eingangsspannung, gr\"un $\hdots$ Ausgangsspannung)}
 \end{figure}
 \noindent Durch den großen Widerstand von $R=1k\Omega$ ist die Zeitkonstante des Systems sehr groß. Dadurch wird die am Eingang anliegende Rechteckspannung am Ausgang stark verschliffen.
 
@@ -332,13 +332,13 @@ Die Resonanzfrequenz des Systems ergibt sich aus folgender Formel:
 \noindent Die Grenzfrequenz des Kondensators liegt bei:
 \begin{figure}[H]
   \centering
-  $f_C = \frac{1}{2\pi RC} = \frac{1}{2\pi *1k\Omega*100nF} = 1591Hz$
+  $f_C = \frac{1}{2\pi RC} = \frac{1}{2\pi *1k\Omega*100nF} = 1,59kHz$
 \end{figure}
 
 \noindent Die Grenzfrequenz der Spule liegt bei:
 \begin{figure}[H]
   \centering
-$f_L = \frac{R}{2\pi L} = \frac{1k\Omega}{2\pi *1mH} = 159155Hz$
+$f_L = \frac{R}{2\pi L} = \frac{1k\Omega}{2\pi *1mH} \approx 159,15kHz$
 \end{figure}
 
 \noindent Durch den großen Widerstand wird die Grenzfrequenz des Kondensators $f_C$ (orange) früher erreicht, sie liegt laut Messung bei $\sim1,6kHz$. Die Grenzfrequenz der Spule $f_L$ (gr\"un) wird laut Messung erst bei $\sim145kHz$ erreicht. Der Filter beginnt hier sehr früh zu Dämpfen, jedoch wird im Bereich zwischen $f_C$ und $f_L$ nur eine Filtersteilheit von $-20dB/Dekade$ erreicht.
@@ -355,10 +355,10 @@ $f_L = \frac{R}{2\pi L} = \frac{1k\Omega}{2\pi *1mH} = 159155Hz$
 
 \noindent Im Vergleich zu den Simulationen lässt sich sagen, dass das simulierte Verhalten des Filters mit verschiedenen Widerständen im Labor sehr gut messbar und nachvollziehbar war. Es zeigen sich jedoch einige Ungenauigkeiten, die auf reale Bauteile und Messfehler zurückzuführen sind.\\\\
 
-\noindent Die \"Ubertragungsfunktion des Systems lautet:
+\noindent Die \"Ubertragungsfunktion $H(s)$ des Systems lautet:
 \begin{figure}[H]
   \centering
-  $\frac{U_a}{U_e} = \frac{Z_C}{Z_R+Z_L+Z_C} = \frac{\frac{1}{j\omega C}}{R+j\omega L+\frac{1}{j\omega C}} = \frac{1}{j\omega CR-\omega^2CL+1} = \frac{1}{s^2CL+sCR+1}$
+  $\frac{U_a}{U_e} = \frac{Z_C}{Z_R+Z_L+Z_C} = \frac{\frac{1}{j\omega C}}{R+j\omega L+\frac{1}{j\omega C}} = \frac{1}{j\omega CR-\omega^2CL+1} \Rightarrow H(s) = \frac{1}{s^2CL+sCR+1}$
 \end{figure}
 
 
@@ -367,6 +367,8 @@ $f_L = \frac{R}{2\pi L} = \frac{1k\Omega}{2\pi *1mH} = 159155Hz$
   \includegraphics[width=150mm]{pnd.jpg}
   \caption{PN-Diagramm der \"Ubertragungsfunktion (violett: $R=22\Omega$, blau: $R=180\Omega$, gr\"un: $R=1k\Omega$)}
 \end{figure}
+
+\noindent Bei $R=22\Omega$ und $R=180\Omega$ hat das System jeweils zwei konjugiert komplexe Polstellen, bei $R=1k\Omega$ zwei reelle Polstellen. Da alle Punkte in der linken Halbebene liegen, ist das System stabil.
 
 \section{Anhang - Messwerte}
 
