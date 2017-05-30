@@ -1,0 +1,10 @@
+**/*.gz
+**/*.aux
+**/*.fdb_latexmk
+**/*.fls
+**/*.log
+**/*.out
+**/*.syntex.gz\(busy\)
+**/*.maf
+**/*.mtc
+**/*.mtc0
