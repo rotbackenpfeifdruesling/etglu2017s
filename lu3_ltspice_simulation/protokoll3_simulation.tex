@@ -165,7 +165,11 @@ In Abbildung~\ref{figure02} sind die Messwerte des OPVs als nichtinvertierender 
   \caption{Nichtinvertierender Verst\"arker mit Rechtecksignal $100Hz$; Blau: Ausgangsspannung $U_a$; Rot: Eingangsspannung $U_e$}
   \label{figure03}
 \end{figure}
+<<<<<<< HEAD
 Die Abbildung~\ref{figure03} zeigt Eingangs- und Ausgangsspannung ($U_e$ und $U_a$) des Nichtinvertierendne Verst\"arkers mit einem Recktecksignal von $100Hz$ und $100mV$ Spannungsamplitude am Eingang. Die gemessene Amplitude der Ausgangsspannug von $4,80V$ entspricht wieder der erwarteten Verst\"arkung von $V = 48$. Wie zu erkennen ist, sind Eingangs- und Ausgangsspannung phasengleich.
+=======
+In Abbildung~\ref{figure01} sind die Spannungen des positiven ($U_p$) und negativen ($U_n$) Einganges des OPV zu sehen. $U_p$ entspricht klarerweise der Eingangsspannung $U_e$. Da zwischen den beiden Eing\"angen
+>>>>>>> d7ec21a920cc48ffb4915775081ee2cd6bdc861f
 
 \begin{figure}[H]
   \centering
@@ -296,7 +300,9 @@ Im Bereich von $0$ bis $1s$ ist ein Einschwingvorgang zu erkennen, welcher auf d
   \caption{Bode-Diagramm}
 \end{figure}
 
-\noindent Am Frequenzverhalten kann man erkennen, dass das System bis zur Grenzfrequenz des $RC$-Glieds ($f_g = \frac{1}{2\pi RC} \approx 72Hz$) verst\"arkend wirkt und danach zu D\"ampfen beginnt. Die Filtersteilheit betr\"agt $-20dB/Dekade$. Die Phase dreht zuerst sehr stark, dann immer schw\"acher von $126^{\circ}$ auf $90^{\circ}$. Im Bereich \"uber $40kHz$ beginnt die Phasenverschiebung wieder zu steigen und die D\"ampfung wird schw\"acher.
+\noindent Am Frequenzverhalten kann man erkennen, dass das System bis zur Grenzfrequenz des $RC$-Glieds ($f_g = \frac{1}{2\pi RC} \approx 72Hz$) verst\"arkend wirkt und danach zu D\"ampfen beginnt. Die Filtersteilheit betr\"agt $-20dB/Dekade$. Die Phase dreht zuerst sehr stark, dann immer schw\"acher von $126^{\circ}$ auf $90^{\circ}$. Im Bereich \"uber $40kHz$ beginnt die Phasenverschiebung wieder zu steigen und die D\"ampfung wird schw\"acher.\\
+
+\noindent TODO: grober Unfug?
 
 \section{Invertierender Schmitt-Trigger}
 
@@ -343,10 +349,10 @@ Die Schaltung wurde gem\"aß Angabe zusammengef\"ugt. Die Versorgungsspannung de
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=150mm]{schmitt_transient_final.png}
+  \includegraphics[width=150mm]{schmitt_transient2.png}
   \caption{Zeitverhalten bei $5MHz$ Dreieckssignal (rot $\hdots$ Ausgangsspannung, blau $\hdots$ Eingangsspannung, gr\"un $\hdots$ Spannung am positiven OPV Eingang)}
 \end{figure}
 
-\noindent TODO: Interpretation
+\noindent Durch die hohe Frequenz des Eingangssignals wird der verwendete OPV an seine Grenzen getrieben und kann nicht mehr schnell genug schalten. Das gew\"unschte Schmitt-Trigger-Verhalten ist nicht mehr zu erkennen.
 
 \end{document}
