@@ -120,23 +120,25 @@
 Das Verhalten eines OPV als nichtinvertierender Verst\"arker soll mittels LTSpice simuliert werden.
 
 \subsection{Schaltplan}
-\begin{figure}
+\begin{figure}[H]
+  \centering
   \includegraphics{nichtinvertierend_schaltung}
   \caption{Nichtinvertierender Verst\"arker}
 %  \label{figure01}
 \end{figure}
 
 \subsection{Durchf\"uhrung}
-Mit LTSpice wird die Schaltung eines OPV als nichtinvertierender Verst\"arker aufgebaut. Die Spannungsverst\"arkung wird mit $V_u = 1 + \frac{R_2}{R_1}$ berechnet und soll zwischen 40 und 60 liegen. Das bedeutet $R_2$ muss 41 bis 61 mal gr\"o\ss er dimensioniert werden als $R_1$. Gew\"ahlt wurden die Widerst\"ande $R_1 = 22\Omega$ und $R_2 = 1k\Omega$. Nun wurde das Verhalten des Systems mit einer DC Eingangsspannung bzw. mit 2 verschieden Rechteckspannungen (siehe Angabe) simuliert und diverse Messungen durchgef\"uhrt (siehe Ergebnis \& Diskussion).
+Die Schaltung eines OPV als nichtinvertierender Verst\"arker wurde mit LTSpice aufgebaut. Die Spannungsverst\"arkung wird mit $V_u = 1 + \frac{R_2}{R_1}$ berechnet und soll zwischen 40 und 60 liegen. Das bedeutet $R_2$ muss etwa 40 bis 60 mal gr\"o\ss er dimensioniert werden als $R_1$. Gew\"ahlt wurden die Widerst\"ande $R_1 = 1k\Omega$ und $R_2 = 47k\Omega$. Nun wurde das Verhalten des Systems mit einer DC Eingangsspannung bzw. mit 2 verschieden Rechteckspannungen (siehe Angabe) simuliert und diverse Messungen durchgef\"uhrt (siehe Ergebnis \& Diskussion).
 
 
 \subsection{Ergebnis \& Diskussion}
 \begin{figure}
-  \includegraphics{nichtinvertierend_schaltung}
-  \caption{Nichtinvertierender Verst\"arker}
-%  \label{figure01}
+  \centering
+  \includegraphics[width=150mm]{nichtinvertierend_dc_eingaenge_spannungen}
+  \caption{Nichtinvertierender Verst\"arker; Blau: $U_p$; Rot: $U_n$}
+  \label{figure01}
 \end{figure}
-
+In Abbildung~\ref{figure01} sind die Spannungen des positiven ($U_p$) und negativen ($U_n$) Einganges des OPV zu sehen. $U_p$ entspricht klarerweise der Eingangsspannung $U_e$. Da zwischen den beiden Eing\"angen  
 
 
 \section{Invertierender Verst\"rker}
