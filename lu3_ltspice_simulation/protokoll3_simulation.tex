@@ -114,7 +114,7 @@
 
 
 
-\section{Nichtinvertierender Verst\"rker}
+\section{Nichtinvertierender Verst\"arker}
 
 \subsection{Aufgabenstellung}
 Das Verhalten eines OPV als nichtinvertierender Verst\"arker soll mittels LTSpice simuliert werden.
@@ -124,32 +124,132 @@ Das Verhalten eines OPV als nichtinvertierender Verst\"arker soll mittels LTSpic
   \centering
   \includegraphics{nichtinvertierend_schaltung}
   \caption{Nichtinvertierender Verst\"arker}
-%  \label{figure01}
-\end{figure}
-
-\subsection{Durchf\"uhrung}
-Die Schaltung eines OPV als nichtinvertierender Verst\"arker wurde mit LTSpice aufgebaut. Die Spannungsverst\"arkung wird mit $V_u = 1 + \frac{R_2}{R_1}$ berechnet und soll zwischen 40 und 60 liegen. Das bedeutet $R_2$ muss etwa 40 bis 60 mal gr\"o\ss er dimensioniert werden als $R_1$. Gew\"ahlt wurden die Widerst\"ande $R_1 = 1k\Omega$ und $R_2 = 47k\Omega$. Nun wurde das Verhalten des Systems mit einer DC Eingangsspannung bzw. mit 2 verschieden Rechteckspannungen (siehe Angabe) simuliert und diverse Messungen durchgef\"uhrt (siehe Ergebnis \& Diskussion).
-
-
-\subsection{Ergebnis \& Diskussion}
-\begin{figure}
-  \centering
-  \includegraphics[width=150mm]{nichtinvertierend_dc_eingaenge_spannungen}
-  \caption{Nichtinvertierender Verst\"arker; Blau: $U_p$; Rot: $U_n$}
   \label{figure01}
 \end{figure}
-In Abbildung~\ref{figure01} sind die Spannungen des positiven ($U_p$) und negativen ($U_n$) Einganges des OPV zu sehen. $U_p$ entspricht klarerweise der Eingangsspannung $U_e$. Da zwischen den beiden Eing\"angen  
-
-
-\section{Invertierender Verst\"rker}
-
-\subsection{Aufgabenstellung}
-
-\subsection{Schaltplan}
 
 \subsection{Durchf\"uhrung}
+Die Schaltung eines OPV als nichtinvertierender Verst\"arker wurde mit LTSpice aufgebaut (Abbildung~\ref{figure01}). Die Spannungsverst\"arkung wird mit $V_u = 1 + \frac{R_2}{R_1}$ berechnet und soll zwischen $40$ und $60$ liegen. Das bedeutet $R_2$ muss etwa $40$ bis $60$ mal gr\"o\ss er dimensioniert werden als $R_1$. Gew\"ahlt wurden die Widerst\"ande $R_1 = 1k\Omega$ und $R_2 = 47k\Omega$. Nun wurde das Verhalten des Systems mit einer DC Eingangsspannung bzw. mit 2 verschieden Rechteckspannungen (siehe Angabe) simuliert und diverse Messungen durchgef\"uhrt (siehe Ergebnis \& Diskussion).
+
 
 \subsection{Ergebnis \& Diskussion}
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|l|l|}
+\hline
+Strom Widerstand $R_1$ & $I_{R1}$ & $100,00\mu A$  \\ \hline
+Strom Widerstand $R_2$ & $I_{R2}$ & $99,99\mu A$  \\ \hline
+Spannung Widerstand $R_1$ & $U_{R1}$ & $100,00mV$  \\ \hline
+Spannung Widerstand $R_2$ & $U_{R2}$ & $4,70V$ \\ \hline
+% positive Eingansspannung OPV & $U_p$  & $100mV$        \\ \hline
+% negative Eingangsspannung OPV & $U_n$  & $99,999309mV$  \\ \hline
+Spannungsdifferenz Eingang OPV & $U_d$  & $0,69\mu V$      \\ \hline
+Strom Eingang OPV & $I_d$  & $12,01nA$ \\ \hline
+Eingangsspannung & $U_e$  & $100mV$        \\ \hline
+Ausgangsspannung & $U_a$  & $4,80V$   \\ \hline
+\end{tabular}
+\caption{Messwerte Nichtinvertierender Verst\"arker bei DC 0,1V}
+\label{figure02}
+\end{table}
+In Abbildung~\ref{figure02} sind die Messwerte des OPVs als nichtinvertierender Verst\"arker mit einer Gleichspannung von $100mV$ zu sehen. Grunds\"atzlich w\"are die Verst\"arkung eines OPVs unendlich gro\ss \, und die Verst\"arkung w\"urde bei wenigen $\mu V$ die positive bzw. negative Versorungsspannung annehmen. Jedoch wird ein Teil der Ausgangsspannung an den invertierenden Eingang des OPVs zur\"uckgef\"uhrt (Gegenkopplung), dadurch kann die Verst\"arkung geregelt werden. Aufgrund des im Idealfall unendlich gro\ss en Eingangswiderstands am OPV flie\ss t zwischen den Eing\"angen verschwindend geringer Strom ($12,01nA$). Aufgrund der Knotenregel flie\ss t daher an $R_1$ und $R_2$ praktisch der gleiche Strom. Weiters ist aufgrund der Maschenregel $U_{R1} = U_e$ und $U_a = U_{R2} + U_{R1}$. Aus diesen Aussagen kann nun die Verst\"arkung des Systems hergeleitet und berechnet werden.\\
+\begin{equation*}
+  V = \frac{U_a}{U_e} = \frac{U_{R1} + U_{R2}}{U_{R1}} = \frac{R_1 + R_2}{R_1} = 1+ \frac{R_2}{R_1} \\
+\end{equation*}
+\begin{equation*}
+  V = 1 + \frac{47 k\Omega}{1 k\Omega} = 48
+\end{equation*}
+\noindent Die berechnete Verst\"arkung passt mit den gemessen Werten \"uberein ($U_e = 100mV$, $U_a = 4,80V$).
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=150mm]{nichtinvertierend_pulse_eingangs_ausgangsspannung}
+  \caption{Nichtinvertierender Verst\"arker mit Rechtecksignal $100Hz$; Blau: Ausgangsspannung $U_a$; Rot: Eingangsspannung $U_e$}
+  \label{figure03}
+\end{figure}
+Die Abbildung~\ref{figure03} zeigt Eingangs- und Ausgangsspannung ($U_e$ und $U_a$) des Nichtinvertierendne Verst\"arkers mit einem Recktecksignal von $100Hz$ und $100mV$ Spannungsamplitude am Eingang. Die gemessene Amplitude der Ausgangsspannug von $4,80V$ entspricht wieder der erwarteten Verst\"arkung von $V = 48$. Wie zu erkennen ist, sind Eingangs- und Ausgangsspannung phasengleich.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=150mm]{nichtinvertierend_pulse2_eingangs_ausgangsspannung}
+  \caption{Nichtinvertierender Verst\"arker mit Rechtecksignal $10kHz$; Blau: Ausgangsspannung $U_a$; Rot: Eingangsspannung $U_e$}
+  \label{figure04}
+\end{figure}
+Die Abbildung~\ref{figure03} zeigt Eingangs- und Ausgangsspannung ($U_e$ und $U_a$) des Nichtinvertierendne Verst\"arkers mit einem Recktecksignal von $10kHz$ und $100mV$ Spannungsamplitude am Eingang. Die gemessene Amplitude der Ausgangsspannung von $4,80V$ entspricht wieder erwarteten Verst\"arkung von $V = 48$. Aufgrund der inneren Kapazit\"at des OPVs verh\"ahlt sich das Ausgangssignal \"ahnlich wie ein Tiefpass 1.Ordnung (RC-Glied). Diese Kurvenform wird nur bei h\"oherer Frequenz sichtbar.
+
+\section{Invertierender Verst\"arker}
+
+\subsection{Aufgabenstellung}
+Das Verhalten eines OPV als invertierender Verst\"arker soll mittels LTSpice simuliert werden.
+
+\subsection{Schaltplan}
+\begin{figure}[H]
+  \centering
+  \includegraphics{invertierend_schaltung}
+  \caption{Invertierender Verst\"arker}
+  \label{figure11}
+\end{figure}
+
+\subsection{Durchf\"uhrung}
+Die Schaltung eines OPV als invertierender Verst\"arker wurde mit LTSpice aufgebaut (Abbildung~\ref{figure11}). Die Spannungsverst\"arkung wird mit $V_u = -\frac{R_2}{R_1}$ berechnet und soll zwischen $-40$ und $-60$ liegen. Das bedeutet $R_2$ muss $40$ bis $60$ mal gr\"o\ss er dimensioniert werden als $R_1$. Gew\"ahlt wurden die Widerst\"ande $R_1 = 1k\Omega$ und $R_2 = 47k\Omega$. Nun wurde das Verhalten des Systems mit einer DC Eingangsspannung bzw. mit Dreiecksignal mit Frequenz $100Hz$ und $10kHz$ simuliert. Weiters wurde der Frequenzbereich $1Hz$ bis $10MHz$ mit Sinussignal und $V_{PP} = 0.1V$ simuliert und ein Bodediagramm geplottet. Die selbe Simulation sollte f\"ur die gleiche Schaltung mit einer Verst\"arkung von $-4$ bis $-6$ durgef\"uhrt werden. Dazu wurden die Widerst\"ande $R_1 = 1k\Omega$ und $R_2 = 4,7k\Omega$ gew\"ahlt, was eine Verst\"arkung von $V_u = -\frac{4,7k\Omega}{1k\Omega} = -4,7$ ergibt. Die Digramme und Eregebnisse sind im Abschnitt \textit{Ergebnis \& Diskussion} zu finden. \\
+
+\subsection{Ergebnis \& Diskussion}
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|l|l|}
+\hline
+Strom Widerstand $R_1$ & $I_{R1}$ & $100,00\mu A$  \\ \hline
+Strom Widerstand $R_2$ & $I_{R2}$ & $100,01\mu A$  \\ \hline
+Spannung Widerstand $R_1$ & $U_{R1}$ & $100,00mV$  \\ \hline
+Spannung Widerstand $R_2$ & $U_{R2}$ & $-4,70V$ \\ \hline
+% positive Eingansspannung OPV & $U_p$  & $100mV$        \\ \hline
+% negative Eingangsspannung OPV & $U_n$  & $99,999309mV$  \\ \hline
+Spannungsdifferenz Eingang OPV & $U_d$  & $0,68\mu V$      \\ \hline
+Strom Eingang OPV & $I_d$  & $12,02nA$ \\ \hline
+Eingangsspannung & $U_e$  & $100mV$        \\ \hline
+Ausgangsspannung & $U_a$  & $-4,70V$   \\ \hline
+\end{tabular}
+\caption{Messwerte Invertierender Verst\"arker bei DC 0,1V}
+\label{figure12}
+\end{table}
+In Abbildung~\ref{figure12} sind die Messwerte des OPVs als invertierender Verst\"arker mit einer Gleichspannung von $100mV$ zu sehen. Grunds\"atzlich w\"are die Verst\"arkung eines OPVs $-\infty$ und die Verst\"arkung w\"urde bei wenigen $\mu V$ die positive bzw. negative Versorungsspannung annehmen, und zwar jeweils negiert zur Spannung am invertierenden Eingang. Jedoch wird durch die Gegenkopplung (OPV Ausgang ist verbunden mit invertierenden Eingang) die Verst\"arkung durch die beiden Widerst\"ande geregelt. Da ein OPV versucht die Spannungen an den Eing\"angen gleich zu halten und der nichtinvertierende Eingang mit Masse verbunden ist, hat man am invertierenden Eingang einen sog. \"virtuellen Nullpunkt\". Da der Eingangswiderstand am OPV sehr gro\ss \, (im Idealfall unendlich) ist, flie\ss t kaum Strom zwischen den beiden Eing\"angen ($12,02nA$). Da $R_1$ einerseits mit der Spannungsquelle und andererseits mit dem virtuellen Nullpunkt (Masse) verbunden ist, kann man $U_{R1}$ gleich $U_e$ setzen. Aus dem gleichen Grund kann man $U_{R1}$ gleich $U_a$ setzen. Weiters kann man aufgrund der Knotenregel den Strom am $R_1$ und $R_2$ gleich setzen. Aus diesen Aussagen kann nun die Verst\"arkung des Systems hergeleitet werden.
+\begin{equation*}
+  V = -\frac{U_a}{U_e} = -\frac{U_{R2}}{U_{R1}} = -\frac{R_2}{R_1} \\
+\end{equation*}
+\begin{equation*}
+  V = -\frac{47 k\Omega}{1 k\Omega} = 47
+\end{equation*}
+\noindent Die berechnete Verst\"arkung passt mit den gemessen Werten \"uberein ($U_e = 100mV$, $U_a = -4,70V$).
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=150mm]{invertierend_dreieck_eingangs_ausgangsspannung}
+  \caption{Invertierender Verst\"arker mit Dreiecksignal $100Hz$; Blau: Ausgangsspannung $U_a$; Rot: Eingangsspannung $U_e$}
+  \label{figure13}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=150mm]{invertierend_dreieck2_eingangs_ausgangsspannung}
+  \caption{Invertierender Verst\"arker mit Dreiecksignal $10kHz$; Blau: Ausgangsspannung $U_a$; Rot: Eingangsspannung $U_e$}
+  \label{figure14}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=150mm]{invertierend_bode1}
+  \caption{Invertierender Verst\"arker Bodediagramm}
+  \label{figure15}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=150mm]{invertierend_bode2}
+  \caption{Invertierender Verst\"arker Bodediagramm}
+  \label{figure16}
+\end{figure}
+
+
+
+
 
 \section{Integrierer}
 
