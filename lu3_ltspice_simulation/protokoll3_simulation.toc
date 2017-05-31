@@ -8,8 +8,8 @@
 \contentsline {subsection}{\numberline {2.2}Schaltplan}{6}{subsection.2.2}
 \contentsline {subsection}{\numberline {2.3}Durchf\"uhrung}{6}{subsection.2.3}
 \contentsline {subsection}{\numberline {2.4}Ergebnis \& Diskussion}{7}{subsection.2.4}
-\contentsline {section}{\numberline {3}Integrierer}{9}{section.3}
-\contentsline {subsection}{\numberline {3.1}Aufgabenstellung}{9}{subsection.3.1}
+\contentsline {section}{\numberline {3}Integrierer}{10}{section.3}
+\contentsline {subsection}{\numberline {3.1}Aufgabenstellung}{10}{subsection.3.1}
 \contentsline {subsection}{\numberline {3.2}Schaltplan}{10}{subsection.3.2}
 \contentsline {subsection}{\numberline {3.3}Durchf\"uhrung}{10}{subsection.3.3}
 \contentsline {subsection}{\numberline {3.4}Ergebnis \& Diskussion}{11}{subsection.3.4}
