@@ -128,7 +128,7 @@ Das Verhalten eines OPV als nichtinvertierender Verst\"arker soll mittels LTSpic
 \end{figure}
 
 \subsection{Durchf\"uhrung}
-Die Schaltung eines OPV als nichtinvertierender Verst\"arker wurde mit LTSpice aufgebaut (Abbildung~\ref{figure01}). Die Spannungsverst\"arkung wird mit $V_u = 1 + \frac{R_2}{R_1}$ berechnet und soll zwischen $40$ und $60$ liegen. Das bedeutet $R_2$ muss etwa $40$ bis $60$ mal gr\"o\ss er dimensioniert werden als $R_1$. Gew\"ahlt wurden die Widerst\"ande $R_1 = 1k\Omega$ und $R_2 = 47k\Omega$. Nun wurde das Verhalten des Systems mit einer DC Eingangsspannung bzw. mit 2 verschieden Rechteckspannungen (siehe Angabe) simuliert und diverse Messungen durchgef\"uhrt (siehe Ergebnis \& Diskussion).
+\noindent Die Schaltung eines OPV als nichtinvertierender Verst\"arker wurde mit LTSpice aufgebaut (Abbildung~\ref{figure01}). Die Spannungsverst\"arkung wird mit $V_u = 1 + \frac{R_2}{R_1}$ berechnet und soll zwischen $40$ und $60$ liegen. Das bedeutet $R_2$ muss etwa $40$ bis $60$ mal gr\"o\ss er dimensioniert werden als $R_1$. Gew\"ahlt wurden die Widerst\"ande $R_1 = 1k\Omega$ und $R_2 = 47k\Omega$. Nun wurde das Verhalten des Systems mit einer DC Eingangsspannung bzw. mit 2 verschieden Rechteckspannungen (siehe Angabe) simuliert und diverse Messungen durchgef\"uhrt (siehe Ergebnis \& Diskussion).
 
 
 \subsection{Ergebnis \& Diskussion}
@@ -150,7 +150,7 @@ Ausgangsspannung & $U_a$  & $4,80V$   \\ \hline
 \caption{Messwerte Nichtinvertierender Verst\"arker bei DC 0,1V}
 \label{figure02}
 \end{table}
-In Abbildung~\ref{figure02} sind die Messwerte des OPVs als nichtinvertierender Verst\"arker mit einer Gleichspannung von $100mV$ zu sehen. Grunds\"atzlich w\"are die Verst\"arkung eines OPVs unendlich gro\ss \, und die Verst\"arkung w\"urde bei wenigen $\mu V$ die positive bzw. negative Versorungsspannung annehmen. Jedoch wird ein Teil der Ausgangsspannung an den invertierenden Eingang des OPVs zur\"uckgef\"uhrt (Gegenkopplung), dadurch kann die Verst\"arkung geregelt werden. Aufgrund des im Idealfall unendlich gro\ss en Eingangswiderstands am OPV flie\ss t zwischen den Eing\"angen verschwindend geringer Strom ($12,01nA$). Aufgrund der Knotenregel flie\ss t daher an $R_1$ und $R_2$ praktisch der gleiche Strom. Weiters ist aufgrund der Maschenregel $U_{R1} = U_e$ und $U_a = U_{R2} + U_{R1}$. Aus diesen Aussagen kann nun die Verst\"arkung des Systems hergeleitet und berechnet werden.\\
+\noindent In Abbildung~\ref{figure02} sind die Messwerte des OPVs als nichtinvertierender Verst\"arker mit einer Gleichspannung von $100mV$ zu sehen. Grunds\"atzlich w\"are die Verst\"arkung eines OPVs unendlich gro\ss \, und die Verst\"arkung w\"urde bei wenigen $\mu V$ die positive bzw. negative Versorungsspannung annehmen. Jedoch wird ein Teil der Ausgangsspannung an den invertierenden Eingang des OPVs zur\"uckgef\"uhrt (Gegenkopplung), dadurch kann die Verst\"arkung geregelt werden. Aufgrund des im Idealfall unendlich gro\ss en Eingangswiderstands am OPV flie\ss t zwischen den Eing\"angen verschwindend geringer Strom ($12,01nA$). Aufgrund der Knotenregel flie\ss t daher an $R_1$ und $R_2$ praktisch der gleiche Strom. Weiters ist aufgrund der Maschenregel $U_{R1} = U_e$ und $U_a = U_{R2} + U_{R1}$. Aus diesen Aussagen kann nun die Verst\"arkung des Systems hergeleitet und berechnet werden.\\
 \begin{equation*}
   V = \frac{U_a}{U_e} = \frac{U_{R1} + U_{R2}}{U_{R1}} = \frac{R_1 + R_2}{R_1} = 1+ \frac{R_2}{R_1} \\
 \end{equation*}
@@ -165,7 +165,7 @@ In Abbildung~\ref{figure02} sind die Messwerte des OPVs als nichtinvertierender 
   \caption{Nichtinvertierender Verst\"arker mit Rechtecksignal $100Hz$; blau \dots Ausgangsspannung $U_a$; \dots Eingangsspannung $U_e$}
   \label{figure03}
 \end{figure}
-Die Abbildung~\ref{figure03} zeigt Eingangs- und Ausgangsspannung ($U_e$ und $U_a$) des Nichtinvertierendne Verst\"arkers mit einem Recktecksignal von $100Hz$ und $100mV$ Spannungsamplitude am Eingang. Die gemessene Amplitude der Ausgangsspannug von $4,80V$ entspricht wieder der erwarteten Verst\"arkung von $V = 48$. Wie zu erkennen ist, sind Eingangs- und Ausgangsspannung phasengleich.
+\noindent Die Abbildung~\ref{figure03} zeigt Eingangs- und Ausgangsspannung ($U_e$ und $U_a$) des Nichtinvertierendne Verst\"arkers mit einem Recktecksignal von $100Hz$ und $100mV$ Spannungsamplitude am Eingang. Die gemessene Amplitude der Ausgangsspannug von $4,80V$ entspricht wieder der erwarteten Verst\"arkung von $V = 48$. Wie zu erkennen ist, sind Eingangs- und Ausgangsspannung phasengleich.
 
 \begin{figure}[H]
   \centering
@@ -173,7 +173,7 @@ Die Abbildung~\ref{figure03} zeigt Eingangs- und Ausgangsspannung ($U_e$ und $U_
   \caption{Nichtinvertierender Verst\"arker mit Rechtecksignal $10kHz$; blau \dots Ausgangsspannung $U_a$; rot \dots Eingangsspannung $U_e$}
   \label{figure04}
 \end{figure}
-Die Abbildung~\ref{figure03} zeigt Eingangs- und Ausgangsspannung ($U_e$ und $U_a$) des Nichtinvertierendne Verst\"arkers mit einem Recktecksignal von $10kHz$ und $100mV$ Spannungsamplitude am Eingang. Die gemessene Amplitude der Ausgangsspannung von $4,80V$ entspricht wieder erwarteten Verst\"arkung von $V = 48$. Aufgrund der inneren Kapazit\"at des OPVs verh\"ahlt sich das Ausgangssignal \"ahnlich wie ein Tiefpass 1.Ordnung (RC-Glied). Diese Kurvenform wird nur bei h\"oherer Frequenz sichtbar.
+\noindent Die Abbildung~\ref{figure03} zeigt Eingangs- und Ausgangsspannung ($U_e$ und $U_a$) des Nichtinvertierenden Verst\"arkers mit einem Recktecksignal von $10kHz$ und $100mV$ Spannungsamplitude am Eingang. Die gemessene Amplitude der Ausgangsspannung von $4,80V$ entspricht der erwarteten Verst\"arkung von $V = 48$. Aufgrund der inneren Kapazit\"at des OPVs verh\"ahlt sich das Ausgangssignal \"ahnlich wie ein Tiefpass 1.Ordnung (RC-Glied). Diese Kurvenform wird nur bei h\"oherer Frequenz sichtbar.
 
 
 
@@ -191,7 +191,7 @@ Das Verhalten eines OPV als invertierender Verst\"arker soll mittels LTSpice sim
 \end{figure}
 
 \subsection{Durchf\"uhrung}
-Die Schaltung eines OPV als invertierender Verst\"arker wurde mit LTSpice aufgebaut (Abbildung~\ref{figure11}). Die Spannungsverst\"arkung wird mit $V_u = -\frac{R_2}{R_1}$ berechnet und soll zwischen $-40$ und $-60$ liegen. Das bedeutet $R_2$ muss $40$ bis $60$ mal gr\"o\ss er dimensioniert werden als $R_1$. Gew\"ahlt wurden die Widerst\"ande $R_1 = 1k\Omega$ und $R_2 = 47k\Omega$. Nun wurde das Verhalten des Systems mit einer DC Eingangsspannung bzw. mit Dreiecksignal mit Frequenz $100Hz$ und $10kHz$ simuliert. Weiters wurde der Frequenzbereich $1Hz$ bis $10MHz$ mit Sinussignal und $V_{PP} = 0.1V$ simuliert und ein Bodediagramm geplottet. Die selbe Simulation sollte f\"ur die gleiche Schaltung mit einer Verst\"arkung von $-4$ bis $-6$ durgef\"uhrt werden. Dazu wurden die Widerst\"ande $R_1 = 1k\Omega$ und $R_2 = 4,7k\Omega$ gew\"ahlt, was eine Verst\"arkung von $V_u = -\frac{4,7k\Omega}{1k\Omega} = -4,7$ ergibt. Die Digramme und Eregebnisse sind im Abschnitt \textit{Ergebnis \& Diskussion} zu finden. \\
+\noindent Die Schaltung eines OPV als invertierender Verst\"arker wurde mit LTSpice aufgebaut (Abbildung~\ref{figure11}). Die Spannungsverst\"arkung wird mit $V = -\frac{R_2}{R_1}$ berechnet und soll zwischen $-40$ und $-60$ liegen. Das bedeutet $R_2$ muss $40$ bis $60$ mal gr\"o\ss er dimensioniert werden als $R_1$. Gew\"ahlt wurden die Widerst\"ande $R_1 = 1k\Omega$ und $R_2 = 47k\Omega$. Nun wurde das Verhalten des Systems mit einer DC Eingangsspannung bzw. mit Dreiecksignal mit Frequenz $100Hz$ und $10kHz$ simuliert. Weiters wurde der Frequenzbereich $1Hz$ bis $10MHz$ mit Sinussignal und $V_{PP} = 0.1V$ simuliert und ein Bodediagramm geplottet. Die selbe Simulation sollte f\"ur die gleiche Schaltung mit einer Verst\"arkung von $-4$ bis $-6$ durchgef\"uhrt werden. Dazu wurden die Widerst\"ande $R_1 = 1k\Omega$ und $R_2 = 4,7k\Omega$ gew\"ahlt, was eine Verst\"arkung von $V_u = -\frac{4,7k\Omega}{1k\Omega} = -4,7$ ergibt. Die Digramme und Ergebnisse sind im Abschnitt \textit{Ergebnis \& Diskussion} zu finden. \\
 
 \subsection{Ergebnis \& Diskussion}
 \begin{table}[H]
@@ -212,12 +212,12 @@ Ausgangsspannung & $U_a$  & $-4,70V$   \\ \hline
 \caption{Messwerte Invertierender Verst\"arker bei DC 0,1V}
 \label{figure12}
 \end{table}
-In Abbildung~\ref{figure12} sind die Messwerte des OPVs als invertierender Verst\"arker mit einer Gleichspannung von $100mV$ zu sehen. Grunds\"atzlich w\"are die Verst\"arkung eines OPVs $-\infty$ und die Verst\"arkung w\"urde bei wenigen $\mu V$ die positive bzw. negative Versorungsspannung annehmen, und zwar jeweils negiert zur Spannung am invertierenden Eingang. Jedoch wird durch die Gegenkopplung (OPV Ausgang ist verbunden mit invertierenden Eingang) die Verst\"arkung durch die beiden Widerst\"ande geregelt. Da ein OPV versucht die Spannungen an den Eing\"angen gleich zu halten und der nichtinvertierende Eingang mit Masse verbunden ist, hat man am invertierenden Eingang einen sog. \"virtuellen Nullpunkt\". Da der Eingangswiderstand am OPV sehr gro\ss \, (im Idealfall unendlich) ist, flie\ss t kaum Strom zwischen den beiden Eing\"angen ($12,02nA$). Da $R_1$ einerseits mit der Spannungsquelle und andererseits mit dem virtuellen Nullpunkt (Masse) verbunden ist, kann man $U_{R1}$ gleich $U_e$ setzen. Aus dem gleichen Grund kann man $U_{R1}$ gleich $U_a$ setzen. Weiters kann man aufgrund der Knotenregel den Strom am $R_1$ und $R_2$ gleich setzen. Aus diesen Aussagen kann nun die Verst\"arkung des Systems hergeleitet werden.
+\noindent In Abbildung~\ref{figure12} sind die Messwerte des OPVs als invertierender Verst\"arker mit einer Gleichspannung von $100mV$ zu sehen. Grunds\"atzlich w\"are die Verst\"arkung eines OPVs $-\infty$ und die Verst\"arkung w\"urde bei wenigen $\mu V$ die positive bzw. negative Versorungsspannung annehmen, und zwar jeweils negiert zur Spannung am invertierenden Eingang. Jedoch wird durch die Gegenkopplung (OPV Ausgang ist verbunden mit invertierenden Eingang) die Verst\"arkung durch die beiden Widerst\"ande geregelt. Da ein OPV versucht die Spannungen an den Eing\"angen gleich zu halten und der nichtinvertierende Eingang mit Masse verbunden ist, hat man am invertierenden Eingang einen sog. ``virtuellen Nullpunkt''. Da der Eingangswiderstand am OPV sehr gro\ss \, (im Idealfall unendlich) ist, flie\ss t kaum Strom zwischen den beiden Eing\"angen ($12,02nA$). Da $R_1$ einerseits mit der Spannungsquelle und andererseits mit dem virtuellen Nullpunkt (Masse) verbunden ist, kann man $U_{R1}$ gleich $U_e$ setzen. Aus dem gleichen Grund kann man $U_{R1}$ gleich $U_a$ setzen. Weiters kann man aufgrund der Knotenregel den Strom am $R_1$ und $R_2$ gleich setzen. Aus diesen Aussagen kann nun die Verst\"arkung des Systems hergeleitet werden.
 \begin{equation*}
   V = -\frac{U_a}{U_e} = -\frac{U_{R2}}{U_{R1}} = -\frac{R_2}{R_1} \\
 \end{equation*}
 \begin{equation*}
-  V = -\frac{47 k\Omega}{1 k\Omega} = 47
+  V = -\frac{47 k\Omega}{1 k\Omega} = -47
 \end{equation*}
 \noindent Die berechnete Verst\"arkung passt mit den gemessen Werten \"uberein ($U_e = 100mV$, $U_a = -4,70V$).
 
@@ -227,7 +227,7 @@ In Abbildung~\ref{figure12} sind die Messwerte des OPVs als invertierender Verst
   \caption{Invertierender Verst\"arker mit Dreiecksignal $100Hz$; blau \dots Ausgangsspannung $U_a$; \dots Eingangsspannung $U_e$}
   \label{figure13}
 \end{figure}
-Die Abbildung~\ref{figure13} zeigt die Eingangs- und Ausgangsspannung eines invertierenden Verst\"arkers mit Dreiecksignal ($100Hz$, Spannungsamplitude: $0.1V$) am Eingang. Zu erkennen ist, dass die Verst\"arkung kontinuierlich $V = -47$ betr\"agt. Die Amplitude des Ausgangssignals liegt daher bei $4,7V$ bzw. bei $-4,7V$.
+\noindent Die Abbildung~\ref{figure13} zeigt die Eingangs- und Ausgangsspannung eines invertierenden Verst\"arkers mit Dreiecksignal ($100Hz$, Spannungsamplitude: $0.1V$) am Eingang. Zu erkennen ist, dass die Verst\"arkung kontinuierlich $V = -47$ betr\"agt. Die Amplitude des Ausgangssignals liegt daher bei $4,7V$ bzw. bei $-4,7V$.
 
 \begin{figure}[H]
   \centering
@@ -235,23 +235,23 @@ Die Abbildung~\ref{figure13} zeigt die Eingangs- und Ausgangsspannung eines inve
   \caption{Invertierender Verst\"arker mit Dreiecksignal $10kHz$; blau \dots Ausgangsspannung $U_a$; rot \dots Eingangsspannung $U_e$}
   \label{figure14}
 \end{figure}
-Die Abbildung~\ref{figure14} zeigt die Eingangs- und Ausgangsspannung eines invertierenden Verst\"arkers mit Dreiecksignal ($10kHz$, Spannungsamplitude: $0.1V$) am Eingang. Aufgrund der inneren Kapazit\"at des OPVs verh\"alt sich der Ausgang \"ahnlich wie ein RC-Tiefpassfilter und die Ausgangspannung \"andert sich verz\"ogert zur Eingangsspannung. Durch die h\"ohere Frequenz ($10kHz$) wird die vollst\"andige Verst\"arkung von $-47$ nicht mehr erreicht.
+\noindent Die Abbildung~\ref{figure14} zeigt die Eingangs- und Ausgangsspannung eines invertierenden Verst\"arkers mit Dreiecksignal ($10kHz$, Spannungsamplitude: $0.1V$) am Eingang. Aufgrund der inneren Kapazit\"at des OPVs verh\"alt sich der Ausgang \"ahnlich wie ein RC-Tiefpassfilter und die Ausgangspannung \"andert sich verz\"ogert zur Eingangsspannung. Durch die h\"ohere Frequenz ($10kHz$) wird die vollst\"andige Verst\"arkung von $-47$ nicht mehr erreicht.
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=150mm]{invertierend_bode1}
-  \caption{Invertierender Verst\"arker Bodediagramm; Widerstandsverh\"altnis: $47:1$}
+  \caption{Invertierender Verst\"arker Bodediagramm bei Widerstandsverh\"altnis: $47:1$}
   \label{figure15}
 \end{figure}
-In den Abbildungen ~\ref{figure15} sind Amplituden- und Phasengang eines invertierenden Verst\"arkers mit Sinussignal am Eingang zu sehen. Die Frequenzen von $1Hz$ bis $10MHz$ wurden simuliert. Die Abbildung ~\ref{figure15} zeigt das Verhalten des invertierenden Verst\"arkers bei einem Widerstandsverh\"altnis von $47:1$. Eine \"ahnlichkeit des Bodediagramms zu einem Tiefpassfilter ist zu sehen. Bis zur Grenzfrequenz wurde eine Konstante Verst\"arkung von $13,44dB$ gemessen. Die Grenzfrequen wurde bei der Verst\"arkung von $13,44dB - 3dB = 10,44dB$ gemessen und betr\"agt rund $23,44kHz$. Danach f\"allt der Amplitudengang mit $-20dB/Dekade$ und dann sogar mit $-40dB/Dekade$ ab. Die Transitfrequenz, also der Punkt mit $0dB$ Verst\"arkung, wurde bei einer Frequenz von rund $102kHz$ gemessen.
+\noindent In der Abbildung ~\ref{figure15} sind Amplituden- und Phasengang eines invertierenden Verst\"arkers mit Sinussignal am Eingang zu sehen. Die Frequenzen von $1Hz$ bis $10MHz$ wurden simuliert. Die Abbildung ~\ref{figure15} zeigt das Verhalten des invertierenden Verst\"arkers bei einem Widerstandsverh\"altnis von $47:1$. Eine \"Ahnlichkeit des Bodediagramms zu einem Tiefpassfilter ist zu erkennen. Bis zur Grenzfrequenz wurde eine konstante Verst\"arkung von $33,4dB$ gemessen. Die Grenzfrequenz wurde bei der Verst\"arkung von $33,4dB - 3dB = 30,4dB$ gemessen und betr\"agt rund $26kHz$. Danach f\"allt der Amplitudengang mit $-20dB/Dekade$ und dann sogar mit $-40dB/Dekade$ ab. Die Transitfrequenz, also der Punkt mit $0dB$ Verst\"arkung, wurde bei einer Frequenz von rund $750kHz$ gemessen.
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=150mm]{invertierend_bode2}
-  \caption{Invertierender Verst\"arker Bodediagramm; Widerstandsverh\"altnis: $4,7:1$}
+  \caption{Invertierender Verst\"arker Bodediagramm bei Widerstandsverh\"altnis: $4,7:1$}
   \label{figure16}
 \end{figure}
-In den Abbildungen ~\ref{figure16} sind Amplituden- und Phasengang eines invertierenden Verst\"arkers mit Sinussignal am Eingang zu sehen. Die Frequenzen von $1Hz$ bis $10MHz$ wurden simuliert. Die Abbildung ~\ref{figure15} zeigt das Verhalten des invertierenden Verst\"arkers bei einem Widerstandsverh\"altnis von $4,7:1$. Eine \"ahnlichkeit des Bodediagramms zu einem Tiefpassfilter ist zu sehen. Bis zur Grenzfrequenz wurde eine konstante D\"ampfung von rund $-6,55dB$ gemessen. Die Grenzfrequenz wurde bei $-6,55dB - 3dB = -9,55dB$ gemessen und betr\"agt rund $229kHz$.
+\noindent In der Abbildung ~\ref{figure16} sind Amplituden- und Phasengang eines invertierenden Verst\"arkers mit Sinussignal am Eingang zu sehen. Die Frequenzen von $1Hz$ bis $10MHz$ wurden simuliert. Die Abbildung ~\ref{figure16} zeigt das Verhalten des invertierenden Verst\"arkers bei einem Widerstandsverh\"altnis von $4,7:1$. Eine \"Ahnlichkeit des Bodediagramms zu einem Tiefpassfilter ist zu erkennen. Bis zur Grenzfrequenz wurde eine konstante D\"ampfung von rund $13,4dB$ gemessen. Die Grenzfrequenz wurde bei $13,4dB - 3dB = 10,4dB$ gemessen und betr\"agt rund $230kHz$. Die Transitfrequenz wurde bei $700kHz$ gemessen.
 
 
 
@@ -293,8 +293,6 @@ Im Bereich von $0$ bis $1s$ ist ein Einschwingvorgang zu erkennen, welcher auf d
   $U_e<0: U_a = \frac{t}{10*RC} \approx 45,5*t, U_e>0: U_a = -\frac{t}{10*RC} \approx -45,5*t$
 \end{figure}
 
-\noindent integriert. TODO: Anfangsbedingung, Vpp!!!
-
 
 \begin{figure}[H]
   \centering
@@ -302,9 +300,7 @@ Im Bereich von $0$ bis $1s$ ist ein Einschwingvorgang zu erkennen, welcher auf d
   \caption{Bode-Diagramm}
 \end{figure}
 
-\noindent Am Frequenzverhalten kann man erkennen, dass das System bis zur Grenzfrequenz des $RC$-Glieds ($f_g = \frac{1}{2\pi RC} \approx 72Hz$) verst\"arkend wirkt und danach zu D\"ampfen beginnt. Die Filtersteilheit betr\"agt $-20dB/Dekade$. Die Phase dreht zuerst sehr stark, dann immer schw\"acher von $126^{\circ}$ auf $90^{\circ}$. Im Bereich \"uber $40kHz$ beginnt die Phasenverschiebung wieder zu steigen und die D\"ampfung wird schw\"acher.\\
-
-\noindent TODO: grober Unfug?
+\noindent Am Amplitudengang kann man das typische Tiefpassverhalten erkennen. Die Filtersteilheit betr\"agt $-20dB/Dekade$. Die Phase dreht zuerst sehr stark, dann immer schw\"acher von $126^{\circ}$ auf $90^{\circ}$. Im Bereich \"uber $40kHz$ beginnt die Phasenverschiebung wieder zu steigen und die D\"ampfung wird schw\"acher.\\
 
 \section{Invertierender Schmitt-Trigger}
 
