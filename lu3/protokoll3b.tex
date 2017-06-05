@@ -93,9 +93,11 @@
 \begin{table}[h!]
 \begin{tabular}{|l|l|}
 \hline \textbf{Kontrolle} & \checkmark \\
-\hline Verhalten eines RC-Filters 1. Ordnung & \\
-\hline Verhalten eines RL-Filters 1. Ordnung & \\
-\hline Dynamisches System 2. Ordnung & \\
+\hline Nichtinvertierender OPV & \\
+\hline OPV und Grenzfrequenz & \\
+\hline Invertierender OPV & \\
+\hline Integrierer & \\
+\hline Schmitt-Trigger & \\
 \hline
 \end{tabular}
 \end{table}
@@ -122,33 +124,191 @@
 
 \section{Nichtinvertierender OPV}
 
-\subsection*{Notizen}
-gew\"ahlte Widerst\"ande: $47\Omega$, $1\Omega$ \\
-gew\"ahlter OPV: LM741 \\
-ausgangsspannung bei DC $100mV$: $5,431V$ \\
-
 \subsection*{Aufgabenstellung}
+Durch Messung der Ströme und Spannungen an einem nichtinvertierenden OPV soll dessen Verhalten nachvollzogen werden.
 
 \subsection*{Schaltplan}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=100mm]{ni_opv_schaltung.png}
+  \caption{Nichtinvertierender OPV}
+\end{figure}
 
 \subsection*{Durchf\"uhrung}
+Die Schaltung wurde gemäß Schaltplan mit dem OPV-IC LM741 aufgebaut. Die Widerstände wurden mit $R_1 = 1k\Omega$ und $R_2 = 47k\Omega$ gewählt um gemäß der Übertragungsfunktion der Schaltung
+
+\begin{figure}[H]
+  \centering
+  $U_a = U_e(1+\frac{R_2}{R_1}) = U_e(1+\frac{47k\Omega}{1k\Omega}) = 48*U_e$
+\end{figure}
+
+\noindent eine 48-fache Verstärkung der Eingangsspannung zu erreichen. Der OPV wurde mit $\pm 15V$ Versorgungsspannung betrieben. Um Ströme und Spannungen in der Schaltung zu messen, wurde ein Eingangsspannung von $0,1V$ angelegt und die Werte in der Folge mit dem Multimeter erhoben. Dieselben Messungen wurden mit einer Eingangsspannung von $0,3V$ wiederholt. Um das Verhalten des nichtinvertierenden OPV im Zeitbereich zu untersuchen, wurde eine Rechteckspannung mit $0,1V_{pp}$ Amplitude und jeweils mit $100Hz$ und $10kHz$ Frequenz angelegt. Hierbei wurden Messungen mit dem Oszilloskop durchgeführt.
 
 \subsection*{Ergebnisse \& Diskussion}
 
+\begin{table}[H]
+  \centering
+  \begin{tabular}{c||c|c||c|}
+    & $U_e = 0,1V$ & Abweichung & $U_e = 0,3V$\\
+    \hline
+    $U_a$ & $5,43V$ & $+13,1\%$ & $14,21V$ \\
+    \hline
+    $U_{R2}$ & $4,43V$ & $-5,7\%$ & $13,91V$ \\
+    \hline
+    $U_{R1}$ & $100mV$ & $\pm 0\%$ & $293mV$\\
+    \hline
+    $U_d$ & $-0,8mV$ & $-1160\%$ & $5mV$ \\
+    \hline
+    $I_{R2}$ & $105mA$ & $+1050\%$ & $-279uA$ \\
+    \hline
+    $I_{R1}$ & $102mA$ & $+1020\%$ & $-280uA$ \\
+    \hline
+    $I_{+}$ & $0,15uA$ & $+12,5\%$ & $0,07uA$ \\
+    \hline
+    $I_{-}$ & $-0,04uA$ & - & $-0,11uA$ \\
+  \end{tabular}
+  \caption{Messergebnisse bei Gleichspannung mit Abweichungen zur Simulation}
+\end{table}
+
+\noindent Die Verstärkung eines Idealen OPV ist unendlich groß, sie wird jedoch durch die Beschaltung herabgesetzt. Die berechnete Verstärkung der Schaltung beträgt $48$, bei $U_e = 0,1V$ beträgt die gemessene Verstärkung $54,3$ und bei $U_e = 0,3V$ $47$. Da der Ideale OPV einen unendlich großen Eingangswiderstand hat, kann man auch hier erkennen, dass an den Eingängen nur ein sehr kleiner Strom fließt. Die Differenzspannung, welche beim idealen OPV $0V$ beträgt ist mit $-0,8mV$ bzw. $5mV$ bei der realen Beschaltung auch sehr klein. Man erkennt, dass an $R_1$ die Eingangspannnung abfällt. Anhand der Messungen lässt sich vermuten, dass der LM741-OPV bei $0,3V$ Eingangspannung näher an das Verhalten eines idealen OPV herakommt als bei $0,1V$ Eingangsspannung.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=100mm]{scope_0.png}
+  \caption{Rechtecksignal mit $100Hz$ (gelb $\hdots\;U_e$, grün $\hdots\;U_a$)}
+\end{figure}
+
+\begin{table}[H]
+  \centering
+  \begin{tabular}{c|c|c}
+     & $pp$ & $RMS$ \\
+     \hline
+    $U_{e}$ & $100mV$ & $49,7mV$ \\
+    \hline
+    $U_{a}$ & $4,8V$ & $2,4V$
+  \end{tabular}
+  \caption{Messungen mit Oszilloskop}
+\end{table}
+
+\noindent Das Rechteckssignal am Eingang wird am Ausgang 48-fach verstärkt, wie man anhand der Spitze-Spitze-Spannungen erkennen kann. Das Signal am Ausgang entspricht ebenfalls einem Rechteck. Ein- und Ausgangsspannung sind phasengleich.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=100mm]{scope_3.png}
+  \caption{Rechtecksignal mit $10kHz$ (gelb $\hdots\;U_e$, grün $\hdots\;U_a$)}
+\end{figure}
+
+\begin{table}[H]
+  \centering
+  \begin{tabular}{c|c|c}
+     & $pp$ & $RMS$ \\
+     \hline
+    $U_{e}$ & $100mV$ & $49,7mV$ \\
+    \hline
+    $U_{a}$ & $4,7V$ & $1,8V$
+  \end{tabular}
+  \caption{Messungen mit Oszilloskop}
+\end{table}
+
+\noindent Das Eingangssignal wird 47-fach verstärkt, wie man anhand der Spitze-Spitze-Spannungen erkennen kann. Jedoch ist am Ausgang kein Rechtecksignal mehr zu erkennen, was sich auf die Tiefpasseigenschaft eines OPV zurückführen lässt, die bei hoher Frequenz sichtbar wird.
 
 \section{Invertierender OPV}
 
-\subsection*{Notizen}
-gew\"ahlte Widerst\"ande: $47\Omega$, $1\Omega$ \\
-gew\"ahlter OPV: LM741 \\
-
 \subsection*{Aufgabenstellung}
+Durch Messung der Ströme und Spannungen an einem invertierenden OPV soll dessen Verhalten nachvollzogen werden. Weiters soll das Frequenzverhalten des beschalteten OPV bei unterschiedlicher Verstärkung untersucht werden.
 
 \subsection*{Schaltplan}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=100mm]{i_opv_schaltung.png}
+  \caption{Invertierender OPV}
+\end{figure}
 
 \subsection*{Durchf\"uhrung}
+Die Schaltung wurde gemäß Schaltplan mit dem OPV-IC LM741 aufgebaut. Die Widerstände wurden mit $R_1 = 1k\Omega$ und $R_2 = 47k\Omega$ gewählt um gemäß der Übertragungsfunktion der Schaltung
+
+\begin{figure}[H]
+  \centering
+  $U_a = -\frac{R_2}{R_1}U_e = -\frac{47k\Omega}{1k\Omega}U_e = -47*U_e$
+\end{figure}
+
+\noindent eine 48-fache Verstärkung der Eingangsspannung zu erreichen. Der OPV wurde mit $\pm 15V$ Versorgungsspannung betrieben. Um Ströme und Spannungen in der Schaltung zu messen, wurde ein Eingangsspannung von $0,1V$ angelegt und die Werte in der Folge mit dem Multimeter erhoben. Um das Verhalten des invertierenden OPV im Zeitbereich zu untersuchen, wurde eine Dreieckspannug mit $0,1V_{pp}$ Amplitude und jeweils mit $100Hz$ und $10kHz$ Frequenz angelegt. Hierbei wurden Messungen mit dem Oszilloskop durchgeführt. Um das Frequenzverhalten der Schaltung zu untersuchen wurde jeweils ein Bode-Diagramm für den invertierenden Verstärker mit -47-facher und -4,7-facher ($R_2=4,7k\Omega$) Verstärkung angefertig. Hierfür wurde als Eingangsspannung ein Sinussignal mit $0,1V_{pp}$ gewählt, wobei im Bereich zwischen $10Hz$ und $1MHz$ gemessen wurde.
 
 \subsection*{Ergebnisse \& Diskussion}
+
+\begin{table}[H]
+  \centering
+  \begin{tabular}{c||c|c|}
+    & $U_e = 0,1V$ & Abweichung\\
+    \hline
+    $U_a$ & $-5,77V$ & $-22,7\%$ \\
+    \hline
+    $U_{R2}$ & $5,69V$ & $-21\%$ \\
+    \hline
+    $U_{R1}$ & $128mV$ & $+28\%$ \\
+    \hline
+    $U_d$ & $35mV$ & $+5147\%$ \\
+    \hline
+    $I_{R2}$ & $123uA$ & $+23\%$ \\
+    \hline
+    $I_{R1}$ & $66uA$ & $-34\%$ \\
+    \hline
+    $I_{+}$ & $-0,02uA$ & $+67\%$ \\
+    \hline
+    $I_{-}$ & $7,38uA$ & - \\
+  \end{tabular}
+  \caption{Messergebnisse bei Gleichspannung mit Abweichungen zur Simulation}
+\end{table}
+
+Die Verstärkung eines Idealen OPV ist unendlich groß, sie wird jedoch durch die Beschaltung herabgesetzt. Die berechnete Verstärkung der Schaltung beträgt $-47$, bei $U_e = 0,1V$ beträgt die gemessene Verstärkung $-57,7$. Da der Ideale OPV einen unendlich großen Eingangswiderstand hat, kann man auch hier erkennen, dass an den Eingängen nur ein sehr kleiner Strom fließt. Die Differenzspannung, welche beim idealen OPV $0V$ beträgt ist mit $35mV$ bei der realen Beschaltung auch sehr klein.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=100mm]{scope_5.png}
+  \caption{Dreiecksignal mit $100Hz$ (gelb $\hdots\;U_e$, grün $\hdots\;U_a$)}
+\end{figure}
+
+\begin{table}[H]
+  \centering
+  \begin{tabular}{c|c|c}
+     & $pp$ & $RMS$ \\
+     \hline
+    $U_{e}$ & $92mV$ & $28mV$ \\
+    \hline
+    $U_{a}$ & $4,7V$ & $1,82V$
+  \end{tabular}
+  \caption{Messungen mit Oszilloskop}
+\end{table}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=100mm]{scope_7.png}
+  \caption{Dreiecksignal mit $10kHz$ (gelb $\hdots\;U_e$, grün $\hdots\;U_a$)}
+\end{figure}
+
+\begin{table}[H]
+  \centering
+  \begin{tabular}{c|c|c}
+     & $pp$ & $RMS$ \\
+     \hline
+    $U_{e}$ & $91mV$ & $27mV$ \\
+    \hline
+    $U_{a}$ & $3,21V$ & $1,68V$
+  \end{tabular}
+  \caption{Messungen mit Oszilloskop}
+\end{table}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=150mm]{bode_47.png}
+  \caption{Amplitudengang bei $-47$-facher Verstärkung}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=150mm]{bode_4_7.png}
+  \caption{Amplitudengang bei $-4,7$-facher Verstärkung}
+\end{figure}
 
 
 \section{Integrierer}
@@ -181,5 +341,19 @@ wenn die amplitude unter die schaltschwelle verringert wird, wird die ausgangssp
 
 \subsection*{Ergebnisse \& Diskussion}
 
+\section{Anhang - Messwerte}
+
+\begin{figure}[H]
+  \centering
+  \begin{minipage}[b]{0.4\textwidth}
+    \includegraphics[width=\textwidth]{daten_47.png}
+    \caption{Messdaten invertierender OPV (-47 Verstärkung)}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[b]{0.4\textwidth}
+    \includegraphics[width=\textwidth]{daten_4_7.png}
+    \caption{Messdaten invertierender OPV (-4,7 Verstärkung)}
+  \end{minipage}
+\end{figure}
 
 \end{document}
