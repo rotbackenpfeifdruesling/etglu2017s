@@ -146,31 +146,55 @@ Die Schaltung wurde gemäß Schaltplan mit dem OPV-IC LM741 aufgebaut. Die Wider
 
 \subsection*{Ergebnisse \& Diskussion}
 
+% \begin{table}[H]
+%   \centering
+%   \begin{tabular}{c||c|c||c|}
+%     & $U_e = 0,1V$ & Abweichung & $U_e = 0,3V$\\
+%     \hline
+%     $U_a$ & $5,43V$ & $+13,1\%$ & $14,21V$ \\
+%     \hline
+%     $U_{R2}$ & $4,43V$ & $-5,7\%$ & $13,91V$ \\
+%     \hline
+%     $U_{R1}$ & $100mV$ & $\pm 0\%$ & $293mV$\\
+%     \hline
+%     $U_d$ & $-0,8mV$ & $-1160\%$ & $5mV$ \\
+%     \hline
+%     $I_{R2}$ & $105mA$ & $+1050\%$ & $-279uA$ \\
+%     \hline
+%     $I_{R1}$ & $102mA$ & $+1020\%$ & $-280uA$ \\
+%     \hline
+%     $I_{+}$ & $0,15uA$ & $+12,5\%$ & $0,07uA$ \\
+%     \hline
+%     $I_{-}$ & $-0,04uA$ & - & $-0,11uA$ \\
+%   \end{tabular}
+%   \caption{Messergebnisse bei Gleichspannung mit Abweichungen zur Simulation}
+% \end{table}
+
 \begin{table}[H]
   \centering
-  \begin{tabular}{c||c|c||c|}
-    & $U_e = 0,1V$ & Abweichung & $U_e = 0,3V$\\
+  \begin{tabular}{c|c|c}
+    & $U_e = 0,1V$ & $U_e = 0,3V$\\
     \hline
-    $U_a$ & $5,43V$ & $+13,1\%$ & $14,21V$ \\
+    $U_a$ & $5,43V$ & $14,21V$ \\
     \hline
-    $U_{R2}$ & $4,43V$ & $-5,7\%$ & $13,91V$ \\
+    $U_{R2}$ & $4,43V$ & $13,91V$ \\
     \hline
-    $U_{R1}$ & $100mV$ & $\pm 0\%$ & $293mV$\\
+    $U_{R1}$ & $100mV$ & $293mV$\\
     \hline
-    $U_d$ & $-0,8mV$ & $-1160\%$ & $5mV$ \\
+    $U_d$ & $-0,8mV$ & $5mV$ \\
     \hline
-    $I_{R2}$ & $105mA$ & $+1050\%$ & $-279uA$ \\
+    $I_{R2}$ & $105uA$ & $-279uA$ \\
     \hline
-    $I_{R1}$ & $102mA$ & $+1020\%$ & $-280uA$ \\
+    $I_{R1}$ & $102uA$ & $-280uA$ \\
     \hline
-    $I_{+}$ & $0,15uA$ & $+12,5\%$ & $0,07uA$ \\
+    $I_{+}$ & $0,15uA$ & $0,07uA$ \\
     \hline
-    $I_{-}$ & $-0,04uA$ & - & $-0,11uA$ \\
+    $I_{-}$ & $-0,04uA$ & $-0,11uA$ \\
   \end{tabular}
-  \caption{Messergebnisse bei Gleichspannung mit Abweichungen zur Simulation}
+  \caption{Messergebnisse bei Gleichspannung}
 \end{table}
 
-\noindent Die Verstärkung eines Idealen OPV ist unendlich groß, sie wird jedoch durch die Beschaltung herabgesetzt. Die berechnete Verstärkung der Schaltung beträgt $48$, bei $U_e = 0,1V$ beträgt die gemessene Verstärkung $54,3$ und bei $U_e = 0,3V$ $47$. Da der Ideale OPV einen unendlich großen Eingangswiderstand hat, kann man auch hier erkennen, dass an den Eingängen nur ein sehr kleiner Strom fließt. Die Differenzspannung, welche beim idealen OPV $0V$ beträgt ist mit $-0,8mV$ bzw. $5mV$ bei der realen Beschaltung auch sehr klein. Man erkennt, dass an $R_1$ die Eingangspannnung abfällt. Anhand der Messungen lässt sich vermuten, dass der LM741-OPV bei $0,3V$ Eingangspannung näher an das Verhalten eines idealen OPV herakommt als bei $0,1V$ Eingangsspannung.
+\noindent Die Verstärkung eines Idealen OPV ist unendlich groß, sie wird jedoch durch die Beschaltung herabgesetzt. Die berechnete Verstärkung der Schaltung beträgt $48$, bei $U_e = 0,1V$ beträgt die gemessene Verstärkung $54,3$ und bei $U_e = 0,3V$ $47$. Da der Ideale OPV einen unendlich großen Eingangswiderstand hat, kann man auch hier erkennen, dass an den Eingängen nur ein sehr kleiner Strom fließt. Die Differenzspannung, welche beim idealen OPV $0V$ beträgt ist mit $-0,8mV$ bzw. $5mV$ bei der realen Beschaltung auch sehr klein. Man erkennt, dass an $R_1$ die Eingangspannnung abfällt. %Anhand der Messungen lässt sich vermuten, dass der LM741-OPV bei $0,3V$ Eingangspannung näher an das Verhalten eines idealen OPV herakommt als bei $0,1V$ Eingangsspannung.
 
 \begin{figure}[H]
   \centering
@@ -210,7 +234,7 @@ Die Schaltung wurde gemäß Schaltplan mit dem OPV-IC LM741 aufgebaut. Die Wider
   \caption{Messungen mit Oszilloskop}
 \end{table}
 
-\noindent Das Eingangssignal wird 47-fach verstärkt, wie man anhand der Spitze-Spitze-Spannungen erkennen kann. Jedoch ist am Ausgang kein Rechtecksignal mehr zu erkennen, was sich auf die Tiefpasseigenschaft eines OPV zurückführen lässt, die bei hoher Frequenz sichtbar wird.
+\noindent Das Eingangssignal wird 47-fach verstärkt, wie man anhand der Spitze-Spitze-Spannungen erkennen kann. Jedoch ist am Ausgang kein Rechtecksignal mehr zu erkennen, was sich auf die Tiefpasseigenschaft eines OPV zurückführen lässt, die bei überschreiten der Grenzfrequenz sichtbar wird.
 
 \section{Invertierender OPV}
 
@@ -236,31 +260,55 @@ Die Schaltung wurde gemäß Schaltplan mit dem OPV-IC LM741 aufgebaut. Die Wider
 
 \subsection*{Ergebnisse \& Diskussion}
 
+% \begin{table}[H]
+%   \centering
+%   \begin{tabular}{c||c|c|}
+%     & $U_e = 0,1V$ & Abweichung\\
+%     \hline
+%     $U_a$ & $-5,77V$ & $-22,7\%$ \\
+%     \hline
+%     $U_{R2}$ & $5,69V$ & $-21\%$ \\
+%     \hline
+%     $U_{R1}$ & $128mV$ & $+28\%$ \\
+%     \hline
+%     $U_d$ & $35mV$ & $+5147\%$ \\
+%     \hline
+%     $I_{R2}$ & $123uA$ & $+23\%$ \\
+%     \hline
+%     $I_{R1}$ & $66uA$ & $-34\%$ \\
+%     \hline
+%     $I_{+}$ & $-0,02uA$ & $+67\%$ \\
+%     \hline
+%     $I_{-}$ & $7,38uA$ & - \\
+%   \end{tabular}
+%   \caption{Messergebnisse bei Gleichspannung mit Abweichungen zur Simulation}
+% \end{table}
+
 \begin{table}[H]
   \centering
-  \begin{tabular}{c||c|c|}
-    & $U_e = 0,1V$ & Abweichung\\
+  \begin{tabular}{c|c}
+    & $U_e = 0,1V$ \\
     \hline
-    $U_a$ & $-5,77V$ & $-22,7\%$ \\
+    $U_a$ & $-5,77V$ \\
     \hline
-    $U_{R2}$ & $5,69V$ & $-21\%$ \\
+    $U_{R2}$ & $5,69V$ \\
     \hline
-    $U_{R1}$ & $128mV$ & $+28\%$ \\
+    $U_{R1}$ & $128mV$ \\
     \hline
-    $U_d$ & $35mV$ & $+5147\%$ \\
+    $U_d$ & $35mV$ \\
     \hline
-    $I_{R2}$ & $123uA$ & $+23\%$ \\
+    $I_{R2}$ & $123uA$ \\
     \hline
-    $I_{R1}$ & $66uA$ & $-34\%$ \\
+    $I_{R1}$ & $66uA$ \\
     \hline
-    $I_{+}$ & $-0,02uA$ & $+67\%$ \\
+    $I_{+}$ & $-0,02uA$ \\
     \hline
-    $I_{-}$ & $7,38uA$ & - \\
+    $I_{-}$ & $7,38uA$ \\
   \end{tabular}
-  \caption{Messergebnisse bei Gleichspannung mit Abweichungen zur Simulation}
+  \caption{Messergebnisse bei Gleichspannung}
 \end{table}
 
-Die Verstärkung eines Idealen OPV ist unendlich groß, sie wird jedoch durch die Beschaltung herabgesetzt. Die berechnete Verstärkung der Schaltung beträgt $-47$, bei $U_e = 0,1V$ beträgt die gemessene Verstärkung $-57,7$. Da der Ideale OPV einen unendlich großen Eingangswiderstand hat, kann man auch hier erkennen, dass an den Eingängen nur ein sehr kleiner Strom fließt. Die Differenzspannung, welche beim idealen OPV $0V$ beträgt ist mit $35mV$ bei der realen Beschaltung auch sehr klein.
+\noindent Die Verstärkung eines Idealen OPV ist unendlich groß, sie wird jedoch durch die Beschaltung herabgesetzt. Die berechnete Verstärkung der Schaltung beträgt $-47$, bei $U_e = 0,1V$ beträgt die gemessene Verstärkung $-57,7$. Da der Ideale OPV einen unendlich großen Eingangswiderstand hat, kann man auch hier erkennen, dass an den Eingängen nur ein sehr kleiner Strom fließt. Die Differenzspannung, welche beim idealen OPV $0V$ beträgt ist mit $35mV$ bei der realen Beschaltung auch sehr klein.
 
 \begin{figure}[H]
   \centering
@@ -280,6 +328,8 @@ Die Verstärkung eines Idealen OPV ist unendlich groß, sie wird jedoch durch di
   \caption{Messungen mit Oszilloskop}
 \end{table}
 
+\noindent Das Dreieckssignal wird am Ausgang $-47$-fach (an Spitze-Spitze-Spannung ersichtlich) verstärkt. Am Ausgang ist ein (gegenüber dem Eingang) invertiertes Dreiecksignal erkennbar. Die beiden Signale verlaufen phasengleich.
+
 \begin{figure}[H]
   \centering
   \includegraphics[width=100mm]{scope_7.png}
@@ -298,11 +348,15 @@ Die Verstärkung eines Idealen OPV ist unendlich groß, sie wird jedoch durch di
   \caption{Messungen mit Oszilloskop}
 \end{table}
 
+\noindent Bei hoher Frequenz wird die Verstärkung vermindert und das Dreiecksignal wird am Ausgang verschliffen. Dies liegt an der Tiefpasseigenschaft der Verstärkerschaltung, welche nach überschreiten der Grenzfrequenz in Erscheinung tritt.
+
 \begin{figure}[H]
   \centering
   \includegraphics[width=150mm]{bode_47.png}
   \caption{Amplitudengang bei $-47$-facher Verstärkung}
 \end{figure}
+
+\noindent Da sich ein OPV intern wie ein Tiefpass verhält, fällt die Verstärkung zwischen Grenzfrequenz ($26kHz$) und Transitfrequenz ($750kHz$) mit einer Filtersteilheit von ca. $-20dB/Dekade$. Bei der Transitfrequenz wird das Signal nicht mehr verstärkt.
 
 \begin{figure}[H]
   \centering
@@ -310,6 +364,7 @@ Die Verstärkung eines Idealen OPV ist unendlich groß, sie wird jedoch durch di
   \caption{Amplitudengang bei $-4,7$-facher Verstärkung}
 \end{figure}
 
+\noindent Wenn die Verstärkung der Schaltung verringert wird (auf $\frac{1}{10}$), verschiebt sich die Grenzfrequenz ($230kHz$) in Richtung höherer Frequenzen und die Dämpfung ist erst eine Dekade später zu erkennen. Die Filtersteilheit beträgt jedoch auch hier ca. $-20dB/Dekade$.
 
 \section{Integrierer}
 

@@ -1,5 +1,5 @@
 \contentsline {section}{\numberline {1}Nichtinvertierender OPV}{3}{section.1}
-\contentsline {section}{\numberline {2}Invertierender OPV}{6}{section.2}
+\contentsline {section}{\numberline {2}Invertierender OPV}{5}{section.2}
 \contentsline {section}{\numberline {3}Integrierer}{9}{section.3}
 \contentsline {section}{\numberline {4}Invertierender Schmitt-Trigger}{10}{section.4}
 \contentsline {section}{\numberline {5}Anhang - Messwerte}{11}{section.5}
