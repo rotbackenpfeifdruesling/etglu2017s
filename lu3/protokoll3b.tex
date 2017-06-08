@@ -372,29 +372,92 @@ Die Schaltung wurde gemäß Schaltplan mit dem OPV-IC LM741 aufgebaut. Die Wider
 gew\"ahlter OPV: LM324 \\
 Integrierer LM324 rechtecksignal $0,1 V_PP$ $5Hz$ scope\_9
 \subsection*{Aufgabenstellung}
+In der \"Ubung soll eine einfache integrierende Operationsverstärkerschaltung aufgebaut werden. Es sollen die Str\"ome und Spannungen in dieser Schaltung gemessen und dadurch das Verhalten eines Integrierers nachvollzogen werden.
 
 \subsection*{Schaltplan}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=80mm]{integrierer_opv_schaltung.png}
+  \caption{Integrierer}
+  \label{figure31}
+\end{figure}
 
 \subsection*{Durchf\"uhrung}
+Die Schaltung wurde gemäß Schaltplan (siehe ~\ref{figure31}) mit dem OPV LM324 aufgebaut. Der OPV wurde mit $\pm 15V$ Versorgungsspannung betrieben. Mittels Funktionsgenerator wurde am Eingang ein periodisches Rechtecksignal mit der Einstellung $0,1 V_{PP}$, Offset $0V$, Duty Circle $50\%$ und Frequenz $5Hz$ angelegt. Die Wirkungsweise wurde untersucht und die Eingangs- und Ausgangsspannung aufgezeichnet.
 
 \subsection*{Ergebnisse \& Diskussion}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=100mm]{integrierer_rechtecksignal_eingang_ausgang.png}
+  \caption{Integrierer Rechtecksignal $5Hz$ (gelb \dots $U_e$, gr\"un \dots $U_a$)}
+  \label{figure32}
+\end{figure}
+Der Integrierer ist wie ein invertierender Verst\a"rker aufgebaut, jedoch wird der Widerstands, der den Ausgang des OPV mit dem invertierenden Eingang verbinden, mit einem Kondensator ersetzt. Au\ss erdem wird ein hochohmiger Widerstand $R_S$ parallel dazu geschalten, welcher jedoch nur zu Stabilisierung dient. Aufgrund der Kapazit\"at des Kondensators $C$ ergibt sich die \"Ubertragungsfunktion:
+\begin{figure}[H]
+\centering
+$U_a = - \frac{1}{R_1C} \int U_e dt$
+\end{figure}
+\noindent Am Ausgang erh\"alt man also das invertierte Integral der Eingangsspannung \"uber die Zeit. Wie in der Abbildung~\ref{figure32} zu sehen ist, ergibt sich daher mit einem Rechtecksigal am Eingang ein Dreiecksignal am Ausgang. Verwendung findet die Schaltung bspw. als aktiver Filter, in der Analogtechnik zum Generieren von S\"agezahnschwingungen oder in Analogrechnern.
+
 
 
 \section{Invertierender Schmitt-Trigger}
 
 \subsection*{Notizen}
 $U_t = 1,719V$\\
-$Ue_pp = 5,11V$\\
-$Ua_pp = 3,26$\\
+$Ue_{pp} = 5,11V$\\
+$Ua_{pp} = 3,26V$\\
 scope\_11.png \\
 wenn die amplitude unter die schaltschwelle verringert wird, wird die ausgangsspannung $0V$.
 \subsection*{Aufgabenstellung}
+In der \"Ubung soll ein invertierender Schmitt-Trigger aufgebaut und dessen Funktionsweise dokumentiert werden.
 
 \subsection*{Schaltplan}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=80mm]{i_schmitt_trigger_schaltung.png}
+  \caption{Invertierender Schmitt-Trigger}
+  \label{figure41}
+\end{figure}
+
 
 \subsection*{Durchf\"uhrung}
+Der invertierende Schmitt-Trigger wurde gem\"a\ss \, Schaltplan (siehe ~\ref{figure41}) mit dem OPV LM324 aufgebaut. Am OPV wurde mit $+5V$ am positiven Versorgungsanschluss betrieben, der negative Versorgungsanschluss wurde mit Masse verbunden. Mittels Funktionsgenerator wurde am Eingang ein periodisches Sinussignal mit der Einstellung $5 V_{PP}$, Offset $2,5V$ und Frequenz $50Hz$ angelegt. Die Spannungen $U_a$, $U_e$ und $U_t$ wurden gemessen und protokolliert (siehe Tabelle ~\ref{figure42}). Weiters wurden Eingangs- und Ausgangssignal mit dem Oszilloskop im Zeit- und Bildbereich aufgezeichnet (siehe Abbildung~\ref{figure43} und ~\ref{figure44}).
 
 \subsection*{Ergebnisse \& Diskussion}
+\begin{table}[H]
+  \centering
+  \begin{tabular}{c|c}
+    $U_e (PP)$ & $5,11V$ \\
+    \hline
+    $U_a (PP)$ & $3,26V$ \\
+    \hline
+    $U_t$ & $1,72V$
+  \end{tabular}
+  \caption{Messungen Invertierender Schmitt-Trigger}
+  \label{figure42}
+\end{table}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=150mm]{i_schmitt_trigger_sinus.png}
+  \caption{Invertierender Schmitt-Trigger mit $50Hz$ Sinussignal (gelb \dots $U_e$, gr\"un \dots $U_a$)}
+  \label{figure43}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=150mm]{i_schmitt_trigger_sinus_bildbereich.png}
+  \caption{Invertierender Schmitt-Trigger mit Sinussignal (Bildbereich)}
+  \label{figure44}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=150mm]{scope_15.png}
+  \caption{Invertierender Schmitt-Trigger mit Dreiecksignal (Bildbereich)}
+\end{figure}
+
 
 \section{Anhang - Messwerte}
 
