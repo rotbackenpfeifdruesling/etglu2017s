@@ -368,9 +368,10 @@ Die Schaltung wurde gemäß Schaltplan mit dem OPV-IC LM741 aufgebaut. Die Wider
 
 \section{Integrierer}
 
-\subsection*{Notizen}
-gew\"ahlter OPV: LM324 \\
-Integrierer LM324 rechtecksignal $0,1 V_PP$ $5Hz$ scope\_9
+%\subsection*{Notizen}
+%gew\"ahlter OPV: LM324 \\
+%Integrierer LM324 rechtecksignal $0,1 V_PP$ $5Hz$ scope\_9
+
 \subsection*{Aufgabenstellung}
 In der \"Ubung soll eine einfache integrierende Operationsverstärkerschaltung aufgebaut werden. Es sollen die Str\"ome und Spannungen in dieser Schaltung gemessen und dadurch das Verhalten eines Integrierers nachvollzogen werden.
 
@@ -392,7 +393,7 @@ Die Schaltung wurde gemäß Schaltplan (siehe ~\ref{figure31}) mit dem OPV LM324
   \caption{Integrierer Rechtecksignal $5Hz$ (gelb \dots $U_e$, gr\"un \dots $U_a$)}
   \label{figure32}
 \end{figure}
-Der Integrierer ist wie ein invertierender Verst\a"rker aufgebaut, jedoch wird der Widerstands, der den Ausgang des OPV mit dem invertierenden Eingang verbinden, mit einem Kondensator ersetzt. Au\ss erdem wird ein hochohmiger Widerstand $R_S$ parallel dazu geschalten, welcher jedoch nur zu Stabilisierung dient. Aufgrund der Kapazit\"at des Kondensators $C$ ergibt sich die \"Ubertragungsfunktion:
+Der Integrierer ist wie ein invertierender Verst\"arker aufgebaut, jedoch wird der Widerstands, der den Ausgang des OPV mit dem invertierenden Eingang verbinden, mit einem Kondensator ersetzt. Au\ss erdem wird ein hochohmiger Widerstand $R_S$ parallel dazu geschalten, welcher jedoch nur zu Stabilisierung dient. Aufgrund der Kapazit\"at des Kondensators $C$ ergibt sich die \"Ubertragungsfunktion:
 \begin{figure}[H]
 \centering
 $U_a = - \frac{1}{R_1C} \int U_e dt$
@@ -403,12 +404,13 @@ $U_a = - \frac{1}{R_1C} \int U_e dt$
 
 \section{Invertierender Schmitt-Trigger}
 
-\subsection*{Notizen}
-$U_t = 1,719V$\\
-$Ue_{pp} = 5,11V$\\
-$Ua_{pp} = 3,26V$\\
-scope\_11.png \\
-wenn die amplitude unter die schaltschwelle verringert wird, wird die ausgangsspannung $0V$.
+%\subsection*{Notizen}
+%$U_t = 1,719V$\\
+%$Ue_{pp} = 5,11V$\\
+%$Ua_{pp} = 3,26V$\\
+%scope\_11.png \\
+%wenn die amplitude unter die schaltschwelle verringert wird, wird die ausgangsspannung $0V$.
+
 \subsection*{Aufgabenstellung}
 In der \"Ubung soll ein invertierender Schmitt-Trigger aufgebaut und dessen Funktionsweise dokumentiert werden.
 
@@ -432,11 +434,12 @@ Der invertierende Schmitt-Trigger wurde gem\"a\ss \, Schaltplan (siehe ~\ref{fig
     \hline
     $U_a (PP)$ & $3,26V$ \\
     \hline
-    $U_t$ & $1,72V$
+    $U_t (PP)$ & $1,72V$
   \end{tabular}
-  \caption{Messungen Invertierender Schmitt-Trigger}
+  \caption{Messung Spannungen Invertierender Schmitt-Trigger}
   \label{figure42}
 \end{table}
+Allgemein schaltet ein Schmitt-Trigger am Ausgang zwischen der positiven bzw. negativen Versorungsspannung um. Die Schaltschwellen, wo das Ausgangssignal kippt sind im Allgemeinen symmetrisch zur Nullline. Um nun die Schaltschwellen auf ein anderes Spannungsniveau zu \"andern, welches nicht symmetrisch zur Nulllinie ist, wird der OPV unipolar und mit einer Referenzspannung betrieben. Dh. die negative Versorgungsspannung mit Masse verbunden. Die positive bzw. negative Versorungsspannung wird hier nicht erreicht, da es sich hier um eine Rail-To-Rail OPV Schaltung handelt.
 
 \begin{figure}[H]
   \centering
@@ -444,19 +447,25 @@ Der invertierende Schmitt-Trigger wurde gem\"a\ss \, Schaltplan (siehe ~\ref{fig
   \caption{Invertierender Schmitt-Trigger mit $50Hz$ Sinussignal (gelb \dots $U_e$, gr\"un \dots $U_a$)}
   \label{figure43}
 \end{figure}
+\noindent Der Schmitt-Trigger arbeitet als Komparator mit Hysterese. Das bedeutet, dass die beiden Eing\"ange (invertierend und nichtinvertierend) verglichen werden und der Ausgang schaltet entsprechend auf $U_{low}$ bzw. auf $U_{high}$. Wie in Abbildung ~\ref{figure43} zu erkennen ist, h\"angen $U_e$ und $U_a$ so zusammen, dass bei den Schwellwerten ($\approx 1V$ und $~\approx 2,5V$) der Ausgang entweder auf $\approx 0,6V$ bzw. auf $\approx 3,8V$ kippt. Die Spannung $U_t$ ist direkt proportional zu $U_a$. Diese Kippstufe kommt daher, dass ein Teil der Ausgangsspannung auf den positiven Eingang des OPV zur\"uckgef\"uhrt wird (Mitkopplung). Allgemein ben\"otigt man die Hysterese, da sonst im Bereich der Schaltschwelle die Ausgangsspannung mehrfach kippen k\"onnte.\\
+Bei der Ausgangsspannung $U_a$ ist mit $0,6V$ bzw. $3,8V$ ein Unterschied zu den berechneten Werten aus der Simulation zu erkennen ($0,029V$ bzw. $4,39$). Dies kommt daher, dass bei der Berechnung ideale Bauelementen angenommen werden. Wird die Amplitude des Eingangssignals verringert, so kann man sehen, dass der Schmitt Trigger am Ausgang nicht mehr schaltet.
+
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=150mm]{i_schmitt_trigger_sinus_bildbereich.png}
-  \caption{Invertierender Schmitt-Trigger mit Sinussignal (Bildbereich)}
+  \caption{Invertierender Schmitt-Trigger mit Sinussignal (Bildbereich); x-Achse: $U_e$; y-Achse: $U_a$}
   \label{figure44}
 \end{figure}
+\noindent Die Abbildung ~\ref{figure44} zeigt die Hysterese-Kennlinie des invertierenden Schmitt-Triggers. Auf der x-Achse ist die Eingangsspannung und auf der y-Achse die Ausgangsspannung eingtragen. Der Verlauf sieht so aus, dass die Linie links oben startet. Die Eingangsspannung wird erh\"oht, ohne dass sich die Ausgangsspannung \"andert. Wird der obere Schwellwert des Schmitt-Triggers erreicht (rechts oben), so schaltet der Ausgang auf $U_{low}$. Danach steigt die Eingangsspannung weiter, ohne \"Anderung am Ausgang. Da es sich um ein periodisches Sinussignal handelt, sinkt dann die Eingangsspannung wiederum bis auf den unteren Schwellwert und der Ausgang schaltet wider auf $U_{high}$. \\
+% TODO: Wird die Art des Eingangssignals ge\"andert, so \"andert sich auch das Bild der Hysterese-Kennline, jedoch ist immer ein geschlossener Kreis zu erkennen. Der Unterschied liegt immer.\\
+\noindent Verwendet wird diese Schaltung bspw. zum Erzeugen von bin\"aren Signalen oder um eindeutige Schaltzustände aus einem analogen Eingangssignalverlauf zu gewinnen.
 
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=150mm]{scope_15.png}
-  \caption{Invertierender Schmitt-Trigger mit Dreiecksignal (Bildbereich)}
-\end{figure}
+%\begin{figure}[H]
+%  \centering
+%  \includegraphics[width=150mm]{scope_15.png}
+%  \caption{Invertierender Schmitt-Trigger mit Dreiecksignal (Bildbereich)}
+%\end{figure}
 
 
 \section{Anhang - Messwerte}
