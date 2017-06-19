@@ -352,21 +352,30 @@ Die Schaltung wurde gemäß Schaltplan mit dem OPV-IC LM741 aufgebaut. Die Wider
 
 \noindent Bei hoher Frequenz wird die Verstärkung vermindert und das Dreiecksignal wird am Ausgang verschliffen. Dies liegt an der Tiefpasseigenschaft der Verstärkerschaltung, welche nach überschreiten der Grenzfrequenz in Erscheinung tritt.
 
+% \begin{figure}[H]
+%   \centering
+%   \includegraphics[width=150mm]{bode_47.png}
+%   \caption{Amplitudengang bei $-47$-facher Verstärkung}
+% \end{figure}
+%
+% \noindent Da sich ein OPV intern wie ein Tiefpass verhält, fällt die Verstärkung zwischen Grenzfrequenz ($26kHz$) und Transitfrequenz ($750kHz$) mit einer Filtersteilheit von ca. $-20dB/Dekade$. Bei der Transitfrequenz wird das Signal nicht mehr verstärkt.
+%
+% \begin{figure}[H]
+%   \centering
+%   \includegraphics[width=150mm]{bode_4_7.png}
+%   \caption{Amplitudengang bei $-4,7$-facher Verstärkung}
+% \end{figure}
+%
+% \noindent Wenn die Verstärkung der Schaltung verringert wird (auf $\frac{1}{10}$), verschiebt sich die Grenzfrequenz ($230kHz$) in Richtung höherer Frequenzen und die Dämpfung ist erst eine Dekade später zu erkennen. Die Filtersteilheit beträgt jedoch auch hier ca. $-20dB/Dekade$.
+
 \begin{figure}[H]
   \centering
-  \includegraphics[width=150mm]{bode_47.png}
-  \caption{Amplitudengang bei $-47$-facher Verstärkung}
+  \includegraphics[width=150mm]{bode.png}
+  \caption{Amplitudengang mit -47x ($f_{g1}$) bzw. -4,7x ($f_{g2}$) Verstärkung}
 \end{figure}
 
-\noindent Da sich ein OPV intern wie ein Tiefpass verhält, fällt die Verstärkung zwischen Grenzfrequenz ($26kHz$) und Transitfrequenz ($750kHz$) mit einer Filtersteilheit von ca. $-20dB/Dekade$. Bei der Transitfrequenz wird das Signal nicht mehr verstärkt.
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=150mm]{bode_4_7.png}
-  \caption{Amplitudengang bei $-4,7$-facher Verstärkung}
-\end{figure}
-
-\noindent Wenn die Verstärkung der Schaltung verringert wird (auf $\frac{1}{10}$), verschiebt sich die Grenzfrequenz ($230kHz$) in Richtung höherer Frequenzen und die Dämpfung ist erst eine Dekade später zu erkennen. Die Filtersteilheit beträgt jedoch auch hier ca. $-20dB/Dekade$.
+\noindent Da sich ein OPV intern wie ein Tiefpass verhält, fällt die Verstärkung zwischen Grenzfrequenz ($f_{g1}=26kHz, f_{g2}=230kHz$) und Transitfrequenz (Bauteileigenschaft des OPV, $f_t = 700kHz$) mit einer Filtersteilheit von ca. $-20dB/Dekade$. Bei der Transitfrequenz wird das Signal nicht mehr verstärkt.\\
+Wenn die Verstärkung der Schaltung verringert wird (hier auf $\frac{1}{10}$), verschiebt sich die Grenzfrequenz in Richtung höherer Frequenzen ($26kHz \to 230kHz$) und die Dämpfung ist erst ca. eine Dekade später zu erkennen.
 
 \section{Integrierer}
 
@@ -475,7 +484,7 @@ Bei der Ausgangsspannung $U_a$ ist mit $0,6V$ bzw. $3,8V$ ein Unterschied zu den
 \begin{figure}[H]
   \centering
   \begin{minipage}[b]{0.4\textwidth}
-    \includegraphics[width=\textwidth]{daten_47.png}
+    \includegraphics[width=\textwidth]{daten_471.png}
     \caption{Messdaten invertierender OPV (-47 Verstärkung)}
   \end{minipage}
   \hfill
