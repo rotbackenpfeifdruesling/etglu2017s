@@ -391,16 +391,16 @@ Die Schaltung wurde gemäß Schaltplan (siehe ~\ref{figure31}) mit dem OPV LM324
 \subsection*{Ergebnisse \& Diskussion}
 \begin{figure}[H]
   \centering
-  \includegraphics[width=100mm]{integrierer_rechtecksignal_eingang_ausgang.png}
+  \includegraphics[width=150mm]{integrierer_rechtecksignal_eingang_ausgang.png}
   \caption{Integrierer Rechtecksignal $5Hz$ (gelb \dots $U_e$, gr\"un \dots $U_a$)}
   \label{figure32}
 \end{figure}
-Der Integrierer ist wie ein invertierender Verst\"arker aufgebaut, jedoch wird der Widerstands, der den Ausgang des OPV mit dem invertierenden Eingang verbinden, mit einem Kondensator ersetzt. Au\ss erdem wird ein hochohmiger Widerstand $R_S$ parallel dazu geschalten, welcher jedoch nur zu Stabilisierung dient. Aufgrund der Kapazit\"at des Kondensators $C$ ergibt sich die \"Ubertragungsfunktion:
+Ein Integrierer ist ein Verst\"arker, bei dem der Ausgang \"uber einen Kondensator auf den invertierenden Eingang r\"uckgekoppelt wird. Au\ss erdem wird ein hochohmiger Widerstand $R_S$ parallel dazu geschalten, welcher jedoch nur zu Stabilisierung dient. Aufgrund der Kapazit\"at des Kondensators $C$ ergibt sich die \"Ubertragungsfunktion:
 \begin{figure}[H]
 \centering
 $U_a = - \frac{1}{R_1C} \int U_e dt$
 \end{figure}
-\noindent Am Ausgang erh\"alt man also das invertierte Integral der Eingangsspannung \"uber die Zeit. Wie in der Abbildung~\ref{figure32} zu sehen ist, ergibt sich daher mit einem Rechtecksigal am Eingang ein Dreiecksignal am Ausgang. Verwendung findet die Schaltung bspw. als aktiver Filter, in der Analogtechnik zum Generieren von S\"agezahnschwingungen oder in Analogrechnern.
+\noindent Am Ausgang erh\"alt man also das invertierte Integral der Eingangsspannung \"uber die Zeit. Wie in der Abbildung~\ref{figure32} zu sehen ist, ergibt sich daher mit einem Rechtecksigal am Eingang ein Dreiecksignal am Ausgang. Verwendung findet die Schaltung bspw. als Teil von PID-Reglern, als aktiver Filter, in der Analogtechnik zum Generieren von S\"agezahnschwingungen oder in Analogrechnern.
 
 
 
@@ -410,7 +410,6 @@ $U_a = - \frac{1}{R_1C} \int U_e dt$
 %$U_t = 1,719V$\\
 %$Ue_{pp} = 5,11V$\\
 %$Ua_{pp} = 3,26V$\\
-%scope\_11.png \\
 %wenn die amplitude unter die schaltschwelle verringert wird, wird die ausgangsspannung $0V$.
 
 \subsection*{Aufgabenstellung}
@@ -455,7 +454,7 @@ Bei der Ausgangsspannung $U_a$ ist mit $0,6V$ bzw. $3,8V$ ein Unterschied zu den
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=150mm]{i_schmitt_trigger_sinus_bildbereich.png}
+  \includegraphics[width=150mm]{i_schmitt_trigger_hysterese_kennlinie.png}
   \caption{Invertierender Schmitt-Trigger mit Sinussignal (Bildbereich); x-Achse: $U_e$; y-Achse: $U_a$}
   \label{figure44}
 \end{figure}
