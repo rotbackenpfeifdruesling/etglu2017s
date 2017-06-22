@@ -1,5 +1,4 @@
-\contentsline {section}{\numberline {1}Messung eines Sinussignals im Spektralbereich mittels FFT}{4}{section.1}
-\contentsline {section}{\numberline {2}Messung eines Rechtecksignals}{4}{section.2}
-\contentsline {section}{\numberline {3}Amplitudenmodulation}{4}{section.3}
-\contentsline {section}{\numberline {4}Br\IeC {\"u}ckengleichrichter}{4}{section.4}
-\contentsline {section}{\numberline {5}Anhang - Messwerte}{5}{section.5}
+\contentsline {section}{\numberline {1}Messung eines Sinussignals im Spektralbereich mittels FFT}{3}{section.1}
+\contentsline {section}{\numberline {2}Messung eines Rechtecksignals}{6}{section.2}
+\contentsline {section}{\numberline {3}Amplitudenmodulation}{6}{section.3}
+\contentsline {section}{\numberline {4}Br\IeC {\"u}ckengleichrichter}{6}{section.4}
