@@ -121,6 +121,31 @@
 
 \section{Messung eines Sinussignals im Spektralbereich mittels FFT}
 
+\subsection*{Notizen}
+Eingangssignal: Sinus $100kHz$, $1V_{pp}$, $V_{offset}=0V$ \\
+Aufzeichnung Signal im Zeitbereich scope\_18/19, kein Aliasing \\
+\\
+Aufzeichung im FQ bereich: Einstellungen: Taste Math;
+
+logarithmisch (spanne 200kHz, center 100kHz):
+Hanning-Fenster: scope_20/21
+Rechteck-Fenster: scope_22/23
+BLackmann-Harris: scope_24/25
+Rechteck: scope_30/31 spanne 10kHz, center 100kHz
+Rechteck: scope_34 spanne 10kHz, center 100kHz Messung
+Blackman-Harris: scope_35 spanne 10kHz, center 100kHz Messung
+Blackman-Harris: scope_36 spanne 10kHz, center 100kHz Messung, Amplitude
+
+linear:
+Rechteck: scope_26/27 spanne 1kHz, center 100kHz
+Rechteck: scope_28/29 spanne 10kHz, center 100kHz
+Blackman-Harris: scope_32/ spanne 10kHz, center 100kHz Messung
+Rechteck: scope_33 spanne 10kHz, center 100kHz Messung
+Blackman-Harris: scope_37 spanne 10kHz, center 100kHz Messung, Amplitude
+
+Messung: Amplitude: -9.2dB = 20*log_10(Veff/1V) = 20*log_10(0.5*1/sqrt(2))
+
+
 \subsection*{Aufgabenstellung}
 
 \subsection*{Schaltplan}
@@ -135,7 +160,20 @@
 \subsection*{Ergebnisse \& Diskussion}
 
 
+
+
 \section{Messung eines Rechtecksignals}
+
+\subsection*{Notizen}
+FQ Generator Einstellungen: Square $50\%$ duty circle $10kHz$, $1V_{pp}$ \\
+Rechtecksignal im Zeitbereich: scope_40 \\
+Hanning; Vrms; spanne 100kHz, center 50kHz; Vrm $450mV$; scope_39 \\
+Hauptkomponente gemessen mit Cursor: $10kHz$, $450mV$ \\
+1. Nebenkomponente: $30kHz$, $147mV$
+2. Nebenkomponente: $50kHz$, $94mV$
+3. Nebenkomponente: $70kHz$, $65mV$
+
+
 
 \subsection*{Schaltplan}
 % \begin{figure}[H]
@@ -148,7 +186,43 @@
 
 \subsection*{Ergebnisse \& Diskussion}
 
+
+
 \section{Amplitudenmodulation}
+
+\subsection*{Notizen}
+Einstellungen FQ Generator: \\
+
+Tr\"agerfq: Sinus $100kHz$, $1V_{pp}$ \\
+Nutzsignal: Sinus $1kHz$, Gleichanteil $0V$ \\
+Zeitbereich scope_41 \\
+Zeitbereich scope_42 \\
+Hanning-Fenster am Oszi
+
+Frequenzbereich: scope_43, linear
+scope_47 logarithmisch
+scope_48 logarithmisch (rectangle)
+Hauptkomponente: 100kHz, Amplitude 166,92mV
+Linke Nebenkomponente: 99kHz, 86mV
+Rechte Nebenkomponente: 101kHz, 86mV
+
+Einstellungen FQ Generator: \\
+Tr\"agerfq: Sinus $100kHz$, $1V_{pp}$ \\
+Nutzsignal: Rechteck $1kHz$, Gleichanteil $0V$ \\
+Zeitbereich scope_44 \\
+
+Frequenzbereich: scope_45, linear
+scope_46 logarithmisch
+Hauptkomponente: 100kHz, Amplitude 175mV
+1. Linke Nebenkomponente: 99kHz, 111mV
+2. Linke Nebenkomponente: 97kHz, 37mV
+3. Linke Nebenkomponente: 95kHz, 23mV
+4. Linke Nebenkomponente: 93kHz, 16mV
+1. R Nebenkomponente: 101kHz, 111mV
+2. R Nebenkomponente: 103kHz, 37mV
+3. R Nebenkomponente: 105kHz, 23mV
+4. R Nebenkomponente: 107kHz, 16mV
+
 
 \subsection*{Aufgabenstellung}
 
@@ -164,7 +238,31 @@
 
 \subsection*{Ergebnisse \& Diskussion}
 
+
+
 \section{Brückengleichrichter}
+
+\subsection*{Notizen}
+Dioden N4148, Widerstand $1MOhm$ \\
+
+Frequenzgenerator $2V_{pp}$, $1kHz$
+Zeitbereich: ($U_a$) $scope_52$, $scope_53$ \\
+Messung $U_a$ $520mV_PP$ $DC_{rms}=338mV$ $Fq=2kHz$ \\
+\\
+Frequenzgenerator $10V_{pp}$, $1kHz$
+Zeitbereich: ($U_a$) $scope_54$ \\
+Messung $U_a$ $4,22V_PP$ $DC_{rms}=2,91V$ $Fq=2kHz$ \\
+\\
+
+
+Frequenzbereich:
+Spektrum scope_57 (rectangle), logarithmisch \\
+Hauptkomponente: $2kHz$, $3,13dB$ \\
+1. Nebenkomponente: $4kHz$, $-11,27dB$ \\
+2. Nebenkomponente: $6kHz$, $-21,9dB$ \\
+3. Nebenkomponente: $8kHz$, $-27,86dB$ \\
+4. Nebenkomponente: $10kHz$, $-37,25dB$
+
 
 \subsection*{Aufgabenstellung}
 
