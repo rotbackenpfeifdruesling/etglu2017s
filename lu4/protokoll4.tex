@@ -145,14 +145,14 @@
 Ein einfaches Sinussignal soll im Zeit- und Frequenzbereich grafisch dargestellt werden.
 
 \subsection*{Durchf\"uhrung}
-Das Oszilloskop wurde direkt mit dem Funktionsgeneraor verbunden und mit diesem wurde daraufhin ein Sinussignal mit $1 V_{pp}$ und $100kHz$ Frequenz erzeugt. Das Bild im Zeitbereich wurde aufgenommen. danach wurde das Signal mittels FFT-Funktion in den Frequenzbereich transformiert und ebenfalls wieder aufgenommen.
+Das Oszilloskop wurde direkt mit dem Funktionsgeneraor verbunden und mit diesem wurde daraufhin ein Sinussignal mit $1 V_{pp}$ und $100kHz$ Frequenz erzeugt. Das Signal wurde mittels FFT-Funktion in den Frequenzbereich transformiert und das daraus resultierende Spektrum aufgenommen.
 
 \subsection*{Ergebnisse \& Diskussion}
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=150mm]{scope_18.png}
-  \caption{Sinussignal mit $1V_{pp}$ und $100kHz$ im Zeitbereich}
-\end{figure}
+% \begin{figure}[H]
+%   \centering
+%   \includegraphics[width=150mm]{scope_18.png}
+%   \caption{Sinussignal mit $1V_{pp}$ und $100kHz$ im Zeitbereich}
+% \end{figure}
 
 \begin{figure}[H]
   \centering
@@ -299,39 +299,7 @@ Die Schlatung wurde gemäß Schaltplan mit 4 1N4148 Dioden und einem $1M\Omega$ 
   \caption{Gleichgerichteter Sinus (violett) (Eingangssignal $10kHz$, $10V_{pp}$, gelb $\hdots$ Messpunkt A, grün $\hdots$ Messpunkt B)}
 \end{figure}
 
-\noindent Bei einem Sinussignal mit $10V_{pp}$ wurden $4,22V$ Spitzenspannung und $2,91V_{RMS}$ gemessen.
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=150mm]{scope_57.png}
-  \caption{Spektrum des gleichgerichteten Sinus (logarithmische Darstellung)}
-\end{figure}
-
-\noindent Die Spketrallinien liegen hier bei ganzzahligen Vielfachen der Frundfrequenz des gleichgerichteten Sinus ($2kHz$).
-
-% Hauptkomponente: $2kHz$, $3,13dB$ \\
-% 1. Nebenkomponente: $4kHz$, $-11,27dB$ \\
-% 2. Nebenkomponente: $6kHz$, $-21,9dB$ \\
-% 3. Nebenkomponente: $8kHz$, $-27,86dB$ \\
-% 4. Nebenkomponente: $10kHz$, $-37,25dB$
-
-\begin{table}[H]
-  \centering
-  \begin{tabular}{c|c|c}
-    $f [kHz]$ & Amplitude $[dB]$ & Amplitude $[V_{rms}]$ \\
-    \hline
-    $2$ & $3,13$ & $1,43$ \\
-    \hline
-    $4$ & $-11,27$ & $0,27$ \\
-    \hline
-    $6$ & $-21,9$ & $0,08$ \\
-    \hline
-    $8$ & $-27,86$ & $0,04$ \\
-    \hline
-    $10$ & $-37,25$ & $0,01$ \\
-  \end{tabular}
-  \caption{Messung der 5 größten Spektralkomponenten}
-\end{table}
+\noindent Bei einem Sinussignal mit $10V_{pp}$ wurden $4,22V$ Spitzenspannung und $2,91V_{RMS}$ gemessen.\\
 
 \noindent Berechnung der Fourierreihe des gleichgerichteten Sinus:\\
 \begin{align*}
@@ -349,7 +317,63 @@ Die Schlatung wurde gemäß Schaltplan mit 4 1N4148 Dioden und einem $1M\Omega$ 
     |sin(\omega t)| &= \frac{2}{\pi} - \sum_{n=1}^{\infty} \frac{4 \cdot cos(2n t)}{\pi(2n+1)(2n-1)}
 \end{align*}
 
-\noindent Sinus mit $1kHz$: $\omega = 2\pi\cdot1kHz \approx 6,3\cdot 10^3 \; rad/s  $\\
-$\Rightarrow |sin(6,3\cdot 10^3)| = \frac{2}{\pi} - \sum_{n=1}^{\infty} \frac{4 \cdot cos(12,6\cdot 10^3 n t)}{\pi(2n+1)(2n-1)}$
+\noindent Sinus mit $1kHz$, $10V_{pp}$: $\omega = 2\pi\cdot1kHz \approx 6,3\cdot 10^3 \; rad/s  $\\
+$\Rightarrow 5 \cdot |sin(6,3\cdot 10^3)| = \frac{10}{\pi} - \sum_{n=1}^{\infty} \frac{20 \cdot cos(12,6\cdot 10^3 n t)}{\pi(2n+1)(2n-1)}$
+
+\begin{table}[H]
+  \centering
+  \begin{tabular}{c|c|c}
+    $f [kHz]$ & Amplitude $[V]$ & Amplitude $[V_{rms}]$ \\
+    \hline
+    Gleichanteil & $3,18$ & $2,25$ \\
+    \hline
+    $2$ & $2,12$ & $1,5$ \\
+    \hline
+    $4$ & $0,42$ & $0,3$ \\
+    \hline
+    $6$ & $0,18$ & $0,13$ \\
+    \hline
+    $8$ & $0,1$ & $0,07$ \\
+    \hline
+    $10$ & $0,06$ & $0,04$ \\
+  \end{tabular}
+  \caption{Berechnung der 5 größten Spektralkomponenten aus der Fourierreihe}
+\end{table}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=150mm]{scope_57.png}
+  \caption{Spektrum des gleichgerichteten Sinus (logarithmische Darstellung)}
+\end{figure}
+
+\noindent Die Spketrallinien liegen hier bei ganzzahligen Vielfachen der Frundfrequenz des gleichgerichteten Sinus ($2kHz$).
+
+% Hauptkomponente: $2kHz$, $3,13dB$ \\
+% 1. Nebenkomponente: $4kHz$, $-11,27dB$ \\
+% 2. Nebenkomponente: $6kHz$, $-21,9dB$ \\
+% 3. Nebenkomponente: $8kHz$, $-27,86dB$ \\
+% 4. Nebenkomponente: $10kHz$, $-37,25dB$
+
+\begin{table}[H]
+  \centering
+  \begin{tabular}{c|c|c|c}
+    $f [kHz]$ & Amplitude $[dB]$ & Amplitude $[V_{rms}]$ & Abweichung \\
+    \hline
+    Gleichanteil & $6,53$ & $2,12$ & $-5,7\%$ \\
+    \hline
+    $2$ & $3,13$ & $1,43$ & $-4,6\%$ \\
+    \hline
+    $4$ & $-11,27$ & $0,27$ & $-10\%$ \\
+    \hline
+    $6$ & $-21,9$ & $0,08$ & $-38,4\%$ \\
+    \hline
+    $8$ & $-27,86$ & $0,04$ & $-42,8\%$ \\
+    \hline
+    $10$ & $-37,25$ & $0,01$ & $-75\%$ \\
+  \end{tabular}
+  \caption{Messung der 5 größten Spektralkomponenten mit Abweichung zur Berechnung}
+\end{table}
+
+\noindent Die Abweichungen zur berechnenten Fourierreihe ergeben sich aus den Schaltschwellen der Dioden und aus der Abtastung bzw. der diskreten Signalanalyse.
 
 \end{document}
